@@ -75,7 +75,7 @@ header{
 
 <div class="container">
 
-<div class="product">
+   <div class="product">
 
     <img src="chana.jpg" alt="Roasted Chana">
 
@@ -93,11 +93,11 @@ header{
     Order on WhatsApp
     </a>
 
-
+<div class="container">
 
 <img src="HARSHITA.jpg" alt="Roasted Chana" width="200">
 
-<h2>BANASAKATHA SING</h2>
+   <h2>BANASAKATHA SING</h2>
 
 <p class="price">₹120</p>
 
