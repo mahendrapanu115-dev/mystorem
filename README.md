@@ -68,7 +68,7 @@ header{
 
     <div class="product">
         <img src="chana.jpg" alt="Roasted Chana">
-        <h2>rosted sing</h2>
+        <h2>ROASTED SING</h2>
         <p class="price">₹150</p>
 
         <a class="btn buy"
