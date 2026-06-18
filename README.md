@@ -61,12 +61,10 @@ header{
 
 <body>
 
-<header>
-    <h1>Mera Online Store</h1>
-    <p>Best Products at Best Price</p>
+<header style="background:linear-gradient(to right, #ff512f, #dd2476); color:white; text-align:center; padding:25px;">
+    <h1>🛒 Mera Online Store</h1>
+    <p>Best Quality Products | Fast Delivery</p>
 </header>
-
-<div class="container">
 
     <div class="product">
         <img src="chana.jpg" alt="Roasted Chana">
