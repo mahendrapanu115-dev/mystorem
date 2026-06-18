@@ -82,7 +82,7 @@ header{
     <p class="price">₹150</p>
 
     <a class="btn buy"
-    href="upi://pay?pa=yourupi@upi&pn=Store&am=499">
+    href="upi://pay?pa=yourupi@upi&pn=Store&am=150">
     Pay Now
     </a>
 
@@ -91,12 +91,22 @@ header{
     Order on WhatsApp
     </a>
 
-</div>
-<img src="HARSHITA.jpg" alt="Potato Chana">
+</div> class="product">
+
+<img src="chana.jpg" alt="Roasted Chana" width="200">
 
 <h2>BANASAKATHA SING</h2>
 
-<p class="price">₹120</p>p>
+<p class="price">₹120</p>
 
+href="upi://pay?pa=yourupi@upi&pn=Store&am=120">
+    Pay Now
+    </a>
+
+     <a class="btn whatsapp"
+    href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Product%20Name">
+    Order on WhatsApp
+    </a>
+    
 </body>
 </html>
