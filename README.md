@@ -12,19 +12,22 @@ body{
     padding:0;
     background:#f5f5f5;
 }
+
+/* ✅ PINK THEME HEADER (FIXED) */
 header{
-    background:#007bff;
+    background:linear-gradient(to right, #ff512f, #dd2476);
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
 }
+
+/* PRODUCTS LAYOUT */
 .container{
     max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
-/* 👉 SIDE BY SIDE FIX */
 .products{
     display:flex;
     flex-wrap:wrap;
@@ -32,6 +35,7 @@ header{
     gap:20px;
 }
 
+/* PRODUCT BOX */
 .product{
     background:white;
     border-radius:10px;
@@ -64,6 +68,7 @@ header{
 .buy{
     background:green;
 }
+
 .whatsapp{
     background:#25D366;
 }
@@ -83,7 +88,7 @@ header{
 
     <!-- PRODUCT 1 -->
     <div class="product">
-        <img src="chana.jpg" alt="Roasted Chana">
+        <img src="chana.jpg">
         <h2>ROASTED SING</h2>
         <p class="price">₹150</p>
 
@@ -98,7 +103,7 @@ header{
 
     <!-- PRODUCT 2 -->
     <div class="product">
-        <img src="HARSHITA.jpg" alt="Second Product">
+        <img src="HARSHITA.jpg">
         <h2>BANASAKATHA SING</h2>
         <p class="price">₹120</p>
 
