@@ -38,17 +38,15 @@ header{
 }
 
 /* PRODUCT BOX */
-.products{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:10px;
-}
-
 .product{
-    width:100%;
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    width:45%;
+    text-align:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
-
 }
 
 .product img{
