@@ -75,7 +75,7 @@ header{
 
 <div class="container">
 
-   <div class="product">
+    <div class="product">
 
     <img src="chana.jpg" alt="Roasted Chana">
 
@@ -95,16 +95,16 @@ header{
 
 <div class="container">
 
- <div class="product">
+    <div class="product">
      
     <img src="HARSHITA.jpg" alt="Roasted Chana" width="200">
 
-   <h2>BANASAKATHA SING</h2>
+    <h2>BANASAKATHA SING</h2>
 
-<p class="price">₹120</p>
+    <p class="price">₹120</p>
 
-<a class="btn buy"
-href="upi://pay?pa=yourupi@upi&pn=Store&am=120">
+    <a class="btn buy"
+    href="upi://pay?pa=yourupi@upi&pn=Store&am=120">
     Pay Now
     </a>
 
