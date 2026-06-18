@@ -69,7 +69,7 @@ header{
 <div class="container">
 
     <div class="product">
-        <img src="https://via.placeholder.com/300x250" alt="Product">
+        <img src="chana.jpg" alt="Roasted Chana">
         <h2>Product Name</h2>
         <p class="price">₹150</p>
 
