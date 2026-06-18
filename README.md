@@ -49,21 +49,19 @@ header{
     color:white;
     text-decoration:none;
     border-radius:5px;
+    transition:0.3s;
 }
+
+/* BUTTON ZOOM EFFECT */
+.btn:hover{
+    transform:scale(1.1);
+}
+
 .buy{
     background:green;
 }
 .whatsapp{
     background:#25D366;
-}
-
-/* ZOOM EFFECT */
-.zoom{
-    transition:0.3s;
-    cursor:pointer;
-}
-.zoom:hover{
-    transform:scale(1.2);
 }
 </style>
 </head>
@@ -77,7 +75,7 @@ header{
 
 <div class="product">
 
-    <img src="chana.jpg" alt="Roasted Chana" class="zoom">
+    <img src="chana.jpg" alt="Roasted Chana">
 
     <h2>ROASTED SING</h2>
 
