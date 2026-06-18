@@ -92,6 +92,11 @@ header{
     </a>
 
 </div>
+<img src="HARSHITA.jpg" alt="Potato Chana">
+
+<h2>BANASAKATHA SING</h2>
+
+<p class="price">₹120</p>p>
 
 </body>
 </html>
