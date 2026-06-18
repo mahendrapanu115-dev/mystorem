@@ -91,7 +91,7 @@ header{
     Order on WhatsApp
     </a>
 
-</div> class="product">
+</div class="product">
 
 <img src="chana.jpg" alt="Roasted Chana" width="200">
 
@@ -99,6 +99,7 @@ header{
 
 <p class="price">₹120</p>
 
+<a class="btn buy"
 href="upi://pay?pa=yourupi@upi&pn=Store&am=120">
     Pay Now
     </a>
@@ -107,6 +108,7 @@ href="upi://pay?pa=yourupi@upi&pn=Store&am=120">
     href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Product%20Name">
     Order on WhatsApp
     </a>
+
     
 </body>
 </html>
