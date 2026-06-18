@@ -56,6 +56,15 @@ header{
 .whatsapp{
     background:#25D366;
 }
+
+/* ZOOM EFFECT */
+.zoom{
+    transition:0.3s;
+    cursor:pointer;
+}
+.zoom:hover{
+    transform:scale(1.2);
+}
 </style>
 </head>
 
@@ -66,21 +75,23 @@ header{
     <p>Best Quality Products | Fast Delivery</p>
 </header>
 
-    <div class="product">
-        <img src="chana.jpg" alt="Roasted Chana">
-        <h2>ROASTED SING</h2>
-        <p class="price">₹150</p>
+<div class="product">
 
-        <a class="btn buy"
-        href="upi://pay?pa=yourupi@upi&pn=Store&am=499">
-        Pay Now
-        </a>
+    <img src="chana.jpg" alt="Roasted Chana" class="zoom">
 
-        <a class="btn whatsapp"
-        href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Product%20Name">
-        Order on WhatsApp
-        </a>
-    </div>
+    <h2>ROASTED SING</h2>
+
+    <p class="price">₹150</p>
+
+    <a class="btn buy"
+    href="upi://pay?pa=yourupi@upi&pn=Store&am=499">
+    Pay Now
+    </a>
+
+    <a class="btn whatsapp"
+    href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Product%20Name">
+    Order on WhatsApp
+    </a>
 
 </div>
 
