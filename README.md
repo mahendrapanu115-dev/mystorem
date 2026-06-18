@@ -105,7 +105,7 @@ header{
         Pay Now
         </a>
 
-        <a class="btn whatsapp" href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Roasted%20Sing">
+        <a class="btn whatsapp" href="https://wa.me/919601393176 <text=Hello%20I%20want%20to%20buy%20Roasted%20Sing">
         Order
         </a>
     </div>
@@ -120,7 +120,7 @@ header{
         Pay Now
         </a>
 
-        <a class="btn whatsapp" href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20BANASKANTHA SING%20Sing">
+        <a class="btn whatsapp" href="https://wa.me/919601393176 <text=Hello%20I%20want%20to%20buy%20BANASKANTHA SING%20Sing">
         Order
         </a>
     </div>
