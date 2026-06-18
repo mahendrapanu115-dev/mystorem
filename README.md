@@ -47,6 +47,8 @@ header{
 
 .product img{
     width:100%;
+    height:180px;
+    object-fit:cover;
     border-radius:10px;
 }
 
