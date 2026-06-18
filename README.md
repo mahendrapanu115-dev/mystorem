@@ -95,7 +95,9 @@ header{
 
 <div class="container">
 
-<img src="HARSHITA.jpg" alt="Roasted Chana" width="200">
+ <div class="product">
+     
+    <img src="HARSHITA.jpg" alt="Roasted Chana" width="200">
 
    <h2>BANASAKATHA SING</h2>
 
