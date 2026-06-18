@@ -13,7 +13,7 @@ body{
     background:#f5f5f5;
 }
 
-/* ✅ PINK THEME HEADER (FIXED) */
+/* PINK HEADER */
 header{
     background:linear-gradient(to right, #ff512f, #dd2476);
     color:white;
@@ -21,7 +21,7 @@ header{
     padding:25px;
 }
 
-/* PRODUCTS LAYOUT */
+/* PRODUCTS ROW */
 .container{
     max-width:1000px;
     margin:auto;
@@ -56,6 +56,7 @@ header{
     font-weight:bold;
 }
 
+/* BUTTON STYLE */
 .btn{
     display:inline-block;
     padding:10px 15px;
@@ -63,6 +64,12 @@ header{
     color:white;
     text-decoration:none;
     border-radius:5px;
+    transition:0.3s;   /* IMPORTANT */
+}
+
+/* BUTTON ZOOM EFFECT */
+.btn:hover{
+    transform:scale(1.1);
 }
 
 .buy{
