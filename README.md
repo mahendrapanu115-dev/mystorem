@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -85,17 +85,7 @@ header{
 .whatsapp{
     background:#25D366;
 }
-    
-@media (max-width:768px){
-    .product{
-        width:45%;
-        padding:10px;
-    }
-
-    .product img{
-        height:120px;
-    }
-}
+</style>
 </head>
 
 <body>
