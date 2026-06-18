@@ -23,25 +23,35 @@ header{
     margin:auto;
     padding:20px;
 }
+
+/* 👉 SIDE BY SIDE FIX */
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
 .product{
     background:white;
     border-radius:10px;
     padding:15px;
-    margin:15px;
-    display:inline-block;
     width:280px;
     text-align:center;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
+
 .product img{
     width:100%;
     border-radius:10px;
 }
+
 .price{
     color:green;
     font-size:22px;
     font-weight:bold;
 }
+
 .btn{
     display:inline-block;
     padding:10px 15px;
@@ -49,12 +59,6 @@ header{
     color:white;
     text-decoration:none;
     border-radius:5px;
-    transition:0.3s;
-}
-
-/* BUTTON ZOOM EFFECT */
-.btn:hover{
-    transform:scale(1.1);
 }
 
 .buy{
@@ -68,51 +72,48 @@ header{
 
 <body>
 
-<header style="background:linear-gradient(to right, #ff512f, #dd2476); color:white; text-align:center; padding:25px;">
+<header>
     <h1>🛒 Mera Online Store</h1>
     <p>Best Quality Products | Fast Delivery</p>
 </header>
 
-    <div class="container">
+<div class="container">
 
+<div class="products">
+
+    <!-- PRODUCT 1 -->
     <div class="product">
+        <img src="chana.jpg" alt="Roasted Chana">
+        <h2>ROASTED SING</h2>
+        <p class="price">₹150</p>
 
-    <img src="chana.jpg" alt="Roasted Chana">
+        <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150">
+        Pay Now
+        </a>
 
-    <h2>ROASTED SING</h2>
+        <a class="btn whatsapp" href="https://wa.me/919601393176">
+        Order
+        </a>
+    </div>
 
-    <p class="price">₹150</p>
-
-    <a class="btn buy"
-    href="upi://pay?pa=yourupi@upi&pn=Store&am=150">
-    Pay Now
-    </a>
-
-    <a class="btn whatsapp"
-    href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Product%20Name">
-    Order on WhatsApp
-    </a>
-
-    <div class="container">
-
+    <!-- PRODUCT 2 -->
     <div class="product">
-     
-    <img src="HARSHITA.jpg" alt="Roasted Chana" width="200">
+        <img src="HARSHITA.jpg" alt="Second Product">
+        <h2>BANASAKATHA SING</h2>
+        <p class="price">₹120</p>
 
-    <h2>BANASAKATHA SING</h2>
+        <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120">
+        Pay Now
+        </a>
 
-    <p class="price">₹120</p>
+        <a class="btn whatsapp" href="https://wa.me/919601393176">
+        Order
+        </a>
+    </div>
 
-    <a class="btn buy"
-    href="upi://pay?pa=yourupi@upi&pn=Store&am=120">
-    Pay Now
-    </a>
+</div>
 
-     <a class="btn whatsapp"
-    href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Product%20Name">
-    Order on WhatsApp
-    </a>
+</div>
 
-    
 </body>
 </html>
