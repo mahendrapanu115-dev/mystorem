@@ -75,6 +75,8 @@ header{
 
 <div class="container">
 
+<div class="product">
+
     <img src="chana.jpg" alt="Roasted Chana">
 
     <h2>ROASTED SING</h2>
