@@ -93,7 +93,7 @@ header{
 
 </div class="product">
 
-<img src="chana.jpg" alt="Roasted Chana" width="200">
+<img src="HARSHITA.jpg" alt="Roasted Chana" width="200">
 
 <h2>BANASAKATHA SING</h2>
 
