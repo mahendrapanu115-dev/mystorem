@@ -41,12 +41,13 @@ header{
 .product{
     background:white;
     border-radius:10px;
-    padding:15px;
-    width:45%;
+    padding:10px;
+    width:calc(50% - 10px);
+    box-sizing:border-box;
     text-align:center;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
-    box-sizing:border-box;
 }
+
 }
 
 .product img{
