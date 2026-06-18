@@ -91,7 +91,7 @@ header{
     Order on WhatsApp
     </a>
 
-</div class="product">
+
 
 <img src="HARSHITA.jpg" alt="Roasted Chana" width="200">
 
