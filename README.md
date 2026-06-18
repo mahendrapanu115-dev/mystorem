@@ -5,14 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mera Online Store</title>
 
-<style.zoom {
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.zoom:hover {
-  transform: scale(1.2);
-}>
+<style>
 body{
     font-family: Arial, sans-serif;
     margin:0;
@@ -74,7 +67,7 @@ header{
 </header>
 
     <div class="product">
-        <img src="chana.jpg" class="zoom" width"200" Roasted Chana">
+        <img src="chana.jpg" alt="Roasted Chana">
         <h2>ROASTED SING</h2>
         <p class="price">₹150</p>
 
