@@ -73,7 +73,7 @@ header{
     <p>Best Quality Products | Fast Delivery</p>
 </header>
 
-<div class="product">
+<div class="container">
 
     <img src="chana.jpg" alt="Roasted Chana">
 
