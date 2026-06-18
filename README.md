@@ -85,7 +85,16 @@ header{
 .whatsapp{
     background:#25D366;
 }
-</style>
+</st@media (max-width:768px){
+    .product{
+        width:45%;
+        padding:10px;
+    }
+
+    .product img{
+        height:120px;
+    }
+}yle>
 </head>
 
 <body>
