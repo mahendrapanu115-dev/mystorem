@@ -1,8 +1,8 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mera Online Store</title>
 
 <style>
@@ -17,85 +17,85 @@ body{
     background:#f5f5f5;
 }
 
-/* Header */
+/* HEADER */
 header{
     background:linear-gradient(to right,#ff512f,#dd2476);
     color:white;
     text-align:center;
-    padding:20px;
+    padding:18px;
 }
 
 header h1{
-    font-size:28px;
+    font-size:24px;
 }
 
 header p{
+    font-size:14px;
     margin-top:5px;
 }
 
-/* Container */
+/* CONTAINER */
 .container{
+    width:100%;
     max-width:1200px;
     margin:auto;
     padding:10px;
 }
 
-/* Product Grid */
+/* PRODUCTS GRID */
 .products{
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
     gap:10px;
 }
 
-/* Product Card */
+/* PRODUCT CARD */
 .product{
-    width:calc(50% - 5px);
-    background:white;
+    background:#fff;
     border-radius:10px;
     overflow:hidden;
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
 }
 
+/* IMAGE FIX */
 .product img{
     width:100%;
-    height:180px;       /* sab images ki same height */
-    object-fit:contain; /* image cut nahi hogi */
+    height:140px;
+    object-fit:contain;
     background:#fff;
     padding:5px;
 }
 
+/* TEXT AREA */
 .product-content{
-    padding:10px;
+    padding:8px;
     text-align:center;
 }
 
 .product h2{
-    font-size:14px;
-    margin-bottom:5px;
+    font-size:13px;
+    margin:5px 0;
 }
 
 .price{
     color:green;
-    font-size:20px;
+    font-size:18px;
     font-weight:bold;
-    margin-bottom:10px;
+    margin-bottom:5px;
 }
 
-/* Buttons */
+/* BUTTONS */
 .btn{
     display:block;
     width:100%;
+    padding:8px;
+    margin-top:5px;
     text-decoration:none;
     color:white;
-    padding:10px;
     border-radius:5px;
-    margin-top:5px;
-    font-size:14px;
-    transition:0.3s;
-}
-
-.btn:hover{
-    opacity:0.9;
+    font-size:13px;
 }
 
 .buy{
@@ -106,18 +106,21 @@ header p{
     background:#25D366;
 }
 
-/* Desktop */
-@media(min-width:768px){
-    .product{
-        width:calc(25% - 8px);
+/* TABLET */
+@media (min-width:768px){
+    .products{
+        grid-template-columns:repeat(3, 1fr);
     }
 
     .product img{
-        height:180px;
+        height:160px;
     }
+}
 
-    .product h2{
-        font-size:18px;
+/* LAPTOP */
+@media (min-width:1024px){
+    .products{
+        grid-template-columns:repeat(4, 1fr);
     }
 }
 </style>
@@ -132,89 +135,69 @@ header p{
 
 <div class="container">
 
-    <div class="products">
+<div class="products">
 
-        <!-- Product 1 -->
-        <div class="product">
-            <img src="chana.jpg" alt="Roasted Sing">
+    <!-- PRODUCT 1 -->
+    <div class="product">
+        <img src="chana.jpg">
+        <div class="product-content">
+            <h2>ROASTED SING</h2>
+            <div class="price">₹150</div>
 
-            <div class="product-content">
-                <h2>ROASTED SING</h2>
-                <p class="price">₹150</p>
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
 
-                <a class="btn buy"
-                href="upi://pay?pa=yourupi@upi&pn=MeraStore&am=150&cu=INR">
-                💳 Pay Now
-                </a>
-
-                <a class="btn whatsapp"
-                href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Roasted%20Sing">
-                📲 Order on WhatsApp
-                </a>
-            </div>
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+            📲 Order
+            </a>
         </div>
-
-        <!-- Product 2 -->
-        <div class="product">
-            <img src="HARSHITA.jpg" alt="Banaskantha Sing">
-
-            <div class="product-content">
-                <h2>BANASKANTHA SING</h2>
-                <p class="price">₹120</p>
-
-                <a class="btn buy"
-                href="upi://pay?pa=yourupi@upi&pn=MeraStore&am=120&cu=INR">
-                💳 Pay Now
-                </a>
-
-                <a class="btn whatsapp"
-                href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20BANASKANTHA%20SING">
-                📲 Order on WhatsApp
-                </a>
-            </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product">
-            <img src="product3.jpg" alt="Product 3">
-
-            <div class="product-content">
-                <h2>PRODUCT 3</h2>
-                <p class="price">₹180</p>
-
-                <a class="btn buy"
-                href="upi://pay?pa=yourupi@upi&pn=MeraStore&am=180&cu=INR">
-                💳 Pay Now
-                </a>
-
-                <a class="btn whatsapp"
-                href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Product%203">
-                📲 Order on WhatsApp
-                </a>
-            </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="product">
-            <img src="product4.jpg" alt="Product 4">
-
-            <div class="product-content">
-                <h2>PRODUCT 4</h2>
-                <p class="price">₹200</p>
-
-                <a class="btn buy"
-                href="upi://pay?pa=yourupi@upi&pn=MeraStore&am=200&cu=INR">
-                💳 Pay Now
-                </a>
-
-                <a class="btn whatsapp"
-                href="https://wa.me/919601393176?text=Hello%20I%20want%20to%20buy%20Product%204">
-                📲 Order on WhatsApp
-                </a>
-            </div>
-        </div>
-
     </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product">
+        <img src="HARSHITA.jpg">
+        <div class="product-content">
+            <h2>BANASKANTHA SING</h2>
+            <div class="price">₹120</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product">
+        <img src="product3.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 3</h2>
+            <div class="price">₹180</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="product">
+        <img src="product4.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 4</h2>
+            <div class="price">₹200</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+</div>
 
 </div>
 
