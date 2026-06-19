@@ -195,6 +195,13 @@ header p{
 
 <body>
 
+<!-- SEARCH -->
+
+<div class="search-wrapper">
+
+<input type="text" id="searchInput" placeholder="🔍 Search products, brands...">
+
+</div>
 <header>
     <h1>🛒 Mera Online Store</h1>
     <p>Best Quality Products | Fast Delivery</p>
