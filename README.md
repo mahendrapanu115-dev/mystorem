@@ -19,14 +19,14 @@ body{
 
 /* HEADER */
 header{
-    background:linear-gradient(to right,#6a11cb,#2575fc);
+    background:linear-gradient(90deg,#1e3c72,#2a5298);
     color:white;
     text-align:center;
     padding:18px;
 
     animation: bounceIn 0.9s ease;
-
 }
+
 
 /* Animation */
 @keyframes slideDown{
