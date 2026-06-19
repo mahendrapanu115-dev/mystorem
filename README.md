@@ -30,8 +30,16 @@ header h1,
 header p{
     text-align:center;
 }
+/* Title animation */
+header h1{
+    animation: textPop 1s ease;
+}
 
-
+/* subtitle animation */
+header p{
+    animation: fadeUp 1.2s ease;
+}
+    
 /* CLEAN TITLE ANIMATION */
 @keyframes textPop{
     0%{
