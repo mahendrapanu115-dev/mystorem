@@ -42,7 +42,7 @@ header p{
 /* Product Grid */
 .products{
     display:flex;
-    flex-wrap:wrap;
+     flex-direction:column;
     gap:10px;
 }
 
@@ -57,8 +57,10 @@ header p{
 
 .product img{
     width:100%;
-    height:auto;
-    object-fit:cover;
+    height:150;
+   object-fit:contain;
+    background:#fff;
+    padding:5px;
 }
 
 .product-content{
