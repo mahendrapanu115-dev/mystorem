@@ -25,7 +25,6 @@ header{
     padding:18px;
 
     animation: bounceIn 0.9s ease;
-}
 
 }
 
