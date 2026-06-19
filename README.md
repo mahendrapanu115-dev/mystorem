@@ -39,7 +39,28 @@ header h1{
 header p{
     animation: fadeUp 1.2s ease;
 }
-    
+   
+    <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search products... 🔍">
+</div>
+
+
+.search-box{
+    padding:10px;
+    text-align:center;
+    background:#fff;
+    border-bottom:1px solid #eee;
+}
+
+.search-box input{
+    width:90%;
+    max-width:400px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:14px;
+}
 /* CLEAN TITLE ANIMATION */
 @keyframes textPop{
     0%{
@@ -259,4 +280,24 @@ header p{
 </div>
 
 </body>
+<script>
+const searchInput = document.getElementById("searchInput");
+const products = document.querySelectorAll(".product");
+
+searchInput.addEventListener("keyup", function(){
+
+    let value = this.value.toLowerCase();
+
+    products.forEach(function(item){
+        let title = item.querySelector("h2").innerText.toLowerCase();
+
+        if(title.includes(value)){
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+});
+</script>
 </html>
