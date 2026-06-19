@@ -41,14 +41,16 @@ header p{
 
 /* Product Grid */
 .products{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
 }
 
 /* Product Card */
 .product{
-    width:100%;
+    width:48%; /* Mobile */
+    max-width:250px; /* PC par bahut patla nahi hoga */
     background:white;
     border-radius:10px;
     overflow:hidden;
@@ -57,11 +59,14 @@ header p{
 
 .product img{
     width:100%;
-    height:160px;
+    height:180px;
     object-fit:contain;
-    background:#fff;
-    padding:5px;
-}
+
+    @media (min-width: 768px){
+    .product{
+        width:220px;
+    }
+        
 
   }   
 .product-content{
