@@ -19,13 +19,13 @@ body{
 
 /* HEADER */
 header{
-    background:linear-gradient(90deg,#1e3c72,#2a5298);
-    color:white;
+    background:linear-gradient(90deg,#f8bbd0,#fce4ec);
+    color:#4a4a4a;
     text-align:center;
     padding:18px;
-
     animation: bounceIn 0.9s ease;
 }
+
 
 
 /* Animation */
