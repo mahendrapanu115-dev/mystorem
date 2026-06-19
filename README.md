@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -155,7 +155,7 @@ header p{
     <div class="product">
         <img src="HARSHITA.jpg">
         <div class="product-content">
-            <h2>BANASKANTHA SING</h2>
+            <h2>BANASKATHA SING</h2>
             <div class="price">₹120</div>
 
             <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
