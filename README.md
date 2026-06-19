@@ -203,10 +203,14 @@ header p{
         <div class="product-content">
             <h2>ROASTED SING</h2>
             <div class="price">₹150</div>
-            <a class="btn buy">💳 Pay Now</a>
-          <a class="btn buy">💳 Pay Now</a>
-            <a class="btn whatsapp">📲 Order</a>
-        </div>
+         <a href="payment.html" class="btn buy">
+💳 Pay Now
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX?text=I want to order this product" 
+class="btn whatsapp">
+📲 Order
+</a>
     </div>
 
     <div class="product">
@@ -214,9 +218,14 @@ header p{
         <div class="product-content">
             <h2>BANASKANTHA SING</h2>
             <div class="price">₹120</div>
-            <a class="btn buy">💳 Pay Now</a>
-            <a class="btn whatsapp">📲 Order</a>
-        </div>
+            <a href="payment.html" class="btn buy">
+💳 Pay Now
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX?text=I want to order this product" 
+class="btn whatsapp">
+📲 Order
+</a>
     </div>
 
     <div class="product">
@@ -224,9 +233,14 @@ header p{
         <div class="product-content">
             <h2>PRODUCT 3</h2>
             <div class="price">₹180</div>
-            <a class="btn buy">💳 Pay Now</a>
-            <a class="btn whatsapp">📲 Order</a>
-        </div>
+           <a href="payment.html" class="btn buy">
+💳 Pay Now
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX?text=I want to order this product" 
+class="btn whatsapp">
+📲 Order
+</a>
     </div>
 
     <div class="product">
@@ -234,9 +248,14 @@ header p{
         <div class="product-content">
             <h2>PRODUCT 4</h2>
             <div class="price">₹200</div>
-            <a class="btn buy">💳 Pay Now</a>
-            <a class="btn whatsapp">📲 Order</a>
-        </div>
+           <a href="payment.html" class="btn buy">
+💳 Pay Now
+</a>
+
+<a href="https://wa.me/91XXXXXXXXXX?text=I want to order this product" 
+class="btn whatsapp">
+📲 Order
+</a>>
     </div>
 
 </div>
