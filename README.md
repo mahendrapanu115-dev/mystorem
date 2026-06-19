@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -16,25 +16,7 @@
 body{
     background:#f5f5f5;
 }
-<script>
-const searchInput = document.getElementById("searchInput");
-const products = document.querySelectorAll(".product");
 
-searchInput.addEventListener("keyup", function(){
-
-    let value = this.value.toLowerCase();
-
-    products.forEach(function(item){
-        let title = item.querySelector("h2").innerText.toLowerCase();
-
-        if(title.includes(value)){
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
-    });
-
-});
 /* HEADER */
 header{
     background:#ffffff;
@@ -48,37 +30,43 @@ header h1,
 header p{
     text-align:center;
 }
-/* Title animation */
+
 header h1{
     animation: textPop 1s ease;
 }
 
-/* subtitle animation */
 header p{
     animation: fadeUp 1.2s ease;
 }
 
-<div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search products... 🔍">
-</div>
-    
-.search-box{
-    padding:10px;
-    text-align:center;
+/* PREMIUM SEARCH BOX */
+.search-wrapper{
     background:#fff;
+    padding:12px;
+    text-align:center;
     border-bottom:1px solid #eee;
 }
 
-.search-box input{
-    width:90%;
-    max-width:400px;
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:8px;
+.search-wrapper input{
+    width:95%;
+    max-width:450px;
+    padding:12px 15px;
+    border:none;
     outline:none;
+    border-radius:30px;
+    background:#f1f3f6;
     font-size:14px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.08);
+    transition:0.3s;
 }
-/* CLEAN TITLE ANIMATION */
+
+.search-wrapper input:focus{
+    background:#fff;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    transform:scale(1.02);
+}
+
+/* ANIMATION */
 @keyframes textPop{
     0%{
         transform:translateY(-10px);
@@ -90,7 +78,6 @@ header p{
     }
 }
 
-/* CLEAN TEXT ANIMATION */
 @keyframes fadeUp{
     0%{
         opacity:0;
@@ -101,34 +88,6 @@ header p{
         transform:translateY(0);
     }
 }
-}
-
-/* Title effect */
-@keyframes textPop{
-    0%{
-        transform:scale(0.6);
-        opacity:0;
-        letter-spacing:5px;
-    }
-    100%{
-        transform:scale(1);
-        opacity:1;
-        letter-spacing:0px;
-    }
-}
-
-/* Subtitle effect */
-@keyframes fadeUp{
-    0%{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    100%{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
 
 /* CONTAINER */
 .container{
@@ -141,7 +100,7 @@ header p{
 /* PRODUCTS GRID */
 .products{
     display:grid;
-    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
+    grid-template-columns:repeat(2, 1fr);
     gap:10px;
 }
 
@@ -155,15 +114,14 @@ header p{
     flex-direction:column;
 }
 
-/* IMAGE FIX */
+/* IMAGE */
 .product img{
     width:100%;
-    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
-    object-fit:cover;  /* सभी images same crop + same look */
-    background:#fff;
+    height:180px;
+    object-fit:cover;
 }
 
-/* TEXT AREA */
+/* CONTENT */
 .product-content{
     padding:8px;
     text-align:center;
@@ -228,67 +186,52 @@ header p{
     <p>Best Quality Products | Fast Delivery</p>
 </header>
 
+<!-- SEARCH BOX -->
+<div class="search-wrapper">
+    <input type="text" id="searchInput" placeholder="🔍 Search products, brands...">
+</div>
+
 <div class="container">
 
 <div class="products">
 
-    <!-- PRODUCT 1 -->
     <div class="product">
         <img src="chana.jpg">
         <div class="product-content">
             <h2>ROASTED SING</h2>
             <div class="price">₹150</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
-            📲 Order
-            </a>
+            <a class="btn buy">💳 Pay Now</a>
+            <a class="btn whatsapp">📲 Order</a>
         </div>
     </div>
 
-    <!-- PRODUCT 2 -->
     <div class="product">
         <img src="HARSHITA.jpg">
         <div class="product-content">
-            <h2>BANASKATHA SING</h2>
+            <h2>BANASKANTHA SING</h2>
             <div class="price">₹120</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
-            📲 Order
-            </a>
+            <a class="btn buy">💳 Pay Now</a>
+            <a class="btn whatsapp">📲 Order</a>
         </div>
     </div>
 
-    <!-- PRODUCT 3 -->
     <div class="product">
         <img src="product3.jpg">
         <div class="product-content">
             <h2>PRODUCT 3</h2>
             <div class="price">₹180</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
-            📲 Order
-            </a>
+            <a class="btn buy">💳 Pay Now</a>
+            <a class="btn whatsapp">📲 Order</a>
         </div>
     </div>
 
-    <!-- PRODUCT 4 -->
     <div class="product">
         <img src="product4.jpg">
         <div class="product-content">
             <h2>PRODUCT 4</h2>
             <div class="price">₹200</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
-            📲 Order
-            </a>
+            <a class="btn buy">💳 Pay Now</a>
+            <a class="btn whatsapp">📲 Order</a>
         </div>
     </div>
 
@@ -296,7 +239,26 @@ header p{
 
 </div>
 
-</body>
+<script>
+const searchInput = document.getElementById("searchInput");
+const products = document.querySelectorAll(".product");
 
+searchInput.addEventListener("input", function(){
+
+    let value = this.value.toLowerCase();
+
+    products.forEach(function(item){
+        let title = item.querySelector("h2").innerText.toLowerCase();
+
+        if(title.includes(value)){
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+});
 </script>
+
+</body>
 </html>
