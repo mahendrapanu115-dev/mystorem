@@ -43,7 +43,7 @@ header p{
 .products{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:8px;
+    gap:10px;
 }
 
 /* Product Card */
@@ -57,12 +57,29 @@ header p{
 
 .product img{
     width:100%;
-    height:140px;      /* sab images same height */
-    object-fit:contain; /* image cut nahi hogi */
-    background:white;
+    height:160px;
+    object-fit:contain;
+    background:#fff;
     padding:5px;
 }
 
+}
+
+/* Tablet */
+@media (min-width:768px){
+    .products{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    }
+
+/* Laptop/Desktop */
+@media (min-width:1024px){
+    .products{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    
 .product-content{
     padding:10px;
     text-align:center;
