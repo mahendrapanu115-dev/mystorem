@@ -204,8 +204,11 @@ header p{
             <h2>ROASTED SING</h2>
             <div class="price">₹150</div>
             <a class="btn buy">💳 Pay Now</a>
-            <a class="btn whatsapp">📲 Order</a>
-        </div>
+                 <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+            📲 Order
+            </a>
     </div>
 
     <div class="product">
