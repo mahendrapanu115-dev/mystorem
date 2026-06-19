@@ -63,23 +63,7 @@ header p{
     padding:5px;
 }
 
-}
-
-/* Tablet */
-@media (min-width:768px){
-    .products{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    }
-
-/* Laptop/Desktop */
-@media (min-width:1024px){
-    .products{
-        grid-template-columns:repeat(4,1fr);
-    }
-
-    
+  }   
 .product-content{
     padding:10px;
     text-align:center;
