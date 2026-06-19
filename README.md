@@ -41,14 +41,14 @@ header p{
 
 /* Product Grid */
 .products{
-    display:flex;
-     flex-direction:column;
-    gap:10px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
 }
 
 /* Product Card */
 .product{
-    width:calc(50% - 5px);
+    width:100%;
     background:white;
     border-radius:10px;
     overflow:hidden;
@@ -57,9 +57,9 @@ header p{
 
 .product img{
     width:100%;
-    height:150;
-   object-fit:contain;
-    background:#fff;
+    height:140px;      /* sab images same height */
+    object-fit:contain; /* image cut nahi hogi */
+    background:white;
     padding:5px;
 }
 
