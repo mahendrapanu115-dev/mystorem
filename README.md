@@ -19,12 +19,25 @@ body{
 
 /* HEADER */
 header{
-    background:linear-gradient(to right,#ff512f,#dd2476);
-    color:white;
-    text-align:center;
-    padding:18px;
+    animation: bounceIn 0.9s ease;
+}
 
-    animation: slideDown 0.8s ease-out;
+@keyframes bounceIn{
+    0%{
+        transform:scale(0.3);
+        opacity:0;
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    70%{
+        transform:scale(0.9);
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
 }
 
 /* Animation */
