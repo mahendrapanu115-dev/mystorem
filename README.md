@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Mera Online Store</title>
 
@@ -43,14 +44,12 @@ header p{
 .products{
     display:flex;
     flex-wrap:wrap;
-    gap:15px;
-    justify-content:center;
+    gap:10px;
 }
 
 /* Product Card */
 .product{
-    width:48%; /* Mobile */
-    max-width:250px; /* PC par bahut patla nahi hoga */
+    width:calc(50% - 5px);
     background:white;
     border-radius:10px;
     overflow:hidden;
@@ -59,16 +58,12 @@ header p{
 
 .product img{
     width:100%;
-    height:180px;
-    object-fit:contain;
+    height:180px;       /* sab images ki same height */
+    object-fit:contain; /* image cut nahi hogi */
+    background:#fff;
+    padding:5px;
+}
 
-    @media (min-width: 768px){
-    .product{
-        width:220px;
-    }
-        
-
-  }   
 .product-content{
     padding:10px;
     text-align:center;
@@ -124,22 +119,6 @@ header p{
     .product h2{
         font-size:18px;
     }
-}
-    *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html,body{
-    width:100%;
-    overflow-x:hidden;
-}
-
-.container{
-    width:100%;
-    max-width:100%;
-    padding:8px;
 }
 </style>
 </head>
