@@ -18,22 +18,37 @@ body{
 }
 
 /* HEADER */
-header{
-    background:#ffffff;
-    color:#222;
-    text-align:center;
-    padding:18px;
-    border-bottom:1px solid #eee;
-}
-
-/* Title animation */
 header h1{
-    animation: textPop 1s ease;
+    animation: textPop 0.8s ease;
 }
 
-/* subtitle animation */
 header p{
-    animation: fadeUp 1.2s ease;
+    animation: fadeUp 1s ease;
+}
+
+/* CLEAN TITLE ANIMATION */
+@keyframes textPop{
+    0%{
+        transform:translateY(-10px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* CLEAN TEXT ANIMATION */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 }
 
 /* Title effect */
