@@ -23,7 +23,26 @@ body{
     background:white;
     padding:12px;
     text-align:center;
-});
+}
+
+    .search-wrapper input{
+
+    width:95%;
+    max-width:450px;
+
+    padding:12px 15px;
+
+    border:none;
+    outline:none;
+
+    border-radius:30px;
+
+    background:#f1f3f6;
+
+    font-size:14px;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
+        
 /* HEADER */
 header{
     background:#ffffff;
