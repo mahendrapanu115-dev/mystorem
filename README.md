@@ -19,46 +19,49 @@ body{
 
 /* HEADER */
 header{
-    background:linear-gradient(90deg,#f8bbd0,#fce4ec);
-    color:#4a4a4a;
+    background:#ffffff;
+    color:#222;
     text-align:center;
     padding:18px;
-    animation: bounceIn 0.9s ease;
+    border-bottom:1px solid #eee;
 }
 
-
-
-/* Animation */
-@keyframes slideDown{
-    from{
-        transform:translateY(-100px);
-        opacity:0;
-    }
-    to{
-        transform:translateY(0);
-        opacity:1;
-    }
-
-}
-
+/* Title animation */
 header h1{
-    animation: glow 2s infinite alternate;
+    animation: textPop 1s ease;
 }
 
-@keyframes glow{
-    from{
-        text-shadow:0 0 5px #fff;
-    }
-    to{
-        text-shadow:0 0 20px #fff, 0 0 30px #ffcc00;
-    }
-
-}
-
+/* subtitle animation */
 header p{
-    font-size:14px;
-    margin-top:5px;
+    animation: fadeUp 1.2s ease;
 }
+
+/* Title effect */
+@keyframes textPop{
+    0%{
+        transform:scale(0.6);
+        opacity:0;
+        letter-spacing:5px;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+        letter-spacing:0px;
+    }
+}
+
+/* Subtitle effect */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 
 /* CONTAINER */
 .container{
