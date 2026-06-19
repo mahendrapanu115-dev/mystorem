@@ -18,13 +18,19 @@ body{
 }
 
 /* HEADER */
-header h1{
-    animation: textPop 0.8s ease;
+header{
+    background:#ffffff;
+    color:#222;
+    text-align:center;
+    padding:18px;
+    border-bottom:1px solid #eee;
 }
 
+header h1,
 header p{
-    animation: fadeUp 1s ease;
+    text-align:center;
 }
+
 
 /* CLEAN TITLE ANIMATION */
 @keyframes textPop{
