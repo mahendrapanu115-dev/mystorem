@@ -23,10 +23,35 @@ header{
     color:white;
     text-align:center;
     padding:18px;
+
+    animation: slideDown 0.8s ease-out;
+}
+
+/* Animation */
+@keyframes slideDown{
+    from{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+
 }
 
 header h1{
-    font-size:24px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 5px #fff;
+    }
+    to{
+        text-shadow:0 0 20px #fff, 0 0 30px #ffcc00;
+    }
+
 }
 
 header p{
