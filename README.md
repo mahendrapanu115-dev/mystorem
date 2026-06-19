@@ -16,6 +16,13 @@ body{
     background:#f5f5f5;
 }
 
+/* SEARCH */
+
+.search-wrapper{
+
+    background:white;
+    padding:12px;
+    text-align:center;
 });
 /* HEADER */
 header{
