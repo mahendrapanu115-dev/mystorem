@@ -186,10 +186,7 @@ header p{
         <input type="text" id="searchInput" placeholder="🔍 Search products, brands...">
     </div>
 
-    <h1>🛒 Mera Online Store</h1>
-    <p>Best Quality Products | Fast Delivery</p>
-
-</header>
+   
 <header>
     <h1>🛒 Mera Online Store</h1>
     <p>Best Quality Products | Fast Delivery</p>
