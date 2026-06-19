@@ -62,10 +62,9 @@ header p{
 /* IMAGE FIX */
 .product img{
     width:100%;
-    height:140px;
-    object-fit:contain;
+    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
+    object-fit:cover;  /* सभी images same crop + same look */
     background:#fff;
-    padding:5px;
 }
 
 /* TEXT AREA */
