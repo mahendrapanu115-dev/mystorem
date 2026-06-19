@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Mera Online Store</title>
 
 <style>
@@ -58,7 +57,7 @@ header p{
 
 .product img{
     width:100%;
-    height:130px;
+    height:auto;
     object-fit:cover;
 }
 
@@ -117,6 +116,22 @@ header p{
     .product h2{
         font-size:18px;
     }
+}
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.container{
+    width:100%;
+    max-width:100%;
+    padding:8px;
 }
 </style>
 </head>
