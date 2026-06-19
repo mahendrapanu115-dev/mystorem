@@ -16,7 +16,25 @@
 body{
     background:#f5f5f5;
 }
+<script>
+const searchInput = document.getElementById("searchInput");
+const products = document.querySelectorAll(".product");
 
+searchInput.addEventListener("keyup", function(){
+
+    let value = this.value.toLowerCase();
+
+    products.forEach(function(item){
+        let title = item.querySelector("h2").innerText.toLowerCase();
+
+        if(title.includes(value)){
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+
+});
 /* HEADER */
 header{
     background:#ffffff;
@@ -39,12 +57,11 @@ header h1{
 header p{
     animation: fadeUp 1.2s ease;
 }
-   
-    <div class="search-box">
+
+<div class="search-box">
     <input type="text" id="searchInput" placeholder="Search products... 🔍">
 </div>
-
-
+    
 .search-box{
     padding:10px;
     text-align:center;
@@ -280,24 +297,6 @@ header p{
 </div>
 
 </body>
-<script>
-const searchInput = document.getElementById("searchInput");
-const products = document.querySelectorAll(".product");
 
-searchInput.addEventListener("keyup", function(){
-
-    let value = this.value.toLowerCase();
-
-    products.forEach(function(item){
-        let title = item.querySelector("h2").innerText.toLowerCase();
-
-        if(title.includes(value)){
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
-    });
-
-});
 </script>
 </html>
