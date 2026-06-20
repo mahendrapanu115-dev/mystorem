@@ -51,6 +51,53 @@ header p{
 }
 
 .search-wrapper{
+width:100%;
+display:flex;
+justify-content:center;
+position:relative;
+}
+
+
+.search-container{
+
+width:600px;
+height:55px;
+background:white;
+border-radius:35px;
+display:flex;
+align-items:center;
+padding:6px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+
+.search-container input{
+
+flex:1;
+border:none;
+outline:none;
+padding-left:20px;
+font-size:16px;
+
+}
+
+
+.search-btn{
+
+height:48px;
+padding:0 35px;
+border:none;
+border-radius:30px;
+background:#0d8cff;
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+
+}
+
+
 #result{
 
 position:absolute;
@@ -59,8 +106,6 @@ width:600px;
 background:white;
 border-radius:15px;
 box-shadow:0 8px 25px rgba(0,0,0,.2);
-overflow:hidden;
-z-index:99;
 
 }
 
@@ -75,11 +120,10 @@ cursor:pointer;
 
 .item:hover{
 
-background:#f2f2f2;
+background:#eee;
 
 }
 
-}
 
 
 }
@@ -105,7 +149,7 @@ background:#f2f2f2;
         opacity:1;
         transform:translateY(0);
     }
-}
+
 }
 
 /* Title effect */
@@ -236,9 +280,8 @@ background:#f2f2f2;
     <input 
     type="text" 
     id="searchInput"
-    placeholder="Search for product, brand"
+    placeholder="Search for Product"
     onkeyup="liveSearch()">
-
 
     <button class="search-btn">
       🔍 Search
@@ -252,11 +295,12 @@ background:#f2f2f2;
 </div>
 
 
+
 <script>
 
 let products = [
- "ROASTED SING",
-"BANASKATHA SING",
+"iPhone 15",
+"Samsung Mobile",
 "Laptop HP",
 "Nike Shoes",
 "Smart Watch",
@@ -268,7 +312,7 @@ let products = [
 
 function liveSearch(){
 
-let text = document
+let input = document
 .getElementById("searchInput")
 .value
 .toLowerCase();
@@ -276,34 +320,41 @@ let text = document
 
 let result = document.getElementById("result");
 
-result.innerHTML = "";
+result.innerHTML="";
 
 
-if(text==""){
+if(input == ""){
 return;
 }
 
 
-products.forEach(function(product){
+products.forEach(product=>{
 
 
-if(product.toLowerCase().includes(text)){
+if(product.toLowerCase().includes(input)){
 
 
-let item = document.createElement("div");
+let div = document.createElement("div");
 
-item.className="item";
+div.className="item";
 
-item.innerHTML = product;
+div.innerHTML = product;
 
 
-result.appendChild(item);
+result.appendChild(div);
 
 
 }
 
 
 });
+
+
+}
+
+</script>
+
+
 
 
 }
