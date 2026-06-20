@@ -50,6 +50,13 @@ header p{
 
 }
 
+.search-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* left-right center */
+  align-items: center;      /* up-down center */
+}
+
 .search-container {
   width: 80%;
   max-width: 600px;
@@ -68,7 +75,6 @@ header p{
   outline: none;
   padding: 0 20px;
   font-size: 14px;
-  border-radius: 25px;
 }
 
 .search-container button {
@@ -78,12 +84,8 @@ header p{
   border-radius: 22px;
   padding: 10px 22px;
   cursor: pointer;
-  font-weight: bold;
 }
 
-.search-container button:hover {
-  background: #006edc;
-}
 }
 /* CLEAN TITLE ANIMATION */
 @keyframes textPop{
@@ -231,9 +233,11 @@ header p{
 <body>
 
 <!-- SEARCH -->
-<div class="search-container">
-  <input type="text" placeholder="Search for City, Place">
-  <button>🔍 Search</button>
+<div class="search-wrapper">
+  <div class="search-container">
+    <input type="text" placeholder="Search for City, Place">
+    <button>🔍 Search</button>
+  </div>
 </div>
 
 <header>
