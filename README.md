@@ -236,7 +236,7 @@ background:#f2f2f2;
     <input 
     type="text" 
     id="searchInput"
-    placeholder="Search for City, Place"
+    placeholder="Search for product, brand"
     onkeyup="liveSearch()">
 
 
