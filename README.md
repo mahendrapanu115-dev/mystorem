@@ -53,38 +53,60 @@ header p{
 .search-wrapper {
   width: 100%;
   display: flex;
-  justify-content: center;  /* left-right center */
-  align-items: center;      /* up-down center */
+  justify-content: center;
 }
 
 .search-container {
   width: 80%;
   max-width: 600px;
-  height: 45px;
+  height: 50px;
   background: white;
-  border-radius: 25px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
-  padding: 5px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  padding: 6px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .search-container input {
   flex: 1;
   border: none;
   outline: none;
-  padding: 0 20px;
-  font-size: 14px;
+  padding-left: 20px;
+  font-size: 15px;
 }
 
-.search-container button {
-  background: #0d8cff;
+
+/* New Button Style */
+.search-btn {
+  background: linear-gradient(135deg,#0d8cff,#005bea);
   color: white;
   border: none;
-  border-radius: 22px;
-  padding: 10px 22px;
+  height: 42px;
+  padding: 0 25px;
+  border-radius: 25px;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(13,140,255,0.4);
 }
+
+
+/* Hover effect */
+.search-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(13,140,255,0.5);
+}
+
+
+/* Click karne par bahar aane wala effect */
+.search-btn:active {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px rgba(13,140,255,0.8);
+}
+
 
 }
 /* CLEAN TITLE ANIMATION */
@@ -236,7 +258,9 @@ header p{
 <div class="search-wrapper">
   <div class="search-container">
     <input type="text" placeholder="Search for City, Place">
-    <button>🔍 Search</button>
+    <button class="search-btn">
+      <span>🔍</span> Search
+    </button>
   </div>
 </div>
 
