@@ -257,7 +257,7 @@ header p{
 <div class="search-wrapper">
   <div class="search-container">
 
-    <input id="mySearch" type="text" placeholder="Search for City, Place">
+    <input id="mySearch" type="text" placeholder="product, brand">
 
     <button class="search-btn" onclick="searchNow()">
       🔍 Search
