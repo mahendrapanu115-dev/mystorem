@@ -50,23 +50,40 @@ header p{
 
 }
 
-.search-box input{
+.search-container {
+  width: 80%;
+  max-width: 600px;
+  height: 45px;
+  background: white;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
 
-    width:95%;
-    max-width:450px;
+.search-container input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-size: 14px;
+  border-radius: 25px;
+}
 
-    padding:12px 15px;
+.search-container button {
+  background: #0d8cff;
+  color: white;
+  border: none;
+  border-radius: 22px;
+  padding: 10px 22px;
+  cursor: pointer;
+  font-weight: bold;
+}
 
-    border:none;
-    outline:none;
-
-    border-radius:30px;
-
-    background:#f1f3f6;
-
-    font-size:14px;
-
-    box-shadow:0 2px 6px rgba(0,0,0,.1);
+.search-container button:hover {
+  background: #006edc;
+}
 }
 /* CLEAN TITLE ANIMATION */
 @keyframes textPop{
@@ -214,12 +231,11 @@ header p{
 <body>
 
 <!-- SEARCH -->
-
-<div class="search-wrapper">
-
-<input type="text" id="searchInput" placeholder="🔍 Search products, brands...">
-
+<div class="search-container">
+  <input type="text" placeholder="Search for City, Place">
+  <button>🔍 Search</button>
 </div>
+
 <header>
     <h1>🛒 Mera Online Store</h1>
     <p>Best Quality Products | Fast Delivery</p>
