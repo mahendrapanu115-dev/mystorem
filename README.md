@@ -51,79 +51,60 @@ header p{
 }
 
 .search-wrapper{
-width:100%;
-display:flex;
-justify-content:center;
-position:relative;
+  width:100%;
+  display:flex;
+  justify-content:center;
 }
-
 
 .search-container{
-
-width:600px;
-height:55px;
-background:white;
-border-radius:35px;
-display:flex;
-align-items:center;
-padding:6px;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
-
+  width:600px;
+  height:55px;
+  background:white;
+  border-radius:35px;
+  display:flex;
+  align-items:center;
+  padding:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
-
 
 .search-container input{
-
-flex:1;
-border:none;
-outline:none;
-padding-left:20px;
-font-size:16px;
-
+  flex:1;
+  border:none;
+  outline:none;
+  padding-left:20px;
+  font-size:16px;
 }
 
 
+/* pura button popup effect */
 .search-btn{
+  height:48px;
+  padding:0 35px;
+  border:none;
+  border-radius:30px;
+  background:#0d8cff;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
 
-height:48px;
-padding:0 35px;
-border:none;
-border-radius:30px;
-background:#0d8cff;
-color:white;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-
+  transition:0.25s ease;
+  box-shadow:0 6px 15px rgba(0,140,255,0.4);
 }
 
 
-#result{
-
-position:absolute;
-top:65px;
-width:600px;
-background:white;
-border-radius:15px;
-box-shadow:0 8px 25px rgba(0,0,0,.2);
-
+/* mouse le jane par */
+.search-btn:hover{
+  transform:scale(1.08);
 }
 
 
-.item{
-
-padding:14px 20px;
-cursor:pointer;
-
+/* click karne par pura button bahar pop */
+.search-btn:active{
+  transform:scale(1.25);
+  box-shadow:0 0 35px rgba(0,140,255,0.8);
 }
-
-
-.item:hover{
-
-background:#eee;
-
 }
-
 
 
 }
@@ -149,7 +130,7 @@ background:#eee;
         opacity:1;
         transform:translateY(0);
     }
-
+}
 }
 
 /* Title effect */
@@ -274,91 +255,26 @@ background:#eee;
 
 <!-- SEARCH -->
 <div class="search-wrapper">
-
   <div class="search-container">
 
-    <input 
-    type="text" 
-    id="searchInput"
-    placeholder="Search for Product"
-    onkeyup="liveSearch()">
+    <input id="mySearch" type="text" placeholder="Search for City, Place">
 
-    <button class="search-btn">
+    <button class="search-btn" onclick="searchNow()">
       🔍 Search
     </button>
 
   </div>
-
-
-  <div id="result"></div>
-
 </div>
 
 
-
 <script>
+function searchNow(){
 
-let products = [
-"iPhone 15",
-"Samsung Mobile",
-"Laptop HP",
-"Nike Shoes",
-"Smart Watch",
-"Headphone",
-"Leather Bag",
-"T Shirt"
-];
+  let text = document.getElementById("mySearch").value;
 
-
-function liveSearch(){
-
-let input = document
-.getElementById("searchInput")
-.value
-.toLowerCase();
-
-
-let result = document.getElementById("result");
-
-result.innerHTML="";
-
-
-if(input == ""){
-return;
-}
-
-
-products.forEach(product=>{
-
-
-if(product.toLowerCase().includes(input)){
-
-
-let div = document.createElement("div");
-
-div.className="item";
-
-div.innerHTML = product;
-
-
-result.appendChild(div);
-
+  alert("Aapne search kiya: " + text);
 
 }
-
-
-});
-
-
-}
-
-</script>
-
-
-
-
-}
-
 </script>
 
 <header>
