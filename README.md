@@ -51,64 +51,6 @@ header p{
 }
 
 .search-wrapper{
-width:100%;
-display:flex;
-justify-content:center;
-position:relative;
-}
-
-
-.search-container{
-
-width:600px;
-height:55px;
-background:white;
-border-radius:35px;
-display:flex;
-align-items:center;
-padding:6px;
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
-
-}
-
-
-.search-container input{
-
-flex:1;
-border:none;
-outline:none;
-padding-left:20px;
-font-size:16px;
-
-}
-
-
-.search-btn{
-
-height:48px;
-padding:0 35px;
-border:none;
-border-radius:30px;
-background:#0d8cff;
-color:white;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-
-transition:.25s;
-
-}
-
-
-.search-btn:hover{
-
-transform:scale(1.08);
-
-}
-
-
-/* Live result box */
-
 #result{
 
 position:absolute;
@@ -117,7 +59,8 @@ width:600px;
 background:white;
 border-radius:15px;
 box-shadow:0 8px 25px rgba(0,0,0,.2);
-z-index:10;
+overflow:hidden;
+z-index:99;
 
 }
 
@@ -135,7 +78,7 @@ cursor:pointer;
 background:#f2f2f2;
 
 }
-}
+
 }
 
 
@@ -309,48 +252,55 @@ background:#f2f2f2;
 </div>
 
 
-
 <script>
 
 let products = [
-"Mobile",
-"Laptop",
-"Shoes",
-"Shirt",
-"Watch",
-"Bag",
-"Headphone"
+ "ROASTED SING",
+"BANASKATHA SING",
+"Laptop HP",
+"Nike Shoes",
+"Smart Watch",
+"Headphone",
+"Leather Bag",
+"T Shirt"
 ];
 
 
 function liveSearch(){
 
-let value = document.getElementById("searchInput").value.toLowerCase();
+let text = document
+.getElementById("searchInput")
+.value
+.toLowerCase();
+
 
 let result = document.getElementById("result");
 
-result.innerHTML="";
+result.innerHTML = "";
 
 
-if(value==""){
- return;
+if(text==""){
+return;
 }
 
 
-products.filter(product => 
-product.toLowerCase().includes(value)
-
-).forEach(product=>{
+products.forEach(function(product){
 
 
-let div = document.createElement("div");
-
-div.className="item";
-
-div.innerHTML = product;
+if(product.toLowerCase().includes(text)){
 
 
-result.appendChild(div);
+let item = document.createElement("div");
+
+item.className="item";
+
+item.innerHTML = product;
+
+
+result.appendChild(item);
+
+
+}
 
 
 });
@@ -358,17 +308,6 @@ result.appendChild(div);
 
 }
 
-</script>
-
-
-<script>
-function searchNow(){
-
-  let text = document.getElementById("mySearch").value;
-
-  alert("Aapne search kiya: " + text);
-
-}
 </script>
 
 <header>
