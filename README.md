@@ -288,7 +288,7 @@ function searchNow(){
 
     <!-- PRODUCT 1 -->
     <div class="product">
-        <WhatsApp Image 2026-06-18 at 11.21.32 AM.jpeg">
+        <img src="divya.new.jpg">
         <div class="product-content">
             <h2>ROASTED SING</h2>
             <div class="price">₹150</div>
