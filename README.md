@@ -50,61 +50,60 @@ header p{
 
 }
 
-.search-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+.search-wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
 }
 
-.search-container {
-  width: 80%;
-  max-width: 600px;
-  height: 50px;
-  background: white;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  padding: 6px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+.search-container{
+  width:600px;
+  height:55px;
+  background:white;
+  border-radius:35px;
+  display:flex;
+  align-items:center;
+  padding:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-.search-container input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding-left: 20px;
-  font-size: 15px;
-}
-
-
-/* New Button Style */
-.search-btn {
-  background: linear-gradient(135deg,#0d8cff,#005bea);
-  color: white;
-  border: none;
-  height: 42px;
-  padding: 0 25px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-
-  transition: 0.3s ease;
-  box-shadow: 0 5px 15px rgba(13,140,255,0.4);
+.search-container input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding-left:20px;
+  font-size:16px;
 }
 
 
-/* Hover effect */
-.search-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(13,140,255,0.5);
+/* pura button popup effect */
+.search-btn{
+  height:48px;
+  padding:0 35px;
+  border:none;
+  border-radius:30px;
+  background:#0d8cff;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+
+  transition:0.25s ease;
+  box-shadow:0 6px 15px rgba(0,140,255,0.4);
 }
 
 
-/* Click karne par bahar aane wala effect */
-.search-btn:active {
-  transform: scale(1.15);
-  box-shadow: 0 0 25px rgba(13,140,255,0.8);
+/* mouse le jane par */
+.search-btn:hover{
+  transform:scale(1.08);
+}
+
+
+/* click karne par pura button bahar pop */
+.search-btn:active{
+  transform:scale(1.25);
+  box-shadow:0 0 35px rgba(0,140,255,0.8);
+}
 }
 
 
@@ -258,9 +257,7 @@ header p{
 <div class="search-wrapper">
   <div class="search-container">
     <input type="text" placeholder="Search for City, Place">
-    <button class="search-btn">
-      <span>🔍</span> Search
-    </button>
+    <button class="search-btn">🔍 Search</button>
   </div>
 </div>
 
