@@ -302,7 +302,7 @@ height:350px;
 
 
 <div>
-
+product 1
 
 <div class="big-img">
 
@@ -315,7 +315,7 @@ height:350px;
 <div class="small-images">
 
 <img onclick="changeImg(this.src)"
-<img src="HARSHITA.jpg">
+<img src="divya.jpg">
 
 
 <img onclick="changeImg(this.src)"
@@ -324,6 +324,7 @@ height:350px;
 
 <img onclick="changeImg(this.src)"
 <img src="HARSHITA.jpg">
+
 
 </div>
 
@@ -337,7 +338,7 @@ height:350px;
 
 
 <h1>
-ROASTED SING
+Lightweight Brown Bomber Jacket
 </h1>
 
 
@@ -373,7 +374,8 @@ ROASTED SING
 
 
 <div class="tags">
-<div class="tag">🥜 Premium Quality</div>
+
+    <div class="tag">🥜 Premium Quality</div>
 
 <div class="tag">🌱 Fresh</div>
 
@@ -388,10 +390,9 @@ ROASTED SING
 
 
 <p class="desc">
-
-Premium quality roasted sing with fresh and crispy taste.
-Made from selected peanuts, hygienically prepared and packed
-to maintain freshness and great flavo
+A stylish light bomber jacket, perfect for transitional seasons.
+Made from breathable water resistant material with zip front,
+side pockets and modern design.
 
 </p>
 
@@ -439,6 +440,9 @@ You might also like
 </h2>
 
 
+
+
+</div>
 
 
 
