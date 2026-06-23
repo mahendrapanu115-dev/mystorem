@@ -542,7 +542,7 @@ height:350px;
 <div class="big-img">
 
 <img id="mainImage"
-src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
+ <img src="divya.jpg">
 
 </div>
 
@@ -558,7 +558,7 @@ src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
 
 
 <img onclick="changeImg(this.src)"
-src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+ <img src="divya.jpg">
 
 
 </div>
