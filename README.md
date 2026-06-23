@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 
-<title>Roasted Peanut Brand</title>
-
+<title>Roasted Peanut Premium</title>
 
 <style>
 
@@ -12,49 +10,58 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Poppins,Arial;
 }
 
 
 body{
 
-background:#120804;
+background:#1b0d05;
+
 color:white;
+
 overflow-x:hidden;
 
 }
 
 
-/* NAV */
+/* NAVBAR */
+
 
 nav{
 
-height:80px;
+width:90%;
 
-width:100%;
+margin:25px auto;
 
-padding:0 8%;
+background:#3a1b0d;
+
+border-radius:50px;
+
+padding:18px 35px;
 
 display:flex;
 
-align-items:center;
-
 justify-content:space-between;
 
-background:#1d0d06;
+align-items:center;
+
+animation:show 1s;
 
 }
+
 
 
 .logo{
 
-font-size:32px;
+font-size:30px;
 
 font-weight:bold;
 
-color:#ffb000;
+color:#ffb703;
 
 }
+
 
 
 nav a{
@@ -63,134 +70,152 @@ color:white;
 
 text-decoration:none;
 
-margin-left:30px;
+margin:15px;
 
 }
 
 
 
-/* HERO FULL */
+/* HERO */
+
 
 .hero{
-
-min-height:100vh;
-
-width:100%;
 
 display:flex;
 
 align-items:center;
 
-justify-content:space-around;
+justify-content:center;
 
-padding:50px 8%;
+min-height:600px;
+
+padding:40px;
+
+gap:50px;
 
 }
 
 
 
-.content{
+.text{
 
 width:45%;
 
-}
-
-
-
-.content h1{
-
-font-size:75px;
-
-line-height:1;
-
-}
-
-
-.content span{
-
-color:#ffb000;
+animation:left 1.2s;
 
 }
 
 
 
-.content p{
+.text h1{
 
-font-size:22px;
+font-size:65px;
+
+line-height:1.1;
+
+}
+
+
+.text span{
+
+color:#ffb703;
+
+}
+
+
+
+.text p{
+
+font-size:20px;
 
 color:#ddd;
 
-margin:30px 0;
-
-line-height:1.6;
+margin:25px 0;
 
 }
 
 
 
-.btn{
+button{
 
-display:inline-block;
+background:#ffb703;
 
-padding:18px 45px;
+border:none;
 
-background:#ffb000;
+padding:18px 40px;
 
-color:black;
-
-border-radius:50px;
-
-font-weight:bold;
+border-radius:40px;
 
 font-size:18px;
 
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+
+button:hover{
+
+transform:scale(1.15);
+
+background:white;
+
 }
 
 
 
-/* IMAGE */
 
-.product-img{
 
-width:45%;
+/* PRODUCT IMAGE */
 
-text-align:center;
+
+.image{
+
+width:40%;
 
 position:relative;
 
 }
 
 
+.image img{
 
-.product-img img{
+width:100%;
 
-width:500px;
+animation:updown 3s infinite;
 
-max-width:100%;
-
-animation:float 3s infinite;
+filter:drop-shadow(0 20px 30px black);
 
 }
 
 
 
-.glow{
+
+/* floating */
+
+
+.circle{
 
 position:absolute;
 
-width:450px;
+width:350px;
 
-height:450px;
+height:350px;
 
-background:#ffb000;
+background:#ffb703;
 
-filter:blur(120px);
+border-radius:50%;
 
-opacity:.5;
+z-index:-1;
+
+right:0;
 
 top:50px;
 
-z-index:-1;
+filter:blur(80px);
 
 }
 
@@ -198,10 +223,10 @@ z-index:-1;
 
 
 
-/* FEATURES */
+/* cards */
 
 
-.features{
+.cards{
 
 display:flex;
 
@@ -209,7 +234,8 @@ justify-content:center;
 
 gap:30px;
 
-padding:50px;
+margin:40px;
+
 
 }
 
@@ -217,13 +243,13 @@ padding:50px;
 
 .card{
 
-background:#32170b;
+background:#3a1b0d;
 
-width:250px;
-
-padding:35px;
+padding:30px;
 
 border-radius:25px;
+
+width:220px;
 
 text-align:center;
 
@@ -237,7 +263,7 @@ transition:.4s;
 
 transform:translateY(-15px);
 
-background:#ffb000;
+background:#ffb703;
 
 color:black;
 
@@ -245,17 +271,80 @@ color:black;
 
 
 
+/* peanuts animation */
 
-/* ANIMATION */
+
+.peanut{
+
+position:absolute;
+
+font-size:40px;
+
+animation:move 8s infinite;
+
+}
 
 
-@keyframes float{
+.one{
+
+left:10%;
+
+}
+
+
+.two{
+
+right:20%;
+
+animation-delay:3s;
+
+}
+
+
+
+@keyframes move{
+
+0%{
+
+top:-50px;
+
+opacity:0;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+top:700px;
+
+opacity:0;
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+
+
+
+@keyframes updown{
+
 
 0%,100%{
 
 transform:translateY(0);
 
 }
+
 
 50%{
 
@@ -268,38 +357,75 @@ transform:translateY(-30px);
 
 
 
+@keyframes left{
 
-@media(max-width:900px){
+from{
+
+transform:translateX(-100px);
+
+opacity:0;
+
+}
+
+to{
+
+transform:translateX(0);
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:translateY(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+@media(max-width:800px){
 
 
 .hero{
 
 flex-direction:column;
 
-text-align:center;
+}
+
+
+.text,.image{
+
+width:90%;
 
 }
 
 
+.text h1{
 
-.content,
-.product-img{
-
-width:100%;
+font-size:40px;
 
 }
 
 
-
-.content h1{
-
-font-size:45px;
-
-}
-
-
-
-.features{
+.cards{
 
 flex-direction:column;
 
@@ -307,15 +433,13 @@ align-items:center;
 
 }
 
-
 }
-
 
 
 </style>
 
-
 </head>
+
 
 
 <body>
@@ -336,7 +460,9 @@ align-items:center;
 
 <a href="#">Home</a>
 
-<a href="#">Products</a>
+<a href="#">Shop</a>
+
+<a href="#">About</a>
 
 <a href="#">Contact</a>
 
@@ -348,16 +474,17 @@ align-items:center;
 
 
 
+
 <section class="hero">
 
 
 
-<div class="content">
+<div class="text">
 
 
 <h1>
 
-Premium
+Real Taste Of
 
 <span>
 
@@ -370,18 +497,19 @@ Roasted Peanuts
 
 <p>
 
-Crunchy taste, fresh roasting and premium quality peanuts.
-Healthy snack delivered directly to your home.
+Crunchy, fresh and healthy roasted peanuts.
+Premium quality snacks delivered at your doorstep.
 
 </p>
 
 
 
-<a class="btn">
+<button>
 
 Order Now 🛒
 
-</a>
+</button>
+
 
 
 </div>
@@ -390,10 +518,10 @@ Order Now 🛒
 
 
 
-<div class="product-img">
+<div class="image">
 
 
-<div class="glow"></div>
+<div class="circle"></div>
 
 
 <img src="https://pngimg.com/uploads/peanut/peanut_PNG7.png">
@@ -408,16 +536,33 @@ Order Now 🛒
 
 
 
-<section class="features">
+
+<div class="peanut one">
+
+🥜
+
+</div>
+
+
+<div class="peanut two">
+
+🥜
+
+</div>
+
+
+
+
+<section class="cards">
 
 
 <div class="card">
 
 <h2>🌱</h2>
 
-<h3>100% Natural</h3>
+<h3>Natural</h3>
 
-<p>No Chemicals</p>
+<p>No chemicals</p>
 
 </div>
 
@@ -429,7 +574,7 @@ Order Now 🛒
 
 <h3>Fresh Roast</h3>
 
-<p>Daily Fresh</p>
+<p>Daily prepared</p>
 
 </div>
 
@@ -441,7 +586,7 @@ Order Now 🛒
 
 <h3>Fast Delivery</h3>
 
-<p>Safe Packing</p>
+<p>Safe packing</p>
 
 </div>
 
