@@ -550,11 +550,11 @@ src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
 <div class="small-images">
 
 <img onclick="changeImg(this.src)"
-src="divya.jpg">
+ <img src="divya.jpg">
 
 
 <img onclick="changeImg(this.src)"
-src="divya.jpg">
+ <img src="divya.jpg">
 
 
 <img onclick="changeImg(this.src)"
@@ -623,7 +623,6 @@ Lightweight Brown Bomber Jacket
 
 
 
-
 <p class="desc">
 
 A stylish light bomber jacket, perfect for transitional seasons.
@@ -635,16 +634,6 @@ side pockets and modern design.
 
 
 
-
-<div class="seller">
-
-
-<img src="https://i.pravatar.cc/150">
-
-
-<div>
-
-
 <br>
 
 <span class="rating">
@@ -652,18 +641,6 @@ side pockets and modern design.
 </span>
 
 </div>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
 
 
 
@@ -675,17 +652,6 @@ side pockets and modern design.
 
 
 </div>
-
-
-
-<script>
-
-
-function changeImg(src){
-
-document.getElementById("mainImage").src=src;
-
-}
 
 
 </script>
