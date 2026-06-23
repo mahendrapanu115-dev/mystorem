@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>Roasted Peanut Premium</title>
+<title>Nutri Roast | Premium Peanuts</title>
+
 
 <style>
 
+
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,Arial;
+font-family:Arial,sans-serif;
+
 }
 
 
 body{
 
-background:#1b0d05;
+background:#160b05;
 
 color:white;
 
 overflow-x:hidden;
 
 }
+
 
 
 /* NAVBAR */
@@ -34,11 +40,11 @@ width:90%;
 
 margin:25px auto;
 
-background:#3a1b0d;
+padding:18px 35px;
+
+background:#3b1b0c;
 
 border-radius:50px;
-
-padding:18px 35px;
 
 display:flex;
 
@@ -46,7 +52,7 @@ justify-content:space-between;
 
 align-items:center;
 
-animation:show 1s;
+animation:top 1s;
 
 }
 
@@ -54,7 +60,7 @@ animation:show 1s;
 
 .logo{
 
-font-size:30px;
+font-size:32px;
 
 font-weight:bold;
 
@@ -72,7 +78,10 @@ text-decoration:none;
 
 margin:15px;
 
+font-size:17px;
+
 }
+
 
 
 
@@ -81,17 +90,17 @@ margin:15px;
 
 .hero{
 
+min-height:90vh;
+
+width:100%;
+
 display:flex;
 
 align-items:center;
 
-justify-content:center;
+justify-content:space-around;
 
-min-height:600px;
-
-padding:40px;
-
-gap:50px;
+padding:50px 8%;
 
 }
 
@@ -99,7 +108,7 @@ gap:50px;
 
 .text{
 
-width:45%;
+width:50%;
 
 animation:left 1.2s;
 
@@ -109,11 +118,12 @@ animation:left 1.2s;
 
 .text h1{
 
-font-size:65px;
+font-size:70px;
 
 line-height:1.1;
 
 }
+
 
 
 .text span{
@@ -126,25 +136,28 @@ color:#ffb703;
 
 .text p{
 
-font-size:20px;
+font-size:22px;
 
 color:#ddd;
 
 margin:25px 0;
 
+line-height:1.5;
+
 }
+
 
 
 
 button{
 
-background:#ffb703;
+padding:18px 45px;
 
 border:none;
 
-padding:18px 40px;
-
 border-radius:40px;
+
+background:#ffb703;
 
 font-size:18px;
 
@@ -169,53 +182,53 @@ background:white;
 
 
 
-/* PRODUCT IMAGE */
+/* PEANUT IMAGE */
 
 
 .image{
 
-width:40%;
+width:45%;
 
 position:relative;
 
+display:flex;
+
+justify-content:center;
+
 }
+
 
 
 .image img{
 
 width:100%;
 
-animation:updown 3s infinite;
+max-width:550px;
 
-filter:drop-shadow(0 20px 30px black);
+animation:float 3s infinite;
+
+filter:drop-shadow(0 30px 40px black);
 
 }
 
 
-
-
-/* floating */
 
 
 .circle{
 
 position:absolute;
 
-width:350px;
+width:420px;
 
-height:350px;
+height:420px;
 
 background:#ffb703;
 
 border-radius:50%;
 
+filter:blur(90px);
+
 z-index:-1;
-
-right:0;
-
-top:50px;
-
-filter:blur(80px);
 
 }
 
@@ -223,10 +236,53 @@ filter:blur(80px);
 
 
 
-/* cards */
+/* FLOAT PEANUT */
 
 
-.cards{
+.peanut{
+
+position:absolute;
+
+font-size:45px;
+
+animation:fall 8s infinite;
+
+}
+
+
+.p1{
+
+left:10%;
+
+}
+
+
+
+.p2{
+
+right:15%;
+
+animation-delay:3s;
+
+}
+
+
+
+.p3{
+
+left:50%;
+
+animation-delay:5s;
+
+}
+
+
+
+
+/* FEATURES */
+
+
+.features{
 
 display:flex;
 
@@ -234,8 +290,7 @@ justify-content:center;
 
 gap:30px;
 
-margin:40px;
-
+padding:40px;
 
 }
 
@@ -243,17 +298,19 @@ margin:40px;
 
 .card{
 
-background:#3a1b0d;
+background:#3b1b0c;
 
 padding:30px;
 
-border-radius:25px;
+width:230px;
 
-width:220px;
+border-radius:25px;
 
 text-align:center;
 
 transition:.4s;
+
+box-shadow:0 10px 30px black;
 
 }
 
@@ -271,38 +328,43 @@ color:black;
 
 
 
-/* peanuts animation */
-
-
-.peanut{
-
-position:absolute;
+.card h2{
 
 font-size:40px;
 
-animation:move 8s infinite;
-
-}
-
-
-.one{
-
-left:10%;
-
-}
-
-
-.two{
-
-right:20%;
-
-animation-delay:3s;
-
 }
 
 
 
-@keyframes move{
+
+
+/* ANIMATION */
+
+
+@keyframes float{
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-35px);
+
+}
+
+
+}
+
+
+
+
+@keyframes fall{
+
 
 0%{
 
@@ -322,7 +384,7 @@ opacity:1;
 
 100%{
 
-top:700px;
+top:800px;
 
 opacity:0;
 
@@ -330,27 +392,6 @@ transform:rotate(360deg);
 
 }
 
-}
-
-
-
-
-
-@keyframes updown{
-
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-30px);
-
-}
 
 }
 
@@ -359,73 +400,106 @@ transform:translateY(-30px);
 
 @keyframes left{
 
+
 from{
+
+opacity:0;
 
 transform:translateX(-100px);
 
-opacity:0;
-
 }
+
 
 to{
 
-transform:translateX(0);
-
 opacity:1;
 
-}
+transform:translateX(0);
 
 }
 
 
+}
 
 
-@keyframes show{
+
+@keyframes top{
+
 
 from{
 
 opacity:0;
 
-transform:translateY(-50px);
+transform:translateY(-80px);
 
 }
+
 
 to{
 
 opacity:1;
 
-}
+transform:translateY(0);
 
 }
 
 
+}
+
+
+
+
+/* MOBILE */
 
 
 @media(max-width:800px){
+
+
+nav{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
 
 
 .hero{
 
 flex-direction:column;
 
+text-align:center;
+
 }
+
 
 
 .text,.image{
 
-width:90%;
+width:100%;
 
 }
+
 
 
 .text h1{
 
-font-size:40px;
+font-size:42px;
 
 }
 
 
-.cards{
+
+.image img{
+
+max-width:350px;
+
+}
+
+
+
+.features{
 
 flex-direction:column;
 
@@ -433,10 +507,12 @@ align-items:center;
 
 }
 
+
 }
 
 
 </style>
+
 
 </head>
 
@@ -456,13 +532,14 @@ align-items:center;
 </div>
 
 
+
 <div>
 
 <a href="#">Home</a>
 
 <a href="#">Shop</a>
 
-<a href="#">About</a>
+<a href="#">Products</a>
 
 <a href="#">Contact</a>
 
@@ -492,13 +569,15 @@ Roasted Peanuts
 
 </span>
 
+
 </h1>
+
 
 
 <p>
 
-Crunchy, fresh and healthy roasted peanuts.
-Premium quality snacks delivered at your doorstep.
+Fresh crispy roasted peanuts.
+Premium quality snacks with natural taste and fast delivery.
 
 </p>
 
@@ -509,7 +588,6 @@ Premium quality snacks delivered at your doorstep.
 Order Now 🛒
 
 </button>
-
 
 
 </div>
@@ -524,7 +602,9 @@ Order Now 🛒
 <div class="circle"></div>
 
 
+
 <img src="https://pngimg.com/uploads/peanut/peanut_PNG7.png">
+
 
 
 </div>
@@ -537,14 +617,22 @@ Order Now 🛒
 
 
 
-<div class="peanut one">
+
+<div class="peanut p1">
 
 🥜
 
 </div>
 
 
-<div class="peanut two">
+<div class="peanut p2">
+
+🥜
+
+</div>
+
+
+<div class="peanut p3">
 
 🥜
 
@@ -553,18 +641,21 @@ Order Now 🛒
 
 
 
-<section class="cards">
+
+<section class="features">
+
 
 
 <div class="card">
 
 <h2>🌱</h2>
 
-<h3>Natural</h3>
+<h3>100% Natural</h3>
 
-<p>No chemicals</p>
+<p>No Chemicals</p>
 
 </div>
+
 
 
 
@@ -574,9 +665,11 @@ Order Now 🛒
 
 <h3>Fresh Roast</h3>
 
-<p>Daily prepared</p>
+<p>Daily Fresh</p>
 
 </div>
+
+
 
 
 
@@ -586,9 +679,21 @@ Order Now 🛒
 
 <h3>Fast Delivery</h3>
 
-<p>Safe packing</p>
+<p>Safe Packing</p>
 
 </div>
+
+
+
+
+</section>
+
+
+
+
+</body>
+
+</html>
 
 
 </section>
