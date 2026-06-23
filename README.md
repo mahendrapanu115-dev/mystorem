@@ -1,601 +1,356 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Roasted Peanut Premium</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mera Online Store</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,Arial;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
-
 
 body{
+    background:#f5f5f5;
+}
 
-background:#1b0d05;
+/* SEARCH */
 
-color:white;
+.search-wrapper{
 
-overflow-x:hidden;
+    background:white;
+    padding:12px;
+    text-align:center;
+}
+
+        
+/* HEADER */
+header{
+    background:#ffffff;
+    color:#222;
+    text-align:center;
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
+
+header h1,
+header p{
+    text-align:center;
+}
+/* Title animation */
+header h1{
+    animation: textPop 1s ease;
+}
+
+/* subtitle animation */
+header p{
+    animation: fadeUp 1.2s ease;
 
 }
 
+.search-wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
 
-/* NAVBAR */
+.search-container{
+  width:600px;
+  height:55px;
+  background:white;
+  border-radius:35px;
+  display:flex;
+  align-items:center;
+  padding:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
 
-
-nav{
-
-width:90%;
-
-margin:25px auto;
-
-background:#3a1b0d;
-
-border-radius:50px;
-
-padding:18px 35px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-animation:show 1s;
-
+.search-container input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding-left:20px;
+  font-size:16px;
 }
 
 
+/* pura button popup effect */
+.search-btn{
+  height:48px;
+  padding:0 35px;
+  border:none;
+  border-radius:30px;
+  background:#0d8cff;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
 
-.logo{
-
-font-size:30px;
-
-font-weight:bold;
-
-color:#ffb703;
-
+  transition:0.25s ease;
+  box-shadow:0 6px 15px rgba(0,140,255,0.4);
 }
 
 
-
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-margin:15px;
-
+/* mouse le jane par */
+.search-btn:hover{
+  transform:scale(1.08);
 }
 
 
-
-/* HERO */
-
-
-.hero{
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-min-height:600px;
-
-padding:40px;
-
-gap:50px;
-
+/* click karne par pura button bahar pop */
+.search-btn:active{
+  transform:scale(1.25);
+  box-shadow:0 0 35px rgba(0,140,255,0.8);
+}
 }
 
 
+}
+/* CLEAN TITLE ANIMATION */
+@keyframes textPop{
+    0%{
+        transform:translateY(-10px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
 
-.text{
+/* CLEAN TEXT ANIMATION */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+}
 
-width:45%;
+/* Title effect */
+@keyframes textPop{
+    0%{
+        transform:scale(0.6);
+        opacity:0;
+        letter-spacing:5px;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+        letter-spacing:0px;
+    }
+}
 
-animation:left 1.2s;
-
+/* Subtitle effect */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
-
-.text h1{
-
-font-size:65px;
-
-line-height:1.1;
-
+/* CONTAINER */
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:10px;
 }
 
-
-.text span{
-
-color:#ffb703;
-
+/* PRODUCTS GRID */
+.products{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
+    gap:10px;
 }
 
-
-
-.text p{
-
-font-size:20px;
-
-color:#ddd;
-
-margin:25px 0;
-
+/* PRODUCT CARD */
+.product{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
 }
 
-
-
-button{
-
-background:#ffb703;
-
-border:none;
-
-padding:18px 40px;
-
-border-radius:40px;
-
-font-size:18px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-transition:.4s;
-
+/* IMAGE FIX */
+.product img{
+    width:100%;
+    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
+    object-fit:cover;  /* सभी images same crop + same look */
+    background:#fff;
 }
 
-
-button:hover{
-
-transform:scale(1.15);
-
-background:white;
-
+/* TEXT AREA */
+.product-content{
+    padding:8px;
+    text-align:center;
 }
 
-
-
-
-
-/* PRODUCT IMAGE */
-
-
-.image{
-
-width:40%;
-
-position:relative;
-
+.product h2{
+    font-size:13px;
+    margin:5px 0;
 }
 
-
-.image img{
-
-width:100%;
-
-animation:updown 3s infinite;
-
-filter:drop-shadow(0 20px 30px black);
-
+.price{
+    color:green;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:5px;
 }
 
-
-
-
-/* floating */
-
-
-.circle{
-
-position:absolute;
-
-width:350px;
-
-height:350px;
-
-background:#ffb703;
-
-border-radius:50%;
-
-z-index:-1;
-
-right:0;
-
-top:50px;
-
-filter:blur(80px);
-
+/* BUTTONS */
+.btn{
+    display:block;
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    text-decoration:none;
+    color:white;
+    border-radius:5px;
+    font-size:13px;
 }
 
-
-
-
-
-/* cards */
-
-
-.cards{
-
-display:flex;
-
-justify-content:center;
-
-gap:30px;
-
-margin:40px;
-
-
+.buy{
+    background:green;
 }
 
-
-
-.card{
-
-background:#3a1b0d;
-
-padding:30px;
-
-border-radius:25px;
-
-width:220px;
-
-text-align:center;
-
-transition:.4s;
-
+.whatsapp{
+    background:#25D366;
 }
 
+/* TABLET */
+@media (min-width:768px){
+    .products{
+        grid-template-columns:repeat(3, 1fr);
+    }
 
-
-.card:hover{
-
-transform:translateY(-15px);
-
-background:#ffb703;
-
-color:black;
-
+    .product img{
+        height:160px;
+    }
 }
 
-
-
-/* peanuts animation */
-
-
-.peanut{
-
-position:absolute;
-
-font-size:40px;
-
-animation:move 8s infinite;
-
+/* LAPTOP */
+@media (min-width:1024px){
+    .products{
+        grid-template-columns:repeat(4, 1fr);
+    }
 }
-
-
-.one{
-
-left:10%;
-
-}
-
-
-.two{
-
-right:20%;
-
-animation-delay:3s;
-
-}
-
-
-
-@keyframes move{
-
-0%{
-
-top:-50px;
-
-opacity:0;
-
-}
-
-
-50%{
-
-opacity:1;
-
-}
-
-
-100%{
-
-top:700px;
-
-opacity:0;
-
-transform:rotate(360deg);
-
-}
-
-}
-
-
-
-
-
-@keyframes updown{
-
-
-0%,100%{
-
-transform:translateY(0);
-
-}
-
-
-50%{
-
-transform:translateY(-30px);
-
-}
-
-}
-
-
-
-
-@keyframes left{
-
-from{
-
-transform:translateX(-100px);
-
-opacity:0;
-
-}
-
-to{
-
-transform:translateX(0);
-
-opacity:1;
-
-}
-
-}
-
-
-
-
-@keyframes show{
-
-from{
-
-opacity:0;
-
-transform:translateY(-50px);
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-
-
-
-@media(max-width:800px){
-
-
-.hero{
-
-flex-direction:column;
-
-}
-
-
-.text,.image{
-
-width:90%;
-
-}
-
-
-.text h1{
-
-font-size:40px;
-
-}
-
-
-.cards{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-}
-
-
 </style>
-
 </head>
-
-
 
 <body>
 
+<!-- SEARCH -->
+<div class="search-wrapper">
+  <div class="search-container">
 
+    <input id="mySearch" type="text" placeholder="product, brand">
 
-<nav>
+    <button class="search-btn" onclick="searchNow()">
+      🔍 Search
+    </button>
 
-
-<div class="logo">
-
-🥜 Nutri Roast
-
+  </div>
 </div>
 
 
-<div>
+<script>
+function searchNow(){
 
-<a href="#">Home</a>
+  let text = document.getElementById("mySearch").value;
 
-<a href="#">Shop</a>
+  alert("Aapne search kiya: " + text);
 
-<a href="#">About</a>
+}
+</script>
 
-<a href="#">Contact</a>
+<header>
+    <h1>🛒 Mera Online Store</h1>
+    <p>Best Quality Products | Fast Delivery</p>
+</header>
 
-</div>
+<div class="container">
 
+<div class="products">
 
-</nav>
+    <!-- PRODUCT 1 -->
+    <div class="product">
+        <img src="divya.new.jpg">
+        <div class="product-content">
+            <h2>ROASTED SING</h2>
+            <div class="price">₹150</div>
 
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
 
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
+    <!-- PRODUCT 2 -->
+    <div class="product">
+        <img src="HARSHITA.jpg">
+        <div class="product-content">
+            <h2>BANASKATHA SING</h2>
+            <div class="price">₹120</div>
 
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
 
-<section class="hero">
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
+    <!-- PRODUCT 3 -->
+    <div class="product">
+        <img src="product3.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 3</h2>
+            <div class="price">₹180</div>
 
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
 
-<div class="text">
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
+    <!-- PRODUCT 4 -->
+    <div class="product">
+        <img src="product4.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 4</h2>
+            <div class="price">₹200</div>
 
-<h1>
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
 
-Real Taste Of
-
-<span>
-
-Roasted Peanuts
-
-</span>
-
-</h1>
-
-
-<p>
-
-Crunchy, fresh and healthy roasted peanuts.
-Premium quality snacks delivered at your doorstep.
-
-</p>
-
-
-
-<button>
-
-Order Now 🛒
-
-</button>
-
-
-
-</div>
-
-
-
-
-
-<div class="image">
-
-
-<div class="circle"></div>
-
-
-<img src="https://pngimg.com/uploads/peanut/peanut_PNG7.png">
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-<div class="peanut one">
-
-🥜
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
 </div>
 
-
-<div class="peanut two">
-
-🥜
-
 </div>
-
-
-
-
-<section class="cards">
-
-
-<div class="card">
-
-<h2>🌱</h2>
-
-<h3>Natural</h3>
-
-<p>No chemicals</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>🔥</h2>
-
-<h3>Fresh Roast</h3>
-
-<p>Daily prepared</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>🚚</h2>
-
-<h3>Fast Delivery</h3>
-
-<p>Safe packing</p>
-
-</div>
-
-
-</section>
-
-
-
 
 </body>
 
+</script>
 </html>
