@@ -302,12 +302,12 @@ height:350px;
 
 
 <div>
-product 1
+
 
 <div class="big-img">
 
 <img id="mainImage"
-<img src="divya.jpg">
+src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
 
 </div>
 
@@ -315,15 +315,15 @@ product 1
 <div class="small-images">
 
 <img onclick="changeImg(this.src)"
-<img src="divya.jpg">
+src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
 
 
 <img onclick="changeImg(this.src)"
-<img src="HARSHITA.jpg">
+src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3">
 
 
 <img onclick="changeImg(this.src)"
-<img src="HARSHITA.jpg">
+src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
 
 
 </div>
@@ -375,11 +375,11 @@ Lightweight Brown Bomber Jacket
 
 <div class="tags">
 
-    <div class="tag">🥜 Premium Quality</div>
+<div class="tag">🏷 Brown</div>
 
-<div class="tag">🌱 Fresh</div>
+<div class="tag">📏 L Size</div>
 
-<div class="tag">📦 Packed</div>
+<div class="tag">👩 Women</div>
 
 <div class="tag">✨ New</div>
 
@@ -390,6 +390,7 @@ Lightweight Brown Bomber Jacket
 
 
 <p class="desc">
+
 A stylish light bomber jacket, perfect for transitional seasons.
 Made from breathable water resistant material with zip front,
 side pockets and modern design.
@@ -440,6 +441,22 @@ You might also like
 </h2>
 
 
+<div class="products">
+
+
+<img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3">
+
+
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+
+
+<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30">
+
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+
+
+</div>
 
 
 </div>
