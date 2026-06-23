@@ -1,22 +1,25 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mera Online Store</title>
+
+<title>Roasted Peanut Premium</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Poppins,Arial;
 }
 
 
 body{
 
 background:#1b0d05;
+
 color:white;
+
 overflow-x:hidden;
 
 }
@@ -24,9 +27,11 @@ overflow-x:hidden;
 
 /* NAVBAR */
 
+
 nav{
 
 width:90%;
+
 margin:25px auto;
 
 background:#3a1b0d;
@@ -46,6 +51,7 @@ animation:show 1s;
 }
 
 
+
 .logo{
 
 font-size:30px;
@@ -55,6 +61,7 @@ font-weight:bold;
 color:#ffb703;
 
 }
+
 
 
 nav a{
@@ -69,8 +76,8 @@ margin:15px;
 
 
 
-
 /* HERO */
+
 
 .hero{
 
@@ -160,7 +167,10 @@ background:white;
 
 
 
-/* IMAGE */
+
+
+/* PRODUCT IMAGE */
+
 
 .image{
 
@@ -181,6 +191,10 @@ filter:drop-shadow(0 20px 30px black);
 
 }
 
+
+
+
+/* floating */
 
 
 .circle{
@@ -208,7 +222,8 @@ filter:blur(80px);
 
 
 
-/* CARDS */
+
+/* cards */
 
 
 .cards{
@@ -220,6 +235,7 @@ justify-content:center;
 gap:30px;
 
 margin:40px;
+
 
 }
 
@@ -255,7 +271,7 @@ color:black;
 
 
 
-/* FLOATING PEANUT */
+/* peanuts animation */
 
 
 .peanut{
@@ -284,9 +300,6 @@ animation-delay:3s;
 
 }
 
-
-
-/* ANIMATION */
 
 
 @keyframes move{
@@ -318,6 +331,7 @@ transform:rotate(360deg);
 }
 
 }
+
 
 
 
@@ -387,8 +401,6 @@ opacity:1;
 
 
 
-/* MOBILE */
-
 @media(max-width:800px){
 
 
@@ -422,162 +434,172 @@ align-items:center;
 }
 
 }
-}
+
+
 </style>
+
 </head>
+
+
 
 <body>
 
-<!-- SEARCH -->
-<div class="search-wrapper">
-  <div class="search-container">
 
-    <input id="mySearch" type="text" placeholder="product, brand">
-
-    <button class="search-btn" onclick="searchNow()">
-      🔍 Search
-    </button>
-
-  </div>
-</div>
-
-
-<script>
-function searchNow(){
-
-  let text = document.getElementById("mySearch").value;
-
-  alert("Aapne search kiya: " + text);
-
-}
-</script>
 
 <nav>
 
+
 <div class="logo">
+
 🥜 Nutri Roast
+
 </div>
+
 
 <div>
 
 <a href="#">Home</a>
+
 <a href="#">Shop</a>
+
 <a href="#">About</a>
+
 <a href="#">Contact</a>
 
 </div>
 
+
 </nav>
+
+
+
 
 
 <section class="hero">
 
+
+
 <div class="text">
 
+
 <h1>
+
 Real Taste Of
+
 <span>
+
 Roasted Peanuts
+
 </span>
+
 </h1>
 
 
 <p>
+
 Crunchy, fresh and healthy roasted peanuts.
 Premium quality snacks delivered at your doorstep.
+
 </p>
 
 
+
 <button>
+
 Order Now 🛒
+
 </button>
+
 
 
 </div>
 
 
 
+
+
 <div class="image">
+
 
 <div class="circle"></div>
 
 
 <img src="https://pngimg.com/uploads/peanut/peanut_PNG7.png">
 
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<div class="peanut one">
+
+🥜
+
+</div>
+
+
+<div class="peanut two">
+
+🥜
+
+</div>
+
+
+
+
+<section class="cards">
+
+
+<div class="card">
+
+<h2>🌱</h2>
+
+<h3>Natural</h3>
+
+<p>No chemicals</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🔥</h2>
+
+<h3>Fresh Roast</h3>
+
+<p>Daily prepared</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🚚</h2>
+
+<h3>Fast Delivery</h3>
+
+<p>Safe packing</p>
+
 </div>
 
 
 </section>
 
-<div class="container">
 
-<div class="products">
 
-    <!-- PRODUCT 1 -->
-    <div class="product">
-        <img src="divya.new.jpg">
-        <div class="product-content">
-            <h2>ROASTED SING</h2>
-            <div class="price">₹150</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
-            📲 Order
-            </a>
-        </div>
-    </div>
-
-    <!-- PRODUCT 2 -->
-    <div class="product">
-        <img src="HARSHITA.jpg">
-        <div class="product-content">
-            <h2>BANASKATHA SING</h2>
-            <div class="price">₹120</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
-            📲 Order
-            </a>
-        </div>
-    </div>
-
-    <!-- PRODUCT 3 -->
-    <div class="product">
-        <img src="product3.jpg">
-        <div class="product-content">
-            <h2>PRODUCT 3</h2>
-            <div class="price">₹180</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
-            📲 Order
-            </a>
-        </div>
-    </div>
-
-    <!-- PRODUCT 4 -->
-    <div class="product">
-        <img src="product4.jpg">
-        <div class="product-content">
-            <h2>PRODUCT 4</h2>
-            <div class="price">₹200</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
-            📲 Order
-            </a>
-        </div>
-    </div>
-
-</div>
-
-</div>
 
 </body>
 
-</script>
 </html>
+
+
+
+
