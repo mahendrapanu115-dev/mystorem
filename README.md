@@ -156,59 +156,6 @@ header p{
     100%{
         opacity:1;
         transform:translateY(0);
-    }
-}
-
-
-/* CONTAINER */
-.container{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    padding:10px;
-}
-
-/* PRODUCTS GRID */
-.products{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
-    gap:10px;
-}
-
-/* PRODUCT CARD */
-.product{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
-}
-
-/* IMAGE FIX */
-.product img{
-    width:100%;
-    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
-    object-fit:cover;  /* सभी images same crop + same look */
-    background:#fff;
-}
-
-/* TEXT AREA */
-.product-content{
-    padding:8px;
-    text-align:center;
-}
-
-.product h2{
-    font-size:13px;
-    margin:5px 0;
-}
-
-.price{
-    color:green;
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:5px;
 }
 
 /* BUTTONS */
