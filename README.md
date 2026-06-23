@@ -1,454 +1,329 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mera Online Store</title>
+<title>Product Detail Page</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
     background:#f5f5f5;
 }
 
-/* SEARCH */
 
-.search-wrapper{
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px;
+}
 
+
+.card{
     background:white;
-    padding:12px;
-    text-align:center;
+    border-radius:20px;
+    padding:25px;
 }
 
-        
-/* HEADER */
-header{
-    background:#ffffff;
-    color:#222;
-    text-align:center;
-    padding:18px;
-    border-bottom:1px solid #eee;
+
+/* top */
+
+.top{
+    display:flex;
+    justify-content:flex-end;
+    gap:15px;
 }
 
-header h1,
-header p{
-    text-align:center;
-}
-/* Title animation */
-header h1{
-    animation: textPop 1s ease;
-}
-
-/* subtitle animation */
-header p{
-    animation: fadeUp 1.2s ease;
-
-}
-
-.search-box input{
-
-    width:95%;
-    max-width:450px;
-
-    padding:12px 15px;
-
+.icon{
     border:none;
-    outline:none;
-
-    border-radius:30px;
-
-    background:#f1f3f6;
-
-    font-size:14px;
-
-    box-shadow:0 2px 6px rgba(0,0,0,.1);
-}
-/* CLEAN TITLE ANIMATION */
-@keyframes textPop{
-    0%{
-        transform:translateY(-10px);
-        opacity:0;
-    }
-    100%{
-        transform:translateY(0);
-        opacity:1;
-    }
-}
-
-/* CLEAN TEXT ANIMATION */
-@keyframes fadeUp{
-    0%{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    100%{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-}
-
-/* Title effect */
-@keyframes textPop{
-    0%{
-        transform:scale(0.6);
-        opacity:0;
-        letter-spacing:5px;
-    }
-    100%{
-        transform:scale(1);
-        opacity:1;
-        letter-spacing:0px;
-    }
-}
-
-/* Subtitle effect */
-@keyframes fadeUp{
-    0%{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    100%{
-        opacity:1;
-        transform:translateY(0);
-    }
+    background:#eee;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
 }
 
 
-/* CONTAINER */
-<div class="product-list">
+/* main */
+
+.main{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    margin-top:20px;
+}
 
 
-<!-- PRODUCT 1 -->
-<div class="product-detail">
 
-IMAGE + DETAILS
+/* images */
 
-</div>
+.big-img{
+    width:100%;
+    height:500px;
+    border-radius:15px;
+    overflow:hidden;
+}
 
-
-<!-- PRODUCT 2 -->
-<div class="product-detail">
-
-IMAGE + DETAILS
-
-</div>
-
-
-<!-- PRODUCT 3 -->
-<div class="product-detail">
-
-IMAGE + DETAILS
-
-</div>
+.big-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
 
-</div>
+.small-images{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
 
-/* PRODUCTS GRID */
-.product-detail{
 
-background:white;
+.small-images img{
 
-border-radius:25px;
-
-padding:30px;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:40px;
-
-margin-bottom:30px;
-
-width:100%;
-
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
 }
 
 
 
 
-.product-image img{
+/* details */
 
-width:100%;
-height:500px;
-
-object-fit:cover;
-
-border-radius:20px;
-
+h1{
+    font-size:35px;
 }
 
 
-.thumbs{
-
-display:flex;
-gap:10px;
-margin-top:15px;
-
-}
-
-
-.thumbs img{
-
-width:70px;
-height:70px;
-
-object-fit:cover;
-
-border-radius:10px;
-
-cursor:pointer;
-
-}
-
-
-
-.detail h1{
-
-font-size:38px;
-
-}
-
-
-.detail-price{
+.price{
 
 font-size:35px;
 font-weight:bold;
-
 margin:20px 0;
 
 }
 
 
-.action{
+.shipping{
+
+color:gray;
+font-size:14px;
+
+}
+
+
+.buttons{
 
 display:flex;
 gap:15px;
+margin:25px 0;
 
 }
 
 
-.action a{
+button{
 
-width:50%;
-padding:15px;
-text-align:center;
-
+padding:15px 25px;
 border-radius:10px;
-
-text-decoration:none;
+border:none;
+cursor:pointer;
+font-size:16px;
 
 }
 
 
-.pay{
+.buy{
 
 background:black;
 color:white;
+flex:1;
 
 }
 
 
-.order{
+.contact{
 
+background:white;
 border:1px solid #ccc;
-color:black;
+flex:1;
+
+}
+
+
+/* tags */
+
+
+.tags{
+
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin:20px 0;
 
 }
 
 
 .tag{
 
-display:inline-block;
-
 background:#eee;
-
-padding:10px 18px;
-
-border-radius:25px;
-
-margin:5px;
+padding:8px 15px;
+border-radius:20px;
 
 }
 
 
 
-@media(max-width:800px){
+.desc{
+
+color:#666;
+line-height:1.6;
+
+}
+
+
+/* seller */
+
+.seller{
+
+margin-top:30px;
+border-top:1px solid #ddd;
+padding-top:20px;
+display:flex;
+align-items:center;
+gap:15px;
+
+}
+
+
+.seller img{
+
+width:60px;
+height:60px;
+border-radius:50%;
+
+}
+
+
+.rating{
+
+color:#d99b00;
+
+}
+
+
+/* related */
+
+
+.related{
+
+margin-top:40px;
+
+}
+
+
+.products{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+
+}
+
+
+.products img{
+
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+
+}
+
+
+
+/* mobile */
 
 @media(max-width:800px){
 
-.product-detail{
+
+.main{
 
 grid-template-columns:1fr;
 
 }
 
+
+.products{
+
+grid-template-columns:repeat(2,1fr);
+
 }
 
 
-/* TABLET */
-@media (min-width:768px){
-    .products{
-        grid-template-columns:repeat(3, 1fr);
-    }
+.big-img{
 
-    .product img{
-        height:160px;
-    }
+height:350px;
+
 }
 
-/* LAPTOP */
-@media (min-width:1024px){
-    .products{
-        grid-template-columns:repeat(4, 1fr);
-    }
 }
+
+
 </style>
+
 </head>
+
 
 <body>
 
-<!-- SEARCH -->
-
-<div class="search-wrapper">
-
-<input type="text" id="searchInput" placeholder="🔍 Search products, brands...">
-
-</div>
-<header>
-    <h1>🛒 Mera Online Store</h1>
-    <p>Best Quality Products | Fast Delivery</p>
-</header>
 
 <div class="container">
 
-<div class="products">
-
-    <!-- PRODUCT 1 -->
-   <div class="product-detail">
+<div class="card">
 
 
-<div class="product-image">
+<div class="top">
 
-
-<img id="mainImg" src="divya.new.jpg">
-
-
-<div class="thumbs">
-
-<img onclick="changeImg(this.src)" src="divya.new.jpg">
-
-<img onclick="changeImg(this.src)" src="HARSHITA.jpg">
-
-<img onclick="changeImg(this.src)" src="product3.jpg">
-
-
-</div>
-
+<button class="icon">♡</button>
+<button class="icon">↗</button>
 
 </div>
 
 
 
-
-<div class="detail">
-
-
-<h1>
-ROASTED SING
-</h1>
-
-
-<div class="detail-price">
-
-₹150
-
-</div>
-
-
-<p>
-+ ₹20 Shipping
-</p>
-
-
-<br>
-
-
-<div class="action">
-
-<a class="pay" href="#">
-💳 Buy Now
-</a>
-
-
-<a class="order" href="#">
-✉ Contact Seller
-</a>
-
-</div>
-
-
-
-<br>
+<div class="main">
 
 
 <div>
 
-<span class="tag">🥜 Premium</span>
 
-<span class="tag">✨ Fresh</span>
+<div class="big-img">
 
-<span class="tag">📦 New</span>
+<img id="mainImage"
+src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
 
 </div>
 
 
+<div class="small-images">
 
-<p style="margin-top:25px;color:#666">
-
-Best quality roasted sing.
-Fresh product with fast delivery.
-
-</p>
+<img onclick="changeImg(this.src)"
+src="divya.jpg">
 
 
-
-<hr style="margin:25px 0">
-
-
-<b>
-Mera Online Store
-</b>
-
-<br>
-
-⭐ ⭐ ⭐ ⭐ ⭐ 4.9
+<img onclick="changeImg(this.src)"
+src="divya.jpg">
 
 
-
-
-    <!-- PRODUCT 2 -->
-       
-<div class="product-image">
-
-
-<img id="mainImg" src="HARSHITA.jpg">
-
-
-<div class="thumbs">
-
-<img onclick="changeImg(this.src)" src="HARSHITA.jpg">
-
-<img onclick="changeImg(this.src)" src="HARSHITA.jpg">
-
-<img onclick="changeImg(this.src)" src="product3.jpg">
+<img onclick="changeImg(this.src)"
+src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
 
 
 </div>
@@ -457,128 +332,138 @@ Mera Online Store
 </div>
 
 
-
-
-<div class="detail">
-
-
-<h1>
-BANASKANTHA SING
-</h1>
-
-
-<div class="detail-price">
-
-₹150
-
-</div>
-
-
-<p>
-+ ₹20 Shipping
-</p>
-
-
-<br>
-
-
-<div class="action">
-
-<a class="pay" href="#">
-💳 Buy Now
-</a>
-
-
-<a class="order" href="#">
-✉ Contact Seller
-</a>
-
-</div>
-
-
-
-<br>
 
 
 <div>
 
-<span class="tag">🥜 Premium</span>
 
-<span class="tag">✨ Fresh</span>
+<h1>
+Lightweight Brown Bomber Jacket
+</h1>
 
-<span class="tag">📦 New</span>
+
+<div class="price">
+
+€70
+
+</div>
+
+
+<span class="shipping">
+
++ €5.60 Shipping
+
+</span>
+
+
+
+<div class="buttons">
+
+<button class="buy">
+🛒 Buy Now
+</button>
+
+
+<button class="contact">
+✉ Contact Seller
+</button>
 
 </div>
 
 
 
-<p style="margin-top:25px;color:#666">
 
-Best quality roasted sing.
-Fresh product with fast delivery.
+<div class="tags">
+
+<div class="tag">🏷 Brown</div>
+
+<div class="tag">📏 L Size</div>
+
+<div class="tag">👩 Women</div>
+
+<div class="tag">✨ New</div>
+
+
+</div>
+
+
+
+
+<p class="desc">
+
+A stylish light bomber jacket, perfect for transitional seasons.
+Made from breathable water resistant material with zip front,
+side pockets and modern design.
 
 </p>
 
 
 
-<hr style="margin:25px 0">
 
 
-<b>
-Mera Online Store
-</b>
+<div class="seller">
+
+
+<img src="https://i.pravatar.cc/150">
+
+
+<div>
+
+<b>Maria Johansson</b>
 
 <br>
 
-⭐ ⭐ ⭐ ⭐ ⭐ 4.9
+<span class="rating">
+★★★★★ 4.9
+</span>
 
 </div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="related">
+
+
+<h2>
+You might also like
+</h2>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
 <script>
+
 
 function changeImg(src){
 
-document.getElementById("mainImg").src=src;
+document.getElementById("mainImage").src=src;
 
 }
 
+
 </script>
 
-</div>
-    <!-- PRODUCT 3 -->
-    <div class="product">
-        <img src="product3.jpg">
-        <div class="product-content">
-            <h2>PRODUCT 3</h2>
-            <div class="price">₹180</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
-            📲 Order
-            </a>
-        </div>
-    </div>
-
-    <!-- PRODUCT 4 -->
-    <div class="product">
-        <img src="product4.jpg">
-        <div class="product-content">
-            <h2>PRODUCT 4</h2>
-            <div class="price">₹200</div>
-
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
-            📲 Order
-            </a>
-        </div>
-    </div>
-
-</div>
-
-</div>
 
 </body>
 
-</script>
 </html>
