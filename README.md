@@ -121,40 +121,29 @@ header p{
 
 
 /* CONTAINER */
-<div class="container">
+<div class="product-list">
 
 
 <!-- PRODUCT 1 -->
-
 <div class="product-detail">
 
-...
-product 1 code
-...
+IMAGE + DETAILS
 
 </div>
-
 
 
 <!-- PRODUCT 2 -->
-
 <div class="product-detail">
 
-...
-product 2 code
-...
+IMAGE + DETAILS
 
 </div>
 
 
-
 <!-- PRODUCT 3 -->
-
 <div class="product-detail">
 
-...
-product 3 code
-...
+IMAGE + DETAILS
 
 </div>
 
@@ -165,15 +154,20 @@ product 3 code
 .product-detail{
 
 background:white;
+
 border-radius:25px;
+
 padding:30px;
 
 display:grid;
+
 grid-template-columns:1fr 1fr;
 
 gap:40px;
 
 margin-bottom:30px;
+
+width:100%;
 
 }
 
@@ -288,6 +282,8 @@ margin:5px;
 
 @media(max-width:800px){
 
+@media(max-width:800px){
+
 .product-detail{
 
 grid-template-columns:1fr;
@@ -295,6 +291,7 @@ grid-template-columns:1fr;
 }
 
 }
+
 
 /* TABLET */
 @media (min-width:768px){
