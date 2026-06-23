@@ -50,63 +50,23 @@ header p{
 
 }
 
-.search-wrapper{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
+.search-box input{
 
-.search-container{
-  width:600px;
-  height:55px;
-  background:white;
-  border-radius:35px;
-  display:flex;
-  align-items:center;
-  padding:6px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
+    width:95%;
+    max-width:450px;
 
-.search-container input{
-  flex:1;
-  border:none;
-  outline:none;
-  padding-left:20px;
-  font-size:16px;
-}
+    padding:12px 15px;
 
+    border:none;
+    outline:none;
 
-/* pura button popup effect */
-.search-btn{
-  height:48px;
-  padding:0 35px;
-  border:none;
-  border-radius:30px;
-  background:#0d8cff;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
+    border-radius:30px;
 
-  transition:0.25s ease;
-  box-shadow:0 6px 15px rgba(0,140,255,0.4);
-}
+    background:#f1f3f6;
 
+    font-size:14px;
 
-/* mouse le jane par */
-.search-btn:hover{
-  transform:scale(1.08);
-}
-
-
-/* click karne par pura button bahar pop */
-.search-btn:active{
-  transform:scale(1.25);
-  box-shadow:0 0 35px rgba(0,140,255,0.8);
-}
-}
-
-
+    box-shadow:0 2px 6px rgba(0,0,0,.1);
 }
 /* CLEAN TITLE ANIMATION */
 @keyframes textPop{
@@ -254,29 +214,12 @@ header p{
 <body>
 
 <!-- SEARCH -->
+
 <div class="search-wrapper">
-  <div class="search-container">
 
-    <input id="mySearch" type="text" placeholder="product, brand">
+<input type="text" id="searchInput" placeholder="🔍 Search products, brands...">
 
-    <button class="search-btn" onclick="searchNow()">
-      🔍 Search
-    </button>
-
-  </div>
 </div>
-
-
-<script>
-function searchNow(){
-
-  let text = document.getElementById("mySearch").value;
-
-  alert("Aapne search kiya: " + text);
-
-}
-</script>
-
 <header>
     <h1>🛒 Mera Online Store</h1>
     <p>Best Quality Products | Fast Delivery</p>
@@ -287,41 +230,19 @@ function searchNow(){
 <div class="products">
 
     <!-- PRODUCT 1 -->
-  <div class="product">
-    <img src="divya.new.jpg">
-    <div class="product-content">
-        <h2>ROASTED SING</h2>
-        
+    <div class="product">
+        <img src="chana.jpg">
+        <div class="product-content">
+            <h2>ROASTED SING</h2>
+            <div class="price">₹150</div>
 
-       <div class="product" onclick="openProduct()">
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
 
-<img src="divya.new.jpg">
-
-<div class="product-content">
-
-<h2>ROASTED SING</h2>
-
-<div class="price">₹150</div>
-
-<a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">
-💳 Pay Now
-</a>
-
-<a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
-📲 Order
-</a>
-
-</div>
-<script>
-
-function openProduct(){
-
-window.location.href="product.html";
-
-}
-
-</script>
-</div>
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
     <!-- PRODUCT 2 -->
     <div class="product">
