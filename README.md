@@ -412,19 +412,102 @@ document.getElementById("mainImg").src=src;
 </div>
 
     <!-- PRODUCT 2 -->
-    <div class="product">
-        <img src="HARSHITA.jpg">
-        <div class="product-content">
-            <h2>BANASKATHA SING</h2>
-            <div class="price">₹120</div>
+       
+<div class="product-image">
 
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
 
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
-            📲 Order
-            </a>
-        </div>
-    </div>
+<img id="mainImg" src="HARSHITA.jpg">
+
+
+<div class="thumbs">
+
+<img onclick="changeImg(this.src)" src="HARSHITA.jpg">
+
+<img onclick="changeImg(this.src)" src="HARSHITA.jpg">
+
+<img onclick="changeImg(this.src)" src="product3.jpg">
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="detail">
+
+
+<h1>
+BANASKANTHA SING
+</h1>
+
+
+<div class="detail-price">
+
+₹150
+
+</div>
+
+
+<p>
++ ₹20 Shipping
+</p>
+
+
+<br>
+
+
+<div class="action">
+
+<a class="pay" href="#">
+💳 Buy Now
+</a>
+
+
+<a class="order" href="#">
+✉ Contact Seller
+</a>
+
+</div>
+
+
+
+<br>
+
+
+<div>
+
+<span class="tag">🥜 Premium</span>
+
+<span class="tag">✨ Fresh</span>
+
+<span class="tag">📦 New</span>
+
+</div>
+
+
+
+<p style="margin-top:25px;color:#666">
+
+Best quality roasted sing.
+Fresh product with fast delivery.
+
+</p>
+
+
+
+<hr style="margin:25px 0">
+
+
+<b>
+Mera Online Store
+</b>
+
+<br>
+
+⭐ ⭐ ⭐ ⭐ ⭐ 4.9
 
     <!-- PRODUCT 3 -->
     <div class="product">
