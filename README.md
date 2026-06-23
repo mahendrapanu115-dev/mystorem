@@ -129,66 +129,134 @@ header p{
 }
 
 /* PRODUCTS GRID */
-.products{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
-    gap:10px;
+.product-detail{
+
+background:white;
+border-radius:25px;
+padding:30px;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
 }
 
-/* PRODUCT CARD */
-.product{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
+
+.product-image img{
+
+width:100%;
+height:500px;
+
+object-fit:cover;
+
+border-radius:20px;
+
 }
 
-/* IMAGE FIX */
-.product img{
-    width:100%;
-    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
-    object-fit:cover;  /* सभी images same crop + same look */
-    background:#fff;
+
+.thumbs{
+
+display:flex;
+gap:10px;
+margin-top:15px;
+
 }
 
-/* TEXT AREA */
-.product-content{
-    padding:8px;
-    text-align:center;
+
+.thumbs img{
+
+width:70px;
+height:70px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+cursor:pointer;
+
 }
 
-.product h2{
-    font-size:13px;
-    margin:5px 0;
+
+
+.detail h1{
+
+font-size:38px;
+
 }
 
-.price{
-    color:green;
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:5px;
+
+.detail-price{
+
+font-size:35px;
+font-weight:bold;
+
+margin:20px 0;
+
 }
 
-/* BUTTONS */
-.btn{
-    display:block;
-    width:100%;
-    padding:8px;
-    margin-top:5px;
-    text-decoration:none;
-    color:white;
-    border-radius:5px;
-    font-size:13px;
+
+.action{
+
+display:flex;
+gap:15px;
+
 }
 
-.buy{
-    background:green;
+
+.action a{
+
+width:50%;
+padding:15px;
+text-align:center;
+
+border-radius:10px;
+
+text-decoration:none;
+
 }
 
-.whatsapp{
-    background:#25D366;
+
+.pay{
+
+background:black;
+color:white;
+
+}
+
+
+.order{
+
+border:1px solid #ccc;
+color:black;
+
+}
+
+
+.tag{
+
+display:inline-block;
+
+background:#eee;
+
+padding:10px 18px;
+
+border-radius:25px;
+
+margin:5px;
+
+}
+
+
+
+@media(max-width:800px){
+
+.product-detail{
+
+grid-template-columns:1fr;
+
+}
+
 }
 
 /* TABLET */
@@ -230,19 +298,118 @@ header p{
 <div class="products">
 
     <!-- PRODUCT 1 -->
-    <div class="product">
-        <img src="chana.jpg">
-        <div class="product-content">
-            <h2>ROASTED SING</h2>
-            <div class="price">₹150</div>
+   <div class="product-detail">
 
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
 
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
-            📲 Order
-            </a>
-        </div>
-    </div>
+<div class="product-image">
+
+
+<img id="mainImg" src="divya.new.jpg">
+
+
+<div class="thumbs">
+
+<img onclick="changeImg(this.src)" src="divya.new.jpg">
+
+<img onclick="changeImg(this.src)" src="HARSHITA.jpg">
+
+<img onclick="changeImg(this.src)" src="product3.jpg">
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="detail">
+
+
+<h1>
+ROASTED SING
+</h1>
+
+
+<div class="detail-price">
+
+₹150
+
+</div>
+
+
+<p>
++ ₹20 Shipping
+</p>
+
+
+<br>
+
+
+<div class="action">
+
+<a class="pay" href="#">
+💳 Buy Now
+</a>
+
+
+<a class="order" href="#">
+✉ Contact Seller
+</a>
+
+</div>
+
+
+
+<br>
+
+
+<div>
+
+<span class="tag">🥜 Premium</span>
+
+<span class="tag">✨ Fresh</span>
+
+<span class="tag">📦 New</span>
+
+</div>
+
+
+
+<p style="margin-top:25px;color:#666">
+
+Best quality roasted sing.
+Fresh product with fast delivery.
+
+</p>
+
+
+
+<hr style="margin:25px 0">
+
+
+<b>
+Mera Online Store
+</b>
+
+<br>
+
+⭐ ⭐ ⭐ ⭐ ⭐ 4.9
+
+
+</div>
+<script>
+
+function changeImg(src){
+
+document.getElementById("mainImg").src=src;
+
+}
+
+</script>
+
+</div>
 
     <!-- PRODUCT 2 -->
     <div class="product">
