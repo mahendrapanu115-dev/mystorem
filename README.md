@@ -307,7 +307,7 @@ height:350px;
 <div class="big-img">
 
 <img id="mainImage"
-src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
+<img src="divya.jpg">
 
 </div>
 
@@ -315,16 +315,15 @@ src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
 <div class="small-images">
 
 <img onclick="changeImg(this.src)"
-src="divya.jpg">
+<img src="HARSHITA.jpg">
 
 
 <img onclick="changeImg(this.src)"
-src="divya.jpg">
+<img src="HARSHITA.jpg">
 
 
 <img onclick="changeImg(this.src)"
-src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-
+<img src="HARSHITA.jpg">
 
 </div>
 
@@ -338,7 +337,7 @@ src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
 
 
 <h1>
-Lightweight Brown Bomber Jacket
+ROASTED SING
 </h1>
 
 
@@ -374,12 +373,11 @@ Lightweight Brown Bomber Jacket
 
 
 <div class="tags">
+<div class="tag">🥜 Premium Quality</div>
 
-<div class="tag">🏷 Brown</div>
+<div class="tag">🌱 Fresh</div>
 
-<div class="tag">📏 L Size</div>
-
-<div class="tag">👩 Women</div>
+<div class="tag">📦 Packed</div>
 
 <div class="tag">✨ New</div>
 
@@ -391,9 +389,9 @@ Lightweight Brown Bomber Jacket
 
 <p class="desc">
 
-A stylish light bomber jacket, perfect for transitional seasons.
-Made from breathable water resistant material with zip front,
-side pockets and modern design.
+Premium quality roasted sing with fresh and crispy taste.
+Made from selected peanuts, hygienically prepared and packed
+to maintain freshness and great flavo
 
 </p>
 
