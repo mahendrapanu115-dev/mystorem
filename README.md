@@ -6,247 +6,422 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
+
 
 body{
-    background:#f5f5f5;
-}
 
-/* SEARCH */
-
-.search-wrapper{
-
-    background:white;
-    padding:12px;
-    text-align:center;
-}
-
-        
-/* HEADER */
-header{
-    background:#ffffff;
-    color:#222;
-    text-align:center;
-    padding:18px;
-    border-bottom:1px solid #eee;
-}
-
-header h1,
-header p{
-    text-align:center;
-}
-/* Title animation */
-header h1{
-    animation: textPop 1s ease;
-}
-
-/* subtitle animation */
-header p{
-    animation: fadeUp 1.2s ease;
+background:#1b0d05;
+color:white;
+overflow-x:hidden;
 
 }
 
-.search-wrapper{
-  width:100%;
-  display:flex;
-  justify-content:center;
+
+/* NAVBAR */
+
+nav{
+
+width:90%;
+margin:25px auto;
+
+background:#3a1b0d;
+
+border-radius:50px;
+
+padding:18px 35px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+animation:show 1s;
+
 }
 
-.search-container{
-  width:600px;
-  height:55px;
-  background:white;
-  border-radius:35px;
-  display:flex;
-  align-items:center;
-  padding:6px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
 
-.search-container input{
-  flex:1;
-  border:none;
-  outline:none;
-  padding-left:20px;
-  font-size:16px;
-}
+.logo{
 
+font-size:30px;
 
-/* pura button popup effect */
-.search-btn{
-  height:48px;
-  padding:0 35px;
-  border:none;
-  border-radius:30px;
-  background:#0d8cff;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
+font-weight:bold;
 
-  transition:0.25s ease;
-  box-shadow:0 6px 15px rgba(0,140,255,0.4);
+color:#ffb703;
+
 }
 
 
-/* mouse le jane par */
-.search-btn:hover{
-  transform:scale(1.08);
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin:15px;
+
+}
+
+
+
+
+/* HERO */
+
+.hero{
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+min-height:600px;
+
+padding:40px;
+
+gap:50px;
+
 }
 
 
-/* click karne par pura button bahar pop */
-.search-btn:active{
-  transform:scale(1.25);
-  box-shadow:0 0 35px rgba(0,140,255,0.8);
-}
-}
 
+.text{
 
-}
-/* CLEAN TITLE ANIMATION */
-@keyframes textPop{
-    0%{
-        transform:translateY(-10px);
-        opacity:0;
-    }
-    100%{
-        transform:translateY(0);
-        opacity:1;
-    }
-}
+width:45%;
 
-/* CLEAN TEXT ANIMATION */
-@keyframes fadeUp{
-    0%{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    100%{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-}
+animation:left 1.2s;
 
-/* Title effect */
-@keyframes textPop{
-    0%{
-        transform:scale(0.6);
-        opacity:0;
-        letter-spacing:5px;
-    }
-    100%{
-        transform:scale(1);
-        opacity:1;
-        letter-spacing:0px;
-    }
-}
-
-/* Subtitle effect */
-@keyframes fadeUp{
-    0%{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    100%{
-        opacity:1;
-        transform:translateY(0);
-    }
 }
 
 
-/* CONTAINER */
-.container{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    padding:10px;
+
+.text h1{
+
+font-size:65px;
+
+line-height:1.1;
+
 }
 
-/* PRODUCTS GRID */
-.products{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
-    gap:10px;
+
+.text span{
+
+color:#ffb703;
+
 }
 
-/* PRODUCT CARD */
-.product{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
+
+
+.text p{
+
+font-size:20px;
+
+color:#ddd;
+
+margin:25px 0;
+
 }
 
-/* IMAGE FIX */
-.product img{
-    width:100%;
-    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
-    object-fit:cover;  /* सभी images same crop + same look */
-    background:#fff;
+
+
+button{
+
+background:#ffb703;
+
+border:none;
+
+padding:18px 40px;
+
+border-radius:40px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.4s;
+
 }
 
-/* TEXT AREA */
-.product-content{
-    padding:8px;
-    text-align:center;
+
+button:hover{
+
+transform:scale(1.15);
+
+background:white;
+
 }
 
-.product h2{
-    font-size:13px;
-    margin:5px 0;
+
+
+/* IMAGE */
+
+.image{
+
+width:40%;
+
+position:relative;
+
 }
 
-.price{
-    color:green;
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:5px;
+
+.image img{
+
+width:100%;
+
+animation:updown 3s infinite;
+
+filter:drop-shadow(0 20px 30px black);
+
 }
 
-/* BUTTONS */
-.btn{
-    display:block;
-    width:100%;
-    padding:8px;
-    margin-top:5px;
-    text-decoration:none;
-    color:white;
-    border-radius:5px;
-    font-size:13px;
+
+
+.circle{
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+background:#ffb703;
+
+border-radius:50%;
+
+z-index:-1;
+
+right:0;
+
+top:50px;
+
+filter:blur(80px);
+
 }
 
-.buy{
-    background:green;
+
+
+
+/* CARDS */
+
+
+.cards{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin:40px;
+
 }
 
-.whatsapp{
-    background:#25D366;
+
+
+.card{
+
+background:#3a1b0d;
+
+padding:30px;
+
+border-radius:25px;
+
+width:220px;
+
+text-align:center;
+
+transition:.4s;
+
 }
 
-/* TABLET */
-@media (min-width:768px){
-    .products{
-        grid-template-columns:repeat(3, 1fr);
-    }
 
-    .product img{
-        height:160px;
-    }
+
+.card:hover{
+
+transform:translateY(-15px);
+
+background:#ffb703;
+
+color:black;
+
 }
 
-/* LAPTOP */
-@media (min-width:1024px){
-    .products{
-        grid-template-columns:repeat(4, 1fr);
-    }
+
+
+/* FLOATING PEANUT */
+
+
+.peanut{
+
+position:absolute;
+
+font-size:40px;
+
+animation:move 8s infinite;
+
+}
+
+
+.one{
+
+left:10%;
+
+}
+
+
+.two{
+
+right:20%;
+
+animation-delay:3s;
+
+}
+
+
+
+/* ANIMATION */
+
+
+@keyframes move{
+
+0%{
+
+top:-50px;
+
+opacity:0;
+
+}
+
+
+50%{
+
+opacity:1;
+
+}
+
+
+100%{
+
+top:700px;
+
+opacity:0;
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+
+
+@keyframes updown{
+
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+
+50%{
+
+transform:translateY(-30px);
+
+}
+
+}
+
+
+
+
+@keyframes left{
+
+from{
+
+transform:translateX(-100px);
+
+opacity:0;
+
+}
+
+to{
+
+transform:translateX(0);
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:translateY(-50px);
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+
+.hero{
+
+flex-direction:column;
+
+}
+
+
+.text,.image{
+
+width:90%;
+
+}
+
+
+.text h1{
+
+font-size:40px;
+
+}
+
+
+.cards{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+}
 }
 </style>
 </head>
@@ -277,10 +452,62 @@ function searchNow(){
 }
 </script>
 
-<header>
-    <h1>🛒 Mera Online Store</h1>
-    <p>Best Quality Products | Fast Delivery</p>
-</header>
+<nav>
+
+<div class="logo">
+🥜 Nutri Roast
+</div>
+
+<div>
+
+<a href="#">Home</a>
+<a href="#">Shop</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="text">
+
+<h1>
+Real Taste Of
+<span>
+Roasted Peanuts
+</span>
+</h1>
+
+
+<p>
+Crunchy, fresh and healthy roasted peanuts.
+Premium quality snacks delivered at your doorstep.
+</p>
+
+
+<button>
+Order Now 🛒
+</button>
+
+
+</div>
+
+
+
+<div class="image">
+
+<div class="circle"></div>
+
+
+<img src="https://pngimg.com/uploads/peanut/peanut_PNG7.png">
+
+</div>
+
+
+</section>
 
 <div class="container">
 
