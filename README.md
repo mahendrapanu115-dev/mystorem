@@ -307,7 +307,7 @@ height:350px;
 <div class="big-img">
 
 <img id="mainImage"
-src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
+<img src="divya.jpg">
 
 </div>
 
@@ -315,15 +315,15 @@ src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
 <div class="small-images">
 
 <img onclick="changeImg(this.src)"
-src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea">
+<img src="HARSHITA.jpg">
 
 
 <img onclick="changeImg(this.src)"
-src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3">
+<img src="divya.jpg">
 
 
 <img onclick="changeImg(this.src)"
-src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<img src="HARSHITA.jpg">
 
 
 </div>
