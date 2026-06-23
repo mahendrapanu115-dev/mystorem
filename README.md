@@ -306,25 +306,23 @@ height:350px;
 
 <div class="big-img">
 
-<img id="mainImage"
-<img src="divya.jpg">
+<div class="product">
+        <img src="divya.jpg"
 
 </div>
 
 
 <div class="small-images">
 
-<img onclick="changeImg(this.src)"
-<img src="HARSHITA.jpg">
+<div class="product">
+        <img src="HARSHITA.jpg"
+
+<div class="product">
+        <img src="divya.jpg"
 
 
-<img onclick="changeImg(this.src)"
-<img src="divya.jpg">
-
-
-<img onclick="changeImg(this.src)"
-<img src="HARSHITA.jpg">
-
+<div class="product">
+        <img src="HARSHITA.jpg"
 
 </div>
 
