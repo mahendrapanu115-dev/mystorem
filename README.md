@@ -398,18 +398,7 @@ Mera Online Store
 ⭐ ⭐ ⭐ ⭐ ⭐ 4.9
 
 
-</div>
-<script>
 
-function changeImg(src){
-
-document.getElementById("mainImg").src=src;
-
-}
-
-</script>
-
-</div>
 
     <!-- PRODUCT 2 -->
        
@@ -509,6 +498,18 @@ Mera Online Store
 
 ⭐ ⭐ ⭐ ⭐ ⭐ 4.9
 
+</div>
+<script>
+
+function changeImg(src){
+
+document.getElementById("mainImg").src=src;
+
+}
+
+</script>
+
+</div>
     <!-- PRODUCT 3 -->
     <div class="product">
         <img src="product3.jpg">
