@@ -121,12 +121,45 @@ header p{
 
 
 /* CONTAINER */
-.container{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    padding:10px;
-}
+<div class="container">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product-detail">
+
+...
+product 1 code
+...
+
+</div>
+
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product-detail">
+
+...
+product 2 code
+...
+
+</div>
+
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product-detail">
+
+...
+product 3 code
+...
+
+</div>
+
+
+</div>
 
 /* PRODUCTS GRID */
 .product-detail{
@@ -140,7 +173,11 @@ grid-template-columns:1fr 1fr;
 
 gap:40px;
 
+margin-bottom:30px;
+
 }
+
+
 
 
 .product-image img{
