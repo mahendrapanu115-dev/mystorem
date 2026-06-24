@@ -1,412 +1,356 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Roasted Sing Premium</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mera Online Store</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
-
 
 body{
-
-background:#050505;
-color:white;
-
+    background:#f5f5f5;
 }
 
+/* SEARCH */
 
+.search-wrapper{
 
+    background:white;
+    padding:12px;
+    text-align:center;
+}
+
+        
 /* HEADER */
-
 header{
+    background:#ffffff;
+    color:#222;
+    text-align:center;
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
 
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 8%;
-background:#000;
+header h1,
+header p{
+    text-align:center;
+}
+/* Title animation */
+header h1{
+    animation: textPop 1s ease;
+}
+
+/* subtitle animation */
+header p{
+    animation: fadeUp 1.2s ease;
 
 }
 
+.search-wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
 
-.logo{
+.search-container{
+  width:600px;
+  height:55px;
+  background:white;
+  border-radius:35px;
+  display:flex;
+  align-items:center;
+  padding:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
 
-font-size:30px;
-font-weight:bold;
-color:#f5a623;
-
+.search-container input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding-left:20px;
+  font-size:16px;
 }
 
 
+/* pura button popup effect */
+.search-btn{
+  height:48px;
+  padding:0 35px;
+  border:none;
+  border-radius:30px;
+  background:#0d8cff;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
 
-nav a{
-
-color:white;
-text-decoration:none;
-margin-left:25px;
-
+  transition:0.25s ease;
+  box-shadow:0 6px 15px rgba(0,140,255,0.4);
 }
 
 
-
-
-/* HERO */
-
-
-.hero{
-
-min-height:90vh;
-display:flex;
-align-items:center;
-justify-content:space-around;
-padding:40px;
-
+/* mouse le jane par */
+.search-btn:hover{
+  transform:scale(1.08);
 }
 
 
-.hero h1{
-
-font-size:60px;
-
+/* click karne par pura button bahar pop */
+.search-btn:active{
+  transform:scale(1.25);
+  box-shadow:0 0 35px rgba(0,140,255,0.8);
+}
 }
 
 
-.hero span{
+}
+/* CLEAN TITLE ANIMATION */
+@keyframes textPop{
+    0%{
+        transform:translateY(-10px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
 
-color:#f5a623;
+/* CLEAN TEXT ANIMATION */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+}
 
+/* Title effect */
+@keyframes textPop{
+    0%{
+        transform:scale(0.6);
+        opacity:0;
+        letter-spacing:5px;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+        letter-spacing:0px;
+    }
+}
+
+/* Subtitle effect */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
-.hero p{
-
-font-size:20px;
-color:#ccc;
-margin:20px 0;
-
+/* CONTAINER */
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:10px;
 }
 
-
-
-.btn{
-
-display:inline-block;
-background:#f5a623;
-color:black;
-padding:15px 40px;
-border-radius:30px;
-font-weight:bold;
-
-}
-
-
-
-.hero img{
-
-width:420px;
-animation:float 3s infinite;
-
-}
-
-
-
-@keyframes float{
-
-50%{
-
-transform:translateY(-25px);
-
-}
-
-}
-
-
-
-/* PRODUCTS */
-
-
+/* PRODUCTS GRID */
 .products{
-
-padding:60px 8%;
-text-align:center;
-
+    display:grid;
+    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
+    gap:10px;
 }
 
-
-.products h2{
-
-font-size:45px;
-margin-bottom:40px;
-
+/* PRODUCT CARD */
+.product{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
 }
 
-
-
-.card{
-
-background:#111;
-width:330px;
-margin:auto;
-padding:25px;
-border-radius:25px;
-border:1px solid #333;
-transition:.4s;
-
+/* IMAGE FIX */
+.product img{
+    width:100%;
+    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
+    object-fit:cover;  /* सभी images same crop + same look */
+    background:#fff;
 }
 
-
-
-.card:hover{
-
-transform:translateY(-15px);
-box-shadow:0 0 30px #f5a623;
-
+/* TEXT AREA */
+.product-content{
+    padding:8px;
+    text-align:center;
 }
 
-
-
-.card img{
-
-width:100%;
-height:230px;
-object-fit:contain;
-
+.product h2{
+    font-size:13px;
+    margin:5px 0;
 }
-
-
-
-.card h3{
-
-font-size:28px;
-margin:15px 0;
-
-}
-
-
 
 .price{
-
-font-size:32px;
-color:#f5a623;
-font-weight:bold;
-
+    color:green;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:5px;
 }
 
-
-
-.card p{
-
-color:#aaa;
-margin:10px;
-
+/* BUTTONS */
+.btn{
+    display:block;
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    text-decoration:none;
+    color:white;
+    border-radius:5px;
+    font-size:13px;
 }
 
-
-
-button{
-
-background:#f5a623;
-border:none;
-padding:14px 35px;
-border-radius:30px;
-font-weight:bold;
-cursor:pointer;
-
+.buy{
+    background:green;
 }
 
-
-
-
-/* ANIMATION */
-
-.hero-text{
-
-animation:show 1s;
-
+.whatsapp{
+    background:#25D366;
 }
 
+/* TABLET */
+@media (min-width:768px){
+    .products{
+        grid-template-columns:repeat(3, 1fr);
+    }
 
-@keyframes show{
-
-from{
-
-opacity:0;
-transform:translateX(-50px);
-
+    .product img{
+        height:160px;
+    }
 }
 
-to{
-
-opacity:1;
-transform:translateX(0);
-
+/* LAPTOP */
+@media (min-width:1024px){
+    .products{
+        grid-template-columns:repeat(4, 1fr);
+    }
 }
-
-}
-
-
-
-
-@media(max-width:700px){
-
-.hero{
-
-flex-direction:column;
-
-}
-
-
-.hero h1{
-
-font-size:40px;
-
-}
-
-
-.hero img{
-
-width:280px;
-
-}
-
-}
-
-
 </style>
-
 </head>
-
 
 <body>
 
+<!-- SEARCH -->
+<div class="search-wrapper">
+  <div class="search-container">
 
+    <input id="mySearch" type="text" placeholder="product, brand">
+
+    <button class="search-btn" onclick="searchNow()">
+      🔍 Search
+    </button>
+
+  </div>
+</div>
+
+
+<script>
+function searchNow(){
+
+  let text = document.getElementById("mySearch").value;
+
+  alert("Aapne search kiya: " + text);
+
+}
+</script>
 
 <header>
-
-
-<div class="logo">
-
-🥜 ROASTED SING
-
-</div>
-
-
-<nav>
-
-<a href="#">Home</a>
-<a href="#">Products</a>
-<a href="#">Order</a>
-
-</nav>
-
-
+    <h1>🛒 Mera Online Store</h1>
+    <p>Best Quality Products | Fast Delivery</p>
 </header>
 
+<div class="container">
 
+<div class="products">
 
+    <!-- PRODUCT 1 -->
+    <div class="product">
+        <img src="divya.new.jpg">
+        <div class="product-content">
+            <h2>ROASTED SING</h2>
+            <div class="price">₹150</div>
 
-<section class="hero">
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
 
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
-<div class="hero-text">
+    <!-- PRODUCT 2 -->
+    <div class="product">
+        <img src="HARSHITA.jpg">
+        <div class="product-content">
+            <h2>BANASKATHA SING</h2>
+            <div class="price">₹120</div>
 
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
 
-<h1>
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
-Premium <span>Roasted Sing</span>
+    <!-- PRODUCT 3 -->
+    <div class="product">
+        <img src="product3.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 3</h2>
+            <div class="price">₹180</div>
 
-</h1>
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
 
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
-<p>
+    <!-- PRODUCT 4 -->
+    <div class="product">
+        <img src="product4.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 4</h2>
+            <div class="price">₹200</div>
 
-Fresh roasted peanuts with rich crispy taste
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
 
-</p>
-
-
-<a class="btn">
-
-Buy Now
-
-</a>
-
-
-</div>
-
-
-
-
-<img <img src="https://cdn.pixabay.com/photo-2017/06/02/18/24/peanuts-2367598_1280.png">
-
-
-
-</section>
-
-
-
-
-
-<section class="products">
-
-
-<h2>
-
-Our Best Product
-
-</h2>
-
-
-
-<div class="card">
-
-
- <img src="https://images.unsplash.com/photo-1599599810694-57a9e5c8b4f2">
-
-
-<h3>
-
-Roasted Sing
-
-</h3>
-
-
-<p>
-
-Premium Quality • 250 Gram
-
-</p>
-
-
-<div class="price">
-
-₹150
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
+            📲 Order
+            </a>
+        </div>
+    </div>
 
 </div>
 
-
-
-<button>
-
-Order Now
-
-</button>
-
-
 </div>
-
-
-
-</section>
-
-
 
 </body>
+
+</script>
 </html>
