@@ -194,8 +194,6 @@ header p{
 
 }
     
-.product:hover img{
-    transform:scale(1.08);
 
     
 /* TEXT AREA */
