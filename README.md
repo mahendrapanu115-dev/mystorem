@@ -191,13 +191,19 @@ header p{
     height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
     object-fit:cover;  /* सभी images same crop + same look */
     background:#fff;
+    transition:0.4s;
 }
+    
+.product:hover img{
+    transform:scale(1.08);
 
+    
 /* TEXT AREA */
 .product-content{
     padding:8px;
     text-align:center;
 }
+
 
 .product h2{
     font-size:13px;
