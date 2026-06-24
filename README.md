@@ -16,28 +16,13 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial;
 }
 
 
 body{
 
-background:#050505;
-color:white;
-
-}
-
-
-
-/* OFFER */
-
-.offer{
-
-background:#ffb000;
-color:#000;
-text-align:center;
-padding:10px;
-font-weight:bold;
+background:#f5f5f5;
 
 }
 
@@ -45,9 +30,9 @@ font-weight:bold;
 
 /* SEARCH */
 
-.search-box{
+.search-wrapper{
 
-background:#fff;
+background:white;
 padding:15px;
 display:flex;
 justify-content:center;
@@ -55,37 +40,36 @@ justify-content:center;
 }
 
 
-.search{
+.search-container{
 
-width:95%;
-max-width:600px;
-height:50px;
-display:flex;
+width:600px;
+height:55px;
 background:white;
+display:flex;
 border-radius:30px;
-box-shadow:0 5px 20px #333;
+box-shadow:0 5px 20px #ccc;
 overflow:hidden;
 
 }
 
 
-.search input{
+.search-container input{
 
 flex:1;
 border:none;
 outline:none;
-padding:15px;
+padding-left:20px;
 font-size:16px;
 
 }
 
 
+.search-btn{
 
-.search button{
-
-width:100px;
+width:120px;
 border:none;
-background:#ffb000;
+background:#0d8cff;
+color:white;
 font-weight:bold;
 cursor:pointer;
 
@@ -99,36 +83,28 @@ cursor:pointer;
 
 header{
 
+background:white;
 text-align:center;
-padding:30px 10px;
+padding:25px;
+border-bottom:1px solid #ddd;
 
 }
 
 
 header h1{
 
-font-size:35px;
-color:#ffb000;
-animation:show 1s;
+color:#ff9900;
+animation:title 1s;
 
 }
 
 
-header p{
-
-color:#ccc;
-margin-top:10px;
-
-}
-
-
-
-@keyframes show{
+@keyframes title{
 
 from{
 
 opacity:0;
-transform:translateY(-30px);
+transform:translateY(-20px);
 
 }
 
@@ -143,12 +119,13 @@ opacity:1;
 
 
 
+
+
 /* PRODUCTS */
 
 
 .container{
 
-width:100%;
 max-width:1200px;
 margin:auto;
 padding:20px;
@@ -156,105 +133,130 @@ padding:20px;
 }
 
 
+
 .products{
 
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:20px;
+gap:15px;
 
 }
 
 
 
 
+.product{
 
-.card{
-
-background:#111;
-border-radius:20px;
+background:white;
+border-radius:15px;
 overflow:hidden;
+box-shadow:0 5px 15px #ddd;
+transition:.3s;
+
+}
+
+
+.product:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+
+
+
+/* IMAGE SLIDER */
+
+
+.slider{
+
+height:220px;
 position:relative;
-padding-bottom:15px;
-transition:.4s;
-border:1px solid #333;
+overflow:hidden;
+background:white;
 
 }
 
 
-.card:hover{
-
-transform:translateY(-10px);
-box-shadow:0 0 25px #ffb000;
-
-}
-
-
-
-.card img{
+.slider img{
 
 width:100%;
 height:220px;
 object-fit:contain;
-background:white;
-transition:.4s;
+display:none;
+cursor:pointer;
 
 }
 
 
-.card:hover img{
+.slider img.active{
 
-transform:scale(1.08);
+display:block;
 
 }
 
 
-
-
-.tag{
+.slider button{
 
 position:absolute;
-top:10px;
-left:10px;
-background:red;
-padding:5px 12px;
-border-radius:20px;
-font-size:12px;
+top:50%;
+transform:translateY(-50%);
+background:black;
+color:white;
+border:none;
+width:35px;
+height:35px;
+border-radius:50%;
 
 }
 
 
 
-.info{
+.prev{
 
+left:5px;
+
+}
+
+
+
+.next{
+
+right:5px;
+
+}
+
+
+
+
+
+
+/* DETAILS */
+
+
+.content{
+
+padding:12px;
 text-align:center;
-padding:15px;
 
 }
 
 
+.content h2{
 
-.info h2{
-
-font-size:18px;
-
-}
-
-
-
-.star{
-
-color:#ffb000;
-margin:8px;
+font-size:16px;
 
 }
-
 
 
 .price{
 
-color:#00ff66;
-font-size:25px;
+color:green;
+font-size:22px;
 font-weight:bold;
+margin:8px;
 
 }
 
@@ -263,12 +265,11 @@ font-weight:bold;
 .btn{
 
 display:block;
-margin:10px;
-padding:12px;
-border-radius:25px;
+padding:10px;
+margin-top:8px;
+border-radius:8px;
 text-decoration:none;
-text-align:center;
-font-weight:bold;
+color:white;
 
 }
 
@@ -276,41 +277,19 @@ font-weight:bold;
 
 .pay{
 
-background:#ffb000;
-color:black;
+background:#ff9900;
 
 }
-
 
 
 .order{
 
 background:#25D366;
-color:white;
 
 }
 
 
 
-
-/* WHATSAPP */
-
-
-.float{
-
-position:fixed;
-right:20px;
-bottom:20px;
-
-background:#25D366;
-color:white;
-
-font-size:30px;
-
-padding:15px;
-border-radius:50%;
-
-}
 
 
 
@@ -324,13 +303,13 @@ border-radius:50%;
 .products{
 
 grid-template-columns:repeat(2,1fr);
-gap:10px;
 
 }
 
 
 
-.card img{
+.slider,
+.slider img{
 
 height:150px;
 
@@ -338,51 +317,18 @@ height:150px;
 
 
 
-.info{
-
-padding:8px;
-
-}
-
-
-.info h2{
+.content h2{
 
 font-size:13px;
 
 }
 
 
-
-.price{
-
-font-size:18px;
-
-}
-
-
-
 .btn{
 
 font-size:12px;
-padding:8px;
 
 }
-
-
-
-header h1{
-
-font-size:25px;
-
-}
-
-
-.search button{
-
-width:80px;
-
-}
-
 
 
 }
@@ -392,7 +338,6 @@ width:80px;
 
 </style>
 
-
 </head>
 
 
@@ -401,24 +346,18 @@ width:80px;
 
 
 
-<div class="offer">
-
-🔥 Roasted Sing Special Offer ₹150 Only 🔥
-
-</div>
 
 
+<div class="search-wrapper">
 
 
-<div class="search-box">
-
-<div class="search">
+<div class="search-container">
 
 
-<input id="search" placeholder="Search Product">
+<input id="searchInput" placeholder="Search Product">
 
 
-<button>
+<button class="search-btn" onclick="searchProduct()">
 
 🔍 Search
 
@@ -427,7 +366,10 @@ width:80px;
 
 </div>
 
+
 </div>
+
+
 
 
 
@@ -440,7 +382,6 @@ width:80px;
 🥜 Roasted Sing Store
 
 </h1>
-
 
 <p>
 
@@ -459,25 +400,49 @@ Fresh Quality | Fast Delivery
 <div class="container">
 
 
-<div class="products" id="products">
+<div class="products">
 
 
 
 
-<div class="card">
+
+<!-- PRODUCT 1 -->
 
 
-<div class="tag">
+<div class="product">
 
-BEST
+
+<div class="slider">
+
+
+<img class="active" src="divya.new.jpg">
+
+<img src="sing2.jpg">
+
+<img src="sing3.jpg">
+
+<img src="sing4.jpg">
+
+<img src="sing5.jpg">
+
+
+<button class="prev" onclick="changeSlide(-1,this)">
+❮
+</button>
+
+
+<button class="next" onclick="changeSlide(1,this)">
+❯
+</button>
+
 
 </div>
 
 
-<img src="divya.new.jpg">
 
 
-<div class="info">
+<div class="content">
+
 
 <h2>
 
@@ -486,18 +451,12 @@ ROASTED SING
 </h2>
 
 
-<div class="star">
-
-⭐⭐⭐⭐⭐
-
-</div>
-
-
 <div class="price">
 
 ₹150
 
 </div>
+
 
 
 <a class="btn pay">
@@ -509,7 +468,7 @@ ROASTED SING
 
 <a class="btn order">
 
-📲 Order WhatsApp
+📲 Order
 
 </a>
 
@@ -523,26 +482,54 @@ ROASTED SING
 
 
 
-<div class="card">
 
 
-<img src="HARSHITA.jpg">
 
 
-<div class="info">
+<!-- PRODUCT 2 -->
+
+
+<div class="product">
+
+
+<div class="slider">
+
+
+<img class="active" src="HARSHITA.jpg">
+
+<img src="sing6.jpg">
+
+<img src="sing7.jpg">
+
+<img src="sing8.jpg">
+
+<img src="sing9.jpg">
+
+
+<button class="prev" onclick="changeSlide(-1,this)">
+❮
+</button>
+
+
+<button class="next" onclick="changeSlide(1,this)">
+❯
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="content">
+
 
 <h2>
 
 BANASKATHA SING
 
 </h2>
-
-
-<div class="star">
-
-⭐⭐⭐⭐
-
-</div>
 
 
 <div class="price">
@@ -561,7 +548,7 @@ BANASKATHA SING
 
 <a class="btn order">
 
-📲 Order WhatsApp
+📲 Order
 
 </a>
 
@@ -576,124 +563,11 @@ BANASKATHA SING
 
 
 
-<div class="card">
-
-
-<img src="product3.jpg">
-
-
-<div class="info">
-
-<h2>
-
-PREMIUM SING
-
-</h2>
-
-
-<div class="star">
-
-⭐⭐⭐⭐⭐
-
-</div>
-
-
-<div class="price">
-
-₹180
-
-</div>
-
-
-<a class="btn pay">
-
-💳 Pay Now
-
-</a>
-
-
-<a class="btn order">
-
-📲 Order WhatsApp
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<img src="product4.jpg">
-
-
-<div class="info">
-
-<h2>
-
-SPECIAL SING
-
-</h2>
-
-
-<div class="star">
-
-⭐⭐⭐⭐
-
-</div>
-
-
-<div class="price">
-
-₹200
-
-</div>
-
-
-<a class="btn pay">
-
-💳 Pay Now
-
-</a>
-
-
-<a class="btn order">
-
-📲 Order WhatsApp
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
 
 </div>
 
 </div>
 
-
-
-
-
-<a class="float">
-
-📲
-
-</a>
 
 
 
@@ -703,34 +577,81 @@ SPECIAL SING
 <script>
 
 
-let search=document.getElementById("search");
+
+// SEARCH FUNCTION
 
 
-let cards=document.querySelectorAll(".card");
+function searchProduct(){
+
+
+let value=document
+.getElementById("searchInput")
+.value
+.toLowerCase();
 
 
 
-search.addEventListener("keyup",()=>{
+let products=document.querySelectorAll(".product");
 
 
-let value=search.value.toLowerCase();
+
+products.forEach(product=>{
 
 
-cards.forEach(card=>{
+let text=product.innerText.toLowerCase();
 
-
-let text=card.innerText.toLowerCase();
 
 
 if(text.includes(value)){
 
-card.style.display="block";
+
+product.style.display="block";
+
 
 }
 
 else{
 
-card.style.display="none";
+
+product.style.display="none";
+
+
+}
+
+
+
+});
+
+
+}
+
+
+
+
+
+
+// MANUAL SLIDE
+
+
+function changeSlide(direction,btn){
+
+
+let slider=btn.parentElement;
+
+
+let images=slider.querySelectorAll("img");
+
+
+let index=0;
+
+
+
+images.forEach((img,i)=>{
+
+
+if(img.classList.contains("active")){
+
+index=i;
 
 }
 
@@ -738,11 +659,100 @@ card.style.display="none";
 });
 
 
+
+images[index].classList.remove("active");
+
+
+index=index+direction;
+
+
+
+if(index>=images.length){
+
+index=0;
+
+}
+
+
+
+if(index<0){
+
+index=images.length-1;
+
+}
+
+
+
+images[index].classList.add("active");
+
+
+
+}
+
+
+
+
+
+
+
+// AUTO SLIDE
+
+
+setInterval(()=>{
+
+
+document.querySelectorAll(".slider")
+.forEach(slider=>{
+
+
+let images=slider.querySelectorAll("img");
+
+
+let index=0;
+
+
+
+images.forEach((img,i)=>{
+
+
+if(img.classList.contains("active")){
+
+index=i;
+
+}
+
+
 });
 
 
 
+images[index].classList.remove("active");
+
+
+index++;
+
+
+if(index>=images.length){
+
+index=0;
+
+}
+
+
+images[index].classList.add("active");
+
+
+
+});
+
+
+
+},3000);
+
+
+
 </script>
+
 
 
 
