@@ -169,59 +169,55 @@ header p{
 }
 
 /* PRODUCTS GRID */
-.products{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
-    gap:10px;
-}
-
-/* PRODUCT CARD */
-.product-box{
-
-    width:600px;
-    height:180px;
+.product-card{
+    width:90%;
+    max-width:700px;
+    height:170px;
     background:white;
-    margin:30px;
-    border-radius:15px;
+    margin:20px auto;
     display:flex;
-    padding:15px;
+    border-radius:15px;
+    overflow:hidden;
     box-shadow:0 5px 15px #ccc;
-
 }
 
 
-.product-box img{
-
-    width:160px;
-    height:150px;
+.product-card img{
+    width:180px;
+    height:170px;
     object-fit:cover;
-    border-radius:12px;
-
 }
 
 
-
-.product-info{
-
-    padding-left:25px;
-
+.product-details{
+    padding:20px;
 }
 
 
-.product-info h2{
-
-    margin:10px 0;
-    font-size:25px;
-
-}
-
-
-.price{
-
-    color:green;
+.product-details h3{
+    margin:0;
     font-size:22px;
-    font-weight:bold;
+}
 
+
+.product-details h2{
+    color:green;
+    margin:10px 0;
+}
+
+
+.product-details p{
+    color:#666;
+}
+
+
+.product-details button{
+    background:#08a900;
+    color:white;
+    border:none;
+    padding:10px 30px;
+    border-radius:8px;
+}
 }
 
 
@@ -322,29 +318,23 @@ function searchNow(){
 <div class="products">
 
     <!-- PRODUCT 1 -->
- <div class="product-box">
+<div class="product-card">
 
-<img src="divya.jpg">
+        <img src="divya.jpg">
 
-<div class="product-info">
+    <div class="product-details">
 
-<h2>ROASTED SING</h2>
+        <h3>ROASTED SING</h3>
 
-<div class="price">
-₹150
-</div>
+        <h2>₹150</h2>
 
-<p class="desc">
-Fresh Quality | Crispy Taste
-</p>
+        <p>Fresh Quality</p>
 
-<button>
-🛒 Order Now
-</button>
+        <button>🛒 Order Now</button>
 
-</div>
+    </div>
 
-</div>
+    </div>
 
     <!-- PRODUCT 2 -->
     <div class="product">
