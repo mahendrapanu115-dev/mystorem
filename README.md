@@ -1,761 +1,356 @@
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Roasted Sing Store</title>
-
+<title>Mera Online Store</title>
 
 <style>
-
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
-
 
 body{
-
-background:#f5f5f5;
-
+    background:#f5f5f5;
 }
-
-
 
 /* SEARCH */
 
 .search-wrapper{
 
-background:white;
-padding:15px;
-display:flex;
-justify-content:center;
+    background:white;
+    padding:12px;
+    text-align:center;
+}
+
+        
+/* HEADER */
+header{
+    background:#ffffff;
+    color:#222;
+    text-align:center;
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
+
+header h1,
+header p{
+    text-align:center;
+}
+/* Title animation */
+header h1{
+    animation: textPop 1s ease;
+}
+
+/* subtitle animation */
+header p{
+    animation: fadeUp 1.2s ease;
 
 }
 
+.search-wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
 
 .search-container{
-
-width:600px;
-height:55px;
-background:white;
-display:flex;
-border-radius:30px;
-box-shadow:0 5px 20px #ccc;
-overflow:hidden;
-
+  width:600px;
+  height:55px;
+  background:white;
+  border-radius:35px;
+  display:flex;
+  align-items:center;
+  padding:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
-
 
 .search-container input{
-
-flex:1;
-border:none;
-outline:none;
-padding-left:20px;
-font-size:16px;
-
+  flex:1;
+  border:none;
+  outline:none;
+  padding-left:20px;
+  font-size:16px;
 }
 
 
+/* pura button popup effect */
 .search-btn{
+  height:48px;
+  padding:0 35px;
+  border:none;
+  border-radius:30px;
+  background:#0d8cff;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
 
-width:120px;
-border:none;
-background:#0d8cff;
-color:white;
-font-weight:bold;
-cursor:pointer;
-
+  transition:0.25s ease;
+  box-shadow:0 6px 15px rgba(0,140,255,0.4);
 }
 
 
-
-
-/* HEADER */
-
-
-header{
-
-background:white;
-text-align:center;
-padding:25px;
-border-bottom:1px solid #ddd;
-
+/* mouse le jane par */
+.search-btn:hover{
+  transform:scale(1.08);
 }
 
 
-header h1{
-
-color:#ff9900;
-animation:title 1s;
-
+/* click karne par pura button bahar pop */
+.search-btn:active{
+  transform:scale(1.25);
+  box-shadow:0 0 35px rgba(0,140,255,0.8);
+}
 }
 
 
-@keyframes title{
-
-from{
-
-opacity:0;
-transform:translateY(-20px);
-
+}
+/* CLEAN TITLE ANIMATION */
+@keyframes textPop{
+    0%{
+        transform:translateY(-10px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
 }
 
-to{
-
-opacity:1;
-
+/* CLEAN TEXT ANIMATION */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 }
 
+/* Title effect */
+@keyframes textPop{
+    0%{
+        transform:scale(0.6);
+        opacity:0;
+        letter-spacing:5px;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+        letter-spacing:0px;
+    }
+}
+
+/* Subtitle effect */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 
-
-
-
-
-/* PRODUCTS */
-
-
+/* CONTAINER */
 .container{
-
-max-width:1200px;
-margin:auto;
-padding:20px;
-
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:10px;
 }
 
-
-
+/* PRODUCTS GRID */
 .products{
-
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px;
-
+    display:grid;
+    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
+    gap:10px;
 }
 
-
-
-
+/* PRODUCT CARD */
 .product{
-
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 15px #ddd;
-transition:.3s;
-
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
 }
 
-
-.product:hover{
-
-transform:translateY(-8px);
-
+/* IMAGE FIX */
+.product img{
+    width:100%;
+    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
+    object-fit:cover;  /* सभी images same crop + same look */
+    background:#fff;
 }
 
-
-
-
-
-
-/* IMAGE SLIDER */
-
-
-.slider{
-
-height:220px;
-position:relative;
-overflow:hidden;
-background:white;
-
+/* TEXT AREA */
+.product-content{
+    padding:8px;
+    text-align:center;
 }
 
-
-.slider img{
-
-width:100%;
-height:220px;
-object-fit:contain;
-display:none;
-cursor:pointer;
-
+.product h2{
+    font-size:13px;
+    margin:5px 0;
 }
-
-
-.slider img.active{
-
-display:block;
-
-}
-
-
-.slider button{
-
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:black;
-color:white;
-border:none;
-width:35px;
-height:35px;
-border-radius:50%;
-
-}
-
-
-
-.prev{
-
-left:5px;
-
-}
-
-
-
-.next{
-
-right:5px;
-
-}
-
-
-
-
-
-
-/* DETAILS */
-
-
-.content{
-
-padding:12px;
-text-align:center;
-
-}
-
-
-.content h2{
-
-font-size:16px;
-
-}
-
 
 .price{
-
-color:green;
-font-size:22px;
-font-weight:bold;
-margin:8px;
-
+    color:green;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:5px;
 }
 
-
-
+/* BUTTONS */
 .btn{
-
-display:block;
-padding:10px;
-margin-top:8px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-
+    display:block;
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    text-decoration:none;
+    color:white;
+    border-radius:5px;
+    font-size:13px;
 }
 
-
-
-.pay{
-
-background:#ff9900;
-
+.buy{
+    background:green;
 }
 
-
-.order{
-
-background:#25D366;
-
+.whatsapp{
+    background:#25D366;
 }
 
+/* TABLET */
+@media (min-width:768px){
+    .products{
+        grid-template-columns:repeat(3, 1fr);
+    }
 
-
-
-
-
-
-/* MOBILE */
-
-
-@media(max-width:767px){
-
-
-.products{
-
-grid-template-columns:repeat(2,1fr);
-
+    .product img{
+        height:160px;
+    }
 }
 
-
-
-.slider,
-.slider img{
-
-height:150px;
-
+/* LAPTOP */
+@media (min-width:1024px){
+    .products{
+        grid-template-columns:repeat(4, 1fr);
+    }
 }
-
-
-
-.content h2{
-
-font-size:13px;
-
-}
-
-
-.btn{
-
-font-size:12px;
-
-}
-
-
-}
-
-
-
-
 </style>
-
 </head>
-
-
 
 <body>
 
-
-
-
-
+<!-- SEARCH -->
 <div class="search-wrapper">
+  <div class="search-container">
 
+    <input id="mySearch" type="text" placeholder="product, brand">
 
-<div class="search-container">
+    <button class="search-btn" onclick="searchNow()">
+      🔍 Search
+    </button>
 
-
-<input id="searchInput" placeholder="Search Product">
-
-
-<button class="search-btn" onclick="searchProduct()">
-
-🔍 Search
-
-</button>
-
-
+  </div>
 </div>
-
-
-</div>
-
-
-
-
-
-
-
-<header>
-
-<h1>
-
-🥜 Roasted Sing Store
-
-</h1>
-
-<p>
-
-Fresh Quality | Fast Delivery
-
-</p>
-
-
-</header>
-
-
-
-
-
-
-<div class="container">
-
-
-<div class="products">
-
-
-
-
-
-<!-- PRODUCT 1 -->
-
-
-<div class="product">
-
-
-<div class="slider">
-
-
-<img class="active" src="divya.new.jpg">
-
-<img src="sing2.jpg">
-
-<img src="sing3.jpg">
-
-<img src="sing4.jpg">
-
-<img src="sing5.jpg">
-
-
-<button class="prev" onclick="changeSlide(-1,this)">
-❮
-</button>
-
-
-<button class="next" onclick="changeSlide(1,this)">
-❯
-</button>
-
-
-</div>
-
-
-
-
-<div class="content">
-
-
-<h2>
-
-ROASTED SING
-
-</h2>
-
-
-<div class="price">
-
-₹150
-
-</div>
-
-
-
-<a class="btn pay">
-
-💳 Pay Now
-
-</a>
-
-
-<a class="btn order">
-
-📲 Order
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- PRODUCT 2 -->
-
-
-<div class="product">
-
-
-<div class="slider">
-
-
-<img class="active" src="HARSHITA.jpg">
-
-<img src="sing6.jpg">
-
-<img src="sing7.jpg">
-
-<img src="sing8.jpg">
-
-<img src="sing9.jpg">
-
-
-<button class="prev" onclick="changeSlide(-1,this)">
-❮
-</button>
-
-
-<button class="next" onclick="changeSlide(1,this)">
-❯
-</button>
-
-
-</div>
-
-
-
-
-
-<div class="content">
-
-
-<h2>
-
-BANASKATHA SING
-
-</h2>
-
-
-<div class="price">
-
-₹120
-
-</div>
-
-
-<a class="btn pay">
-
-💳 Pay Now
-
-</a>
-
-
-<a class="btn order">
-
-📲 Order
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-</div>
-
-</div>
-
-
-
-
-
 
 
 <script>
+function searchNow(){
 
+  let text = document.getElementById("mySearch").value;
 
-
-// SEARCH FUNCTION
-
-
-function searchProduct(){
-
-
-let value=document
-.getElementById("searchInput")
-.value
-.toLowerCase();
-
-
-
-let products=document.querySelectorAll(".product");
-
-
-
-products.forEach(product=>{
-
-
-let text=product.innerText.toLowerCase();
-
-
-
-if(text.includes(value)){
-
-
-product.style.display="block";
-
+  alert("Aapne search kiya: " + text);
 
 }
-
-else{
-
-
-product.style.display="none";
-
-
-}
-
-
-
-});
-
-
-}
-
-
-
-
-
-
-// MANUAL SLIDE
-
-
-function changeSlide(direction,btn){
-
-
-let slider=btn.parentElement;
-
-
-let images=slider.querySelectorAll("img");
-
-
-let index=0;
-
-
-
-images.forEach((img,i)=>{
-
-
-if(img.classList.contains("active")){
-
-index=i;
-
-}
-
-
-});
-
-
-
-images[index].classList.remove("active");
-
-
-index=index+direction;
-
-
-
-if(index>=images.length){
-
-index=0;
-
-}
-
-
-
-if(index<0){
-
-index=images.length-1;
-
-}
-
-
-
-images[index].classList.add("active");
-
-
-
-}
-
-
-
-
-
-
-
-// AUTO SLIDE
-
-
-setInterval(()=>{
-
-
-document.querySelectorAll(".slider")
-.forEach(slider=>{
-
-
-let images=slider.querySelectorAll("img");
-
-
-let index=0;
-
-
-
-images.forEach((img,i)=>{
-
-
-if(img.classList.contains("active")){
-
-index=i;
-
-}
-
-
-});
-
-
-
-images[index].classList.remove("active");
-
-
-index++;
-
-
-if(index>=images.length){
-
-index=0;
-
-}
-
-
-images[index].classList.add("active");
-
-
-
-});
-
-
-
-},3000);
-
-
-
 </script>
 
+<header>
+    <h1>🛒 Mera Online Store</h1>
+    <p>Best Quality Products | Fast Delivery</p>
+</header>
 
+<div class="container">
 
+<div class="products">
+
+    <!-- PRODUCT 1 -->
+    <div class="product">
+        <img src="divya.new.jpg">
+        <div class="product-content">
+            <h2>ROASTED SING</h2>
+            <div class="price">₹150</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product">
+        <img src="HARSHITA.jpg">
+        <div class="product-content">
+            <h2>BANASKATHA SING</h2>
+            <div class="price">₹120</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product">
+        <img src="product3.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 3</h2>
+            <div class="price">₹180</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="product">
+        <img src="product4.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 4</h2>
+            <div class="price">₹200</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</div>
 
 </body>
 
+</script>
 </html>
