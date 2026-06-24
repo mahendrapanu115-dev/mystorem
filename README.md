@@ -191,7 +191,7 @@ header p{
     height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
     object-fit:cover;  /* सभी images same crop + same look */
     background:#fff;
-    transition:0.4s;
+
 }
     
 .product:hover img{
