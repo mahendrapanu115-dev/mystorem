@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Roasted Sing Store</title>
 
+
 <style>
+
 
 *{
 margin:0;
@@ -16,7 +22,8 @@ font-family:Arial,sans-serif;
 
 body{
 
-background:#f5f5f5;
+background:#050505;
+color:white;
 
 }
 
@@ -26,8 +33,8 @@ background:#f5f5f5;
 
 .offer{
 
-background:#111;
-color:#ffb000;
+background:#ffb000;
+color:#000;
 text-align:center;
 padding:10px;
 font-weight:bold;
@@ -38,9 +45,9 @@ font-weight:bold;
 
 /* SEARCH */
 
-.search-wrapper{
+.search-box{
 
-background:white;
+background:#fff;
 padding:15px;
 display:flex;
 justify-content:center;
@@ -48,37 +55,38 @@ justify-content:center;
 }
 
 
-.search-container{
+.search{
 
-width:600px;
-height:55px;
+width:95%;
+max-width:600px;
+height:50px;
 display:flex;
 background:white;
-border-radius:35px;
-box-shadow:0 5px 20px #ddd;
-padding:5px;
+border-radius:30px;
+box-shadow:0 5px 20px #333;
+overflow:hidden;
 
 }
 
 
-.search-container input{
+.search input{
 
 flex:1;
 border:none;
 outline:none;
-padding-left:20px;
+padding:15px;
 font-size:16px;
 
 }
 
 
-.search-btn{
 
-background:#0d8cff;
-color:white;
+.search button{
+
+width:100px;
 border:none;
-border-radius:30px;
-padding:0 30px;
+background:#ffb000;
+font-weight:bold;
 cursor:pointer;
 
 }
@@ -88,38 +96,39 @@ cursor:pointer;
 
 /* HEADER */
 
+
 header{
 
-background:white;
 text-align:center;
-padding:20px;
+padding:30px 10px;
 
 }
 
 
 header h1{
 
-color:#222;
-animation:pop 1s;
+font-size:35px;
+color:#ffb000;
+animation:show 1s;
 
 }
 
 
 header p{
 
-color:#777;
+color:#ccc;
+margin-top:10px;
 
 }
 
 
 
-
-@keyframes pop{
+@keyframes show{
 
 from{
 
 opacity:0;
-transform:scale(.5);
+transform:translateY(-30px);
 
 }
 
@@ -134,11 +143,12 @@ opacity:1;
 
 
 
+/* PRODUCTS */
 
-/* CONTAINER */
 
 .container{
 
+width:100%;
 max-width:1200px;
 margin:auto;
 padding:20px;
@@ -146,49 +156,66 @@ padding:20px;
 }
 
 
-
-/* PRODUCTS */
-
 .products{
 
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
 
 }
 
 
 
-/* CARD */
 
-.product{
 
-background:white;
-border-radius:15px;
+.card{
+
+background:#111;
+border-radius:20px;
 overflow:hidden;
 position:relative;
-box-shadow:0 5px 15px #ddd;
+padding-bottom:15px;
+transition:.4s;
+border:1px solid #333;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 0 25px #ffb000;
+
+}
+
+
+
+.card img{
+
+width:100%;
+height:220px;
+object-fit:contain;
+background:white;
 transition:.4s;
 
 }
 
 
-.product:hover{
+.card:hover img{
 
-transform:translateY(-10px);
-box-shadow:0 15px 30px #bbb;
+transform:scale(1.08);
 
 }
 
 
 
-.badge{
+
+.tag{
 
 position:absolute;
 top:10px;
 left:10px;
-background:#ff0000;
-color:white;
+background:red;
 padding:5px 12px;
 border-radius:20px;
 font-size:12px;
@@ -197,47 +224,27 @@ font-size:12px;
 
 
 
+.info{
 
-.product img{
-
-width:100%;
-height:200px;
-object-fit:cover;
-transition:.4s;
-
-}
-
-
-
-.product:hover img{
-
-transform:scale(1.08);
-
-}
-
-
-
-.product-content{
-
-padding:12px;
 text-align:center;
+padding:15px;
 
 }
 
 
 
-.product h2{
+.info h2{
 
-font-size:16px;
+font-size:18px;
 
 }
 
 
 
-.rating{
+.star{
 
 color:#ffb000;
-margin:5px;
+margin:8px;
 
 }
 
@@ -245,62 +252,48 @@ margin:5px;
 
 .price{
 
-color:green;
-font-size:22px;
+color:#00ff66;
+font-size:25px;
 font-weight:bold;
 
 }
 
 
 
-
 .btn{
 
 display:block;
-padding:10px;
-margin-top:8px;
-border-radius:8px;
+margin:10px;
+padding:12px;
+border-radius:25px;
 text-decoration:none;
+text-align:center;
+font-weight:bold;
+
+}
+
+
+
+.pay{
+
+background:#ffb000;
+color:black;
+
+}
+
+
+
+.order{
+
+background:#25D366;
 color:white;
 
 }
 
 
 
-.buy{
 
-background:#0a8f08;
-
-}
-
-
-.whatsapp{
-
-background:#25D366;
-
-}
-
-
-
-
-
-/* DESKTOP */
-
-
-@media(min-width:768px){
-
-.products{
-
-grid-template-columns:repeat(4,1fr);
-
-}
-
-}
-
-
-
-
-/* FLOAT WHATSAPP */
+/* WHATSAPP */
 
 
 .float{
@@ -308,14 +301,93 @@ grid-template-columns:repeat(4,1fr);
 position:fixed;
 right:20px;
 bottom:20px;
+
 background:#25D366;
 color:white;
+
 font-size:30px;
+
 padding:15px;
 border-radius:50%;
-text-decoration:none;
 
 }
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:767px){
+
+
+.products{
+
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+
+}
+
+
+
+.card img{
+
+height:150px;
+
+}
+
+
+
+.info{
+
+padding:8px;
+
+}
+
+
+.info h2{
+
+font-size:13px;
+
+}
+
+
+
+.price{
+
+font-size:18px;
+
+}
+
+
+
+.btn{
+
+font-size:12px;
+padding:8px;
+
+}
+
+
+
+header h1{
+
+font-size:25px;
+
+}
+
+
+.search button{
+
+width:80px;
+
+}
+
+
+
+}
+
+
 
 
 </style>
@@ -324,29 +396,31 @@ text-decoration:none;
 </head>
 
 
+
 <body>
+
 
 
 <div class="offer">
 
-🔥 Today Offer: Roasted Sing ₹150 Only | Free Delivery
+🔥 Roasted Sing Special Offer ₹150 Only 🔥
 
 </div>
 
 
 
 
-<div class="search-wrapper">
+<div class="search-box">
 
-<div class="search-container">
-
-
-<input id="search" placeholder="Search Product...">
+<div class="search">
 
 
-<button class="search-btn">
+<input id="search" placeholder="Search Product">
 
-🔍
+
+<button>
+
+🔍 Search
 
 </button>
 
@@ -363,14 +437,14 @@ text-decoration:none;
 
 <h1>
 
-🥜 Mera Online Store
+🥜 Roasted Sing Store
 
 </h1>
 
 
 <p>
 
-Best Quality Products | Fast Delivery
+Fresh Quality | Fast Delivery
 
 </p>
 
@@ -390,13 +464,12 @@ Best Quality Products | Fast Delivery
 
 
 
+<div class="card">
 
-<div class="product">
 
+<div class="tag">
 
-<div class="badge">
-
-Best Seller
+BEST
 
 </div>
 
@@ -404,8 +477,7 @@ Best Seller
 <img src="divya.new.jpg">
 
 
-<div class="product-content">
-
+<div class="info">
 
 <h2>
 
@@ -414,7 +486,7 @@ ROASTED SING
 </h2>
 
 
-<div class="rating">
+<div class="star">
 
 ⭐⭐⭐⭐⭐
 
@@ -428,38 +500,36 @@ ROASTED SING
 </div>
 
 
-
-<a class="btn buy">
+<a class="btn pay">
 
 💳 Pay Now
 
 </a>
 
 
-<a class="btn whatsapp">
+<a class="btn order">
 
-📲 Order
+📲 Order WhatsApp
 
 </a>
 
 
 </div>
 
+
 </div>
 
 
 
 
 
-
-<div class="product">
+<div class="card">
 
 
 <img src="HARSHITA.jpg">
 
 
-<div class="product-content">
-
+<div class="info">
 
 <h2>
 
@@ -468,7 +538,7 @@ BANASKATHA SING
 </h2>
 
 
-<div class="rating">
+<div class="star">
 
 ⭐⭐⭐⭐
 
@@ -482,22 +552,23 @@ BANASKATHA SING
 </div>
 
 
-<a class="btn buy">
+<a class="btn pay">
 
 💳 Pay Now
 
 </a>
 
 
-<a class="btn whatsapp">
+<a class="btn order">
 
-📲 Order
+📲 Order WhatsApp
 
 </a>
 
 
 </div>
 
+
 </div>
 
 
@@ -505,24 +576,22 @@ BANASKATHA SING
 
 
 
-
-<div class="product">
+<div class="card">
 
 
 <img src="product3.jpg">
 
 
-<div class="product-content">
-
+<div class="info">
 
 <h2>
 
-ROASTED PEANUT
+PREMIUM SING
 
 </h2>
 
 
-<div class="rating">
+<div class="star">
 
 ⭐⭐⭐⭐⭐
 
@@ -536,16 +605,16 @@ ROASTED PEANUT
 </div>
 
 
-<a class="btn buy">
+<a class="btn pay">
 
 💳 Pay Now
 
 </a>
 
 
-<a class="btn whatsapp">
+<a class="btn order">
 
-📲 Order
+📲 Order WhatsApp
 
 </a>
 
@@ -560,23 +629,22 @@ ROASTED PEANUT
 
 
 
-<div class="product">
+<div class="card">
 
 
 <img src="product4.jpg">
 
 
-<div class="product-content">
-
+<div class="info">
 
 <h2>
 
-PREMIUM SING
+SPECIAL SING
 
 </h2>
 
 
-<div class="rating">
+<div class="star">
 
 ⭐⭐⭐⭐
 
@@ -590,16 +658,16 @@ PREMIUM SING
 </div>
 
 
-<a class="btn buy">
+<a class="btn pay">
 
 💳 Pay Now
 
 </a>
 
 
-<a class="btn whatsapp">
+<a class="btn order">
 
-📲 Order
+📲 Order WhatsApp
 
 </a>
 
@@ -621,11 +689,12 @@ PREMIUM SING
 
 
 
-<a class="float" href="https://wa.me/919601393176">
+<a class="float">
 
 📲
 
 </a>
+
 
 
 
@@ -636,30 +705,32 @@ PREMIUM SING
 
 let search=document.getElementById("search");
 
-let products=document.querySelectorAll(".product");
+
+let cards=document.querySelectorAll(".card");
 
 
-search.addEventListener("keyup",function(){
+
+search.addEventListener("keyup",()=>{
 
 
-let value=this.value.toLowerCase();
+let value=search.value.toLowerCase();
 
 
-products.forEach(function(product){
+cards.forEach(card=>{
 
 
-let name=product.innerText.toLowerCase();
+let text=card.innerText.toLowerCase();
 
 
-if(name.includes(value)){
+if(text.includes(value)){
 
-product.style.display="block";
+card.style.display="block";
 
 }
 
 else{
 
-product.style.display="none";
+card.style.display="none";
 
 }
 
@@ -676,4 +747,5 @@ product.style.display="none";
 
 
 </body>
+
 </html>
