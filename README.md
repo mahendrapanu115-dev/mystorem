@@ -176,40 +176,75 @@ header p{
 }
 
 /* PRODUCT CARD */
-.product{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+.product-box{
+
+    width:600px;
+    height:180px;
+    background:white;
+    margin:30px;
+    border-radius:15px;
     display:flex;
-    flex-direction:column;
+    padding:15px;
+    box-shadow:0 5px 15px #ccc;
+
 }
 
-/* IMAGE FIX */
-.product img{
-    width:100%;
-    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
-    object-fit:cover;  /* सभी images same crop + same look */
-    background:#fff;
+
+.product-box img{
+
+    width:160px;
+    height:150px;
+    object-fit:cover;
+    border-radius:12px;
+
 }
 
-/* TEXT AREA */
-.product-content{
-    padding:8px;
-    text-align:center;
+
+
+.product-info{
+
+    padding-left:25px;
+
 }
 
-.product h2{
-    font-size:13px;
-    margin:5px 0;
+
+.product-info h2{
+
+    margin:10px 0;
+    font-size:25px;
+
 }
+
 
 .price{
+
     color:green;
-    font-size:18px;
+    font-size:22px;
     font-weight:bold;
-    margin-bottom:5px;
+
 }
+
+
+.desc{
+
+    color:#666;
+    margin:10px 0;
+
+}
+
+
+button{
+
+    background:#08a900;
+    color:white;
+    border:none;
+    padding:12px 35px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+
+}
+
 
 /* BUTTONS */
 .btn{
@@ -287,19 +322,29 @@ function searchNow(){
 <div class="products">
 
     <!-- PRODUCT 1 -->
-    <div class="product">
-        <img src="divya.new.jpg">
-        <div class="product-content">
-            <h2>ROASTED SING</h2>
-            <div class="price">₹150</div>
+ <div class="product-box">
 
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
+<img src="divya.jpg">
 
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
-            📲 Order
-            </a>
-        </div>
-    </div>
+<div class="product-info">
+
+<h2>ROASTED SING</h2>
+
+<div class="price">
+₹150
+</div>
+
+<p class="desc">
+Fresh Quality | Crispy Taste
+</p>
+
+<button>
+🛒 Order Now
+</button>
+
+</div>
+
+</div>
 
     <!-- PRODUCT 2 -->
     <div class="product">
