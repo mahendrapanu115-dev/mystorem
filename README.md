@@ -1,49 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-<meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mera Online Store</title>
+<title>Mera Store</title>
 
 
 <style>
 
-
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
-
+font-family:Arial;
 }
-
 
 
 body{
-
-background:#f1f3f6;
-
+background:#f2f2f2;
 }
 
-
-
-/* HEADER */
 
 
 header{
 
 background:white;
-
-padding:15px;
-
+padding:20px;
 text-align:center;
-
-box-shadow:0 2px 8px #ccc;
 
 }
 
@@ -52,110 +36,59 @@ box-shadow:0 2px 8px #ccc;
 .logo{
 
 font-size:28px;
-
 font-weight:bold;
-
 color:#2874f0;
 
 }
 
 
+.search{
 
-header p{
-
-margin-top:5px;
-
-color:#555;
-
-}
-
-
-
-
-
-/* SEARCH */
-
-
-.search-box{
-
-margin-top:15px;
+margin-top:20px;
 
 display:flex;
-
 justify-content:center;
-
-gap:8px;
+gap:5px;
 
 }
 
 
+.search input{
 
-.search-box input{
+width:70%;
+padding:12px;
 
-
-width:65%;
-
-max-width:400px;
-
-padding:12px 15px;
-
-border-radius:25px;
+border-radius:20px;
 
 border:1px solid #ccc;
 
-outline:none;
-
-font-size:14px;
-
-
 }
 
 
 
+.search button{
 
-.search-box button{
+padding:12px 18px;
 
+border:0;
 
-padding:12px 22px;
-
-border:none;
-
-border-radius:25px;
+border-radius:20px;
 
 background:#2874f0;
 
 color:white;
 
-font-weight:bold;
-
-cursor:pointer;
-
-
 }
 
 
-
-
-
-/* MAIN */
 
 
 .container{
 
-padding:12px;
-
-max-width:1200px;
-
-margin:auto;
-
+padding:10px;
 
 }
 
-
-
-
-
-/* PRODUCTS */
 
 
 .products{
@@ -164,70 +97,41 @@ display:grid;
 
 grid-template-columns:repeat(2,1fr);
 
-gap:12px;
-
+gap:10px;
 
 }
 
 
 
 
-
-/* CARD */
-
-
-.product{
+.card{
 
 
 background:white;
 
-border-radius:12px;
+border-radius:10px;
 
 overflow:hidden;
 
-box-shadow:0 3px 10px rgba(0,0,0,.15);
-
-transition:.3s;
-
-
-}
-
-
-
-.product:hover{
-
-transform:translateY(-5px);
+box-shadow:0 2px 8px #ccc;
 
 }
 
 
 
 
+.img{
 
 
-/* IMAGE */
-
-
-.image-box{
-
-
-height:160px;
+height:150px;
 
 overflow:hidden;
 
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-
 }
 
 
 
-
-.image-box img{
+.img img{
 
 
 width:100%;
@@ -236,16 +140,14 @@ height:100%;
 
 object-fit:contain;
 
-padding:10px;
-
-transition:.5s;
+transition:.4s;
 
 
 }
 
 
 
-.product:hover img{
+.card:hover img{
 
 transform:scale(1.1);
 
@@ -254,27 +156,19 @@ transform:scale(1.1);
 
 
 
-
-
-
-/* CONTENT */
-
-
-.content{
-
-padding:10px;
+.info{
 
 text-align:center;
+
+padding:10px;
 
 }
 
 
 
-.content h2{
+.info h3{
 
 font-size:14px;
-
-height:35px;
 
 }
 
@@ -282,48 +176,42 @@ height:35px;
 
 .price{
 
+color:green;
 
 font-size:20px;
 
 font-weight:bold;
 
-color:green;
-
 margin:8px;
-
 
 }
 
 
 
-
-/* BUTTON */
-
-
-.btn{
+button.buy,
+button.order{
 
 
-display:block;
+width:100%;
 
-text-decoration:none;
+padding:10px;
+
+border:0;
+
+border-radius:5px;
+
+margin-top:5px;
 
 color:white;
 
-padding:9px;
-
-margin-top:7px;
-
-border-radius:6px;
-
-font-size:14px;
-
 
 }
 
 
-.pay{
 
-background:#ff9f00;
+.buy{
+
+background:#ff9800;
 
 }
 
@@ -338,64 +226,7 @@ background:#25D366;
 
 
 
-
-/* FOOTER */
-
-
-footer{
-
-background:#222;
-
-color:white;
-
-text-align:center;
-
-padding:15px;
-
-margin-top:20px;
-
-}
-
-
-
-
-
-
-
-/* TABLET */
-
-
-@media(min-width:700px){
-
-
-.products{
-
-grid-template-columns:repeat(3,1fr);
-
-}
-
-
-
-.image-box{
-
-height:200px;
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-/* LAPTOP */
-
-
-@media(min-width:1000px){
+@media(min-width:800px){
 
 
 .products{
@@ -405,16 +236,7 @@ grid-template-columns:repeat(4,1fr);
 }
 
 
-.image-box{
-
-height:230px;
-
 }
-
-
-}
-
-
 
 
 
@@ -422,18 +244,14 @@ height:230px;
 </style>
 
 
-
 </head>
-
 
 
 <body>
 
 
 
-
 <header>
-
 
 
 <div class="logo">
@@ -443,25 +261,17 @@ height:230px;
 </div>
 
 
-<p>
-
-Best Quality Products | Fast Delivery
-
-</p>
+<p>Best Quality Products | Fast Delivery</p>
 
 
 
-
-<div class="search-box">
-
-
-<input type="text" 
-id="search"
-placeholder="Search product">
+<div class="search">
 
 
+<input id="search" placeholder="Search product">
 
-<button onclick="searchProduct()">
+
+<button onclick="find()">
 
 🔍 Search
 
@@ -471,11 +281,7 @@ placeholder="Search product">
 </div>
 
 
-
 </header>
-
-
-
 
 
 
@@ -483,27 +289,24 @@ placeholder="Search product">
 <div class="container">
 
 
-<div class="products" id="products">
+<div class="products">
 
 
 
+<div class="card">
 
 
-<div class="product">
-
-
-<div class="image-box">
+<div class="img">
 
 <img src="chana.jpg">
 
 </div>
 
 
+<div class="info">
 
-<div class="content">
 
-
-<h2>ROASTED SING</h2>
+<h3>ROASTED SING</h3>
 
 
 <div class="price">
@@ -513,46 +316,45 @@ placeholder="Search product">
 </div>
 
 
-<a class="btn pay">
+<button class="buy">
 
 💳 Pay Now
 
-</a>
+</button>
 
 
-<a class="btn order">
+<button class="order">
 
 📲 Order
 
-</a>
-
-
-
-</div>
+</button>
 
 
 </div>
 
 
+</div>
 
 
 
 
 
-<div class="product">
 
 
-<div class="image-box">
+<div class="card">
+
+
+<div class="img">
 
 <img src="HARSHITA.jpg">
 
 </div>
 
 
-<div class="content">
+<div class="info">
 
 
-<h2>BANASKATHA SING</h2>
+<h3>BANASKATHA SING</h3>
 
 
 <div class="price">
@@ -562,48 +364,44 @@ placeholder="Search product">
 </div>
 
 
-
-<a class="btn pay">
+<button class="buy">
 
 💳 Pay Now
 
-</a>
+</button>
 
 
-<a class="btn order">
+<button class="order">
 
 📲 Order
 
-</a>
-
-
-
-</div>
+</button>
 
 
 </div>
 
 
+</div>
 
 
 
 
 
 
-<div class="product">
+<div class="card">
 
 
-<div class="image-box">
+<div class="img">
 
 <img src="product3.jpg">
 
 </div>
 
 
-<div class="content">
+<div class="info">
 
 
-<h2>PRODUCT 3</h2>
+<h3>PRODUCT 3</h3>
 
 
 <div class="price">
@@ -613,48 +411,44 @@ placeholder="Search product">
 </div>
 
 
-
-<a class="btn pay">
+<button class="buy">
 
 💳 Pay Now
 
-</a>
+</button>
 
 
-<a class="btn order">
+<button class="order">
 
 📲 Order
 
-</a>
-
-
-
-</div>
+</button>
 
 
 </div>
 
 
+</div>
 
 
 
 
 
 
-<div class="product">
+<div class="card">
 
 
-<div class="image-box">
+<div class="img">
 
 <img src="product4.jpg">
 
 </div>
 
 
-<div class="content">
+<div class="info">
 
 
-<h2>PRODUCT 4</h2>
+<h3>PRODUCT 4</h3>
 
 
 <div class="price">
@@ -664,29 +458,18 @@ placeholder="Search product">
 </div>
 
 
-
-<a class="btn pay">
+<button class="buy">
 
 💳 Pay Now
 
-</a>
+</button>
 
 
-<a class="btn order">
+<button class="order">
 
 📲 Order
 
-</a>
-
-
-
-</div>
-
-
-</div>
-
-
-
+</button>
 
 
 </div>
@@ -696,18 +479,10 @@ placeholder="Search product">
 
 
 
+</div>
 
 
-
-
-
-<footer>
-
-© 2026 Mera Online Store
-
-</footer>
-
-
+</div>
 
 
 
@@ -716,47 +491,41 @@ placeholder="Search product">
 <script>
 
 
-function searchProduct(){
+function find(){
 
 
-let input=document
+let text=document
 .getElementById("search")
 .value
 .toLowerCase();
 
 
-
-let products=document
-.querySelectorAll(".product");
-
+let cards=document
+.querySelectorAll(".card");
 
 
-products.forEach(function(item){
+
+cards.forEach(function(card){
 
 
-let name=item
-.querySelector("h2")
+let name=card
+.querySelector("h3")
 .innerText
 .toLowerCase();
 
 
 
-if(name.includes(input)){
+if(name.includes(text)){
 
-
-item.style.display="block";
-
+card.style.display="block";
 
 }
 
 else{
 
-
-item.style.display="none";
-
+card.style.display="none";
 
 }
-
 
 
 });
@@ -766,9 +535,7 @@ item.style.display="none";
 
 
 
-
 </script>
-
 
 
 
