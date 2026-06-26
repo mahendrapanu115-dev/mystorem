@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -6,18 +7,21 @@
 
 <title>Mera Online Store</title>
 
+
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 
 body{
-    background:#f1f3f6;
+
+background:#f1f3f6;
+
 }
 
 
@@ -25,43 +29,68 @@ body{
 
 header{
 
-    background:white;
-    text-align:center;
-    padding:20px;
-    border-bottom:1px solid #ddd;
+background:white;
+text-align:center;
+padding:20px;
+border-bottom:1px solid #ddd;
 
 }
 
 
 header h1{
 
-    font-size:28px;
-    animation:textPop 1s ease;
+font-size:28px;
+
+animation:textPop 1s;
 
 }
 
 
-header p{
-
-    margin-top:5px;
-    color:#555;
-}
-
-
-
-/* ANIMATION */
 
 @keyframes textPop{
 
-0%{
-transform:scale(.7);
+from{
+
 opacity:0;
+transform:scale(.5);
+
 }
 
-100%{
-transform:scale(1);
+to{
+
 opacity:1;
+transform:scale(1);
+
 }
+
+}
+
+
+
+/* SEARCH */
+
+
+.search-box{
+
+margin-top:15px;
+
+}
+
+
+.search-box input{
+
+width:90%;
+max-width:400px;
+
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid #ccc;
+
+font-size:15px;
+
+outline:none;
 
 }
 
@@ -72,36 +101,44 @@ opacity:1;
 
 .container{
 
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    padding:15px;
+max-width:1200px;
+
+margin:auto;
+
+padding:15px;
 
 }
 
 
 
-/* PRODUCT GRID */
+
+/* PRODUCTS */
 
 
 .products{
 
 display:grid;
+
 grid-template-columns:repeat(2,1fr);
+
 gap:15px;
 
 }
 
 
 
-/* PRODUCT CARD */
+
+/* CARD */
 
 
 .product{
 
 background:white;
+
 border-radius:12px;
+
 overflow:hidden;
+
 box-shadow:0 3px 12px rgba(0,0,0,.15);
 
 transition:.3s;
@@ -109,30 +146,47 @@ transition:.3s;
 }
 
 
+
 .product:hover{
 
-transform:translateY(-5px);
+transform:translateY(-6px);
 
 }
 
 
 
+/* IMAGE ANIMATION */
 
-/* FLIPKART STYLE IMAGE */
+
+.img-box{
+
+overflow:hidden;
+
+}
 
 
 .product img{
 
 width:100%;
+
 height:260px;
 
 object-fit:contain;
 
-background:white;
-
 padding:15px;
 
+transition:.5s;
+
 }
+
+
+
+.product:hover img{
+
+transform:scale(1.12);
+
+}
+
 
 
 
@@ -143,6 +197,7 @@ padding:15px;
 .product-content{
 
 padding:12px;
+
 text-align:center;
 
 }
@@ -152,19 +207,20 @@ text-align:center;
 .product h2{
 
 font-size:15px;
-margin-bottom:8px;
 
 }
 
 
 
-
 .price{
 
-color:#008000;
 font-size:22px;
+
 font-weight:bold;
-margin:8px 0;
+
+color:green;
+
+margin:8px;
 
 }
 
@@ -177,21 +233,18 @@ margin:8px 0;
 .btn{
 
 display:block;
-width:100%;
 
 padding:10px;
 
 margin-top:8px;
 
 color:white;
+
 text-decoration:none;
 
 border-radius:6px;
 
-font-size:14px;
-
 }
-
 
 
 .buy{
@@ -199,7 +252,6 @@ font-size:14px;
 background:#ff9f00;
 
 }
-
 
 
 .whatsapp{
@@ -210,10 +262,8 @@ background:#25D366;
 
 
 
-/* TABLET */
 
 @media(min-width:768px){
-
 
 .products{
 
@@ -221,23 +271,11 @@ grid-template-columns:repeat(3,1fr);
 
 }
 
-
-.product img{
-
-height:230px;
-
 }
 
 
-}
-
-
-
-
-/* LAPTOP */
 
 @media(min-width:1024px){
-
 
 .products{
 
@@ -245,22 +283,14 @@ grid-template-columns:repeat(4,1fr);
 
 }
 
-
-.product img{
-
-height:260px;
-
 }
 
-
-
-}
 
 
 </style>
 
-
 </head>
+
 
 
 <body>
@@ -269,11 +299,25 @@ height:260px;
 
 <header>
 
+
 <h1>🛒 Mera Online Store</h1>
 
 <p>Best Quality Products | Fast Delivery</p>
 
+
+<div class="search-box">
+
+<input type="text" 
+id="search"
+placeholder="🔍 Search Product..."
+onkeyup="searchProduct()">
+
+
+</div>
+
+
 </header>
+
 
 
 
@@ -281,27 +325,25 @@ height:260px;
 <div class="container">
 
 
-<div class="products">
+<div class="products" id="products">
 
 
 
 <div class="product">
 
 
+<div class="img-box">
+
 <img src="chana.jpg">
+
+</div>
 
 
 <div class="product-content">
 
 <h2>ROASTED SING</h2>
 
-
-<div class="price">
-
-₹150
-
-</div>
-
+<div class="price">₹150</div>
 
 
 <a class="btn buy"
@@ -313,7 +355,7 @@ href="upi://pay?pa=yourupi@upi&am=150&cu=INR">
 
 
 <a class="btn whatsapp"
-href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+href="https://wa.me/919601393176">
 
 📲 Order
 
@@ -329,10 +371,15 @@ href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
 
 
 
+
 <div class="product">
 
 
+<div class="img-box">
+
 <img src="HARSHITA.jpg">
+
+</div>
 
 
 <div class="product-content">
@@ -348,8 +395,8 @@ href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
 </div>
 
 
-<a class="btn buy"
-href="upi://pay?pa=yourupi@upi&am=120&cu=INR">
+
+<a class="btn buy">
 
 💳 Pay Now
 
@@ -357,18 +404,19 @@ href="upi://pay?pa=yourupi@upi&am=120&cu=INR">
 
 
 
-<a class="btn whatsapp"
-href="https://wa.me/919601393176?text=I%20want%20Banaskantha%20Sing">
+<a class="btn whatsapp">
 
 📲 Order
 
 </a>
 
 
+
 </div>
 
 
 </div>
+
 
 
 
@@ -378,7 +426,11 @@ href="https://wa.me/919601393176?text=I%20want%20Banaskantha%20Sing">
 <div class="product">
 
 
+<div class="img-box">
+
 <img src="product3.jpg">
+
+</div>
 
 
 <div class="product-content">
@@ -409,12 +461,10 @@ href="https://wa.me/919601393176?text=I%20want%20Banaskantha%20Sing">
 </a>
 
 
-
 </div>
 
 
 </div>
-
 
 
 
@@ -424,7 +474,11 @@ href="https://wa.me/919601393176?text=I%20want%20Banaskantha%20Sing">
 <div class="product">
 
 
+<div class="img-box">
+
 <img src="product4.jpg">
+
+</div>
 
 
 <div class="product-content">
@@ -448,7 +502,6 @@ href="https://wa.me/919601393176?text=I%20want%20Banaskantha%20Sing">
 </a>
 
 
-
 <a class="btn whatsapp">
 
 📲 Order
@@ -456,6 +509,12 @@ href="https://wa.me/919601393176?text=I%20want%20Banaskantha%20Sing">
 </a>
 
 
+</div>
+
+
+</div>
+
+
 
 </div>
 
@@ -465,10 +524,62 @@ href="https://wa.me/919601393176?text=I%20want%20Banaskantha%20Sing">
 
 
 
-</div>
+
+<script>
 
 
-</div>
+function searchProduct(){
+
+
+let input=document
+.getElementById("search")
+.value
+.toLowerCase();
+
+
+
+let products=document
+.querySelectorAll(".product");
+
+
+
+products.forEach(function(product){
+
+
+let name=product
+.querySelector("h2")
+.innerText
+.toLowerCase();
+
+
+
+if(name.includes(input)){
+
+
+product.style.display="block";
+
+
+}
+
+else{
+
+
+product.style.display="none";
+
+
+}
+
+
+
+});
+
+
+}
+
+
+
+</script>
+
 
 
 </body>
