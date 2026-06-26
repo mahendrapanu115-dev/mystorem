@@ -4,26 +4,29 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mera Store</title>
+<title>Mera Online Store</title>
 
 
 <style>
 
 
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Poppins,Arial;
+font-family:Arial,sans-serif;
+
 }
 
 
 
 body{
 
-background:#f5f5f5;
+background:#f1f3f6;
 
 }
 
@@ -36,11 +39,11 @@ header{
 
 background:white;
 
-padding:20px;
+padding:15px;
 
 text-align:center;
 
-box-shadow:0 2px 10px #ddd;
+box-shadow:0 2px 8px #ccc;
 
 }
 
@@ -48,7 +51,7 @@ box-shadow:0 2px 10px #ddd;
 
 .logo{
 
-font-size:32px;
+font-size:28px;
 
 font-weight:bold;
 
@@ -60,9 +63,9 @@ color:#2874f0;
 
 header p{
 
-color:#555;
-
 margin-top:5px;
+
+color:#555;
 
 }
 
@@ -73,46 +76,51 @@ margin-top:5px;
 /* SEARCH */
 
 
-.search{
+.search-box{
 
-margin:20px auto;
+margin-top:15px;
 
 display:flex;
 
 justify-content:center;
 
-gap:10px;
+gap:8px;
 
 }
 
 
 
-.search input{
+.search-box input{
 
 
-width:400px;
+width:65%;
 
-padding:14px 20px;
+max-width:400px;
 
-border-radius:30px;
+padding:12px 15px;
 
-border:1px solid #ddd;
+border-radius:25px;
 
-font-size:15px;
+border:1px solid #ccc;
+
+outline:none;
+
+font-size:14px;
 
 
 }
 
 
 
-.search button{
+
+.search-box button{
 
 
-padding:14px 30px;
+padding:12px 22px;
 
 border:none;
 
-border-radius:30px;
+border-radius:25px;
 
 background:#2874f0;
 
@@ -129,25 +137,34 @@ cursor:pointer;
 
 
 
-/* PRODUCTS */
+/* MAIN */
 
 
 .container{
 
-padding:20px;
+padding:12px;
+
+max-width:1200px;
+
+margin:auto;
+
 
 }
 
 
 
-.products{
 
+
+/* PRODUCTS */
+
+
+.products{
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(2,1fr);
 
-gap:18px;
+gap:12px;
 
 
 }
@@ -164,11 +181,11 @@ gap:18px;
 
 background:white;
 
-border-radius:15px;
+border-radius:12px;
 
 overflow:hidden;
 
-box-shadow:0 5px 15px rgba(0,0,0,.12);
+box-shadow:0 3px 10px rgba(0,0,0,.15);
 
 transition:.3s;
 
@@ -179,11 +196,11 @@ transition:.3s;
 
 .product:hover{
 
-
-transform:translateY(-8px);
-
+transform:translateY(-5px);
 
 }
+
+
 
 
 
@@ -191,10 +208,12 @@ transform:translateY(-8px);
 /* IMAGE */
 
 
-.image{
+.image-box{
 
 
-height:220px;
+height:160px;
+
+overflow:hidden;
 
 display:flex;
 
@@ -202,14 +221,13 @@ align-items:center;
 
 justify-content:center;
 
-overflow:hidden;
-
 
 }
 
 
 
-.image img{
+
+.image-box img{
 
 
 width:100%;
@@ -218,7 +236,7 @@ height:100%;
 
 object-fit:contain;
 
-padding:15px;
+padding:10px;
 
 transition:.5s;
 
@@ -229,21 +247,22 @@ transition:.5s;
 
 .product:hover img{
 
-
 transform:scale(1.1);
-
 
 }
 
 
 
 
-/* TEXT */
+
+
+
+/* CONTENT */
 
 
 .content{
 
-padding:15px;
+padding:10px;
 
 text-align:center;
 
@@ -253,7 +272,9 @@ text-align:center;
 
 .content h2{
 
-font-size:16px;
+font-size:14px;
+
+height:35px;
 
 }
 
@@ -262,16 +283,17 @@ font-size:16px;
 .price{
 
 
-font-size:22px;
+font-size:20px;
 
 font-weight:bold;
 
 color:green;
 
-margin:10px;
+margin:8px;
 
 
 }
+
 
 
 
@@ -283,27 +305,25 @@ margin:10px;
 
 display:block;
 
-padding:11px;
-
-margin-top:8px;
-
-border-radius:8px;
+text-decoration:none;
 
 color:white;
 
-text-decoration:none;
+padding:9px;
 
-font-weight:bold;
+margin-top:7px;
+
+border-radius:6px;
+
+font-size:14px;
 
 
 }
 
 
-
-.buy{
+.pay{
 
 background:#ff9f00;
-
 
 }
 
@@ -312,7 +332,6 @@ background:#ff9f00;
 .order{
 
 background:#25D366;
-
 
 }
 
@@ -325,50 +344,87 @@ background:#25D366;
 
 footer{
 
-
-margin-top:30px;
-
 background:#222;
 
 color:white;
 
 text-align:center;
 
-padding:20px;
+padding:15px;
 
+margin-top:20px;
 
 }
 
 
 
 
-@media(max-width:900px){
+
+
+
+/* TABLET */
+
+
+@media(min-width:700px){
 
 
 .products{
 
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(3,1fr);
 
 }
 
 
 
-.search input{
+.image-box{
 
-width:220px;
+height:200px;
+
+}
+
+
 
 }
 
 
 
+
+
+
+
+/* LAPTOP */
+
+
+@media(min-width:1000px){
+
+
+.products{
+
+grid-template-columns:repeat(4,1fr);
+
 }
+
+
+.image-box{
+
+height:230px;
+
+}
+
+
+}
+
+
+
 
 
 
 </style>
 
 
+
 </head>
+
 
 
 <body>
@@ -377,6 +433,7 @@ width:220px;
 
 
 <header>
+
 
 
 <div class="logo">
@@ -395,13 +452,16 @@ Best Quality Products | Fast Delivery
 
 
 
-<div class="search">
+<div class="search-box">
 
 
-<input placeholder="Search product, brand">
+<input type="text" 
+id="search"
+placeholder="Search product">
 
 
-<button>
+
+<button onclick="searchProduct()">
 
 🔍 Search
 
@@ -411,7 +471,10 @@ Best Quality Products | Fast Delivery
 </div>
 
 
+
 </header>
+
+
 
 
 
@@ -420,7 +483,7 @@ Best Quality Products | Fast Delivery
 <div class="container">
 
 
-<div class="products">
+<div class="products" id="products">
 
 
 
@@ -429,17 +492,19 @@ Best Quality Products | Fast Delivery
 <div class="product">
 
 
-<div class="image">
+<div class="image-box">
 
 <img src="chana.jpg">
 
 </div>
 
 
+
 <div class="content">
 
 
 <h2>ROASTED SING</h2>
+
 
 <div class="price">
 
@@ -448,7 +513,7 @@ Best Quality Products | Fast Delivery
 </div>
 
 
-<a class="btn buy">
+<a class="btn pay">
 
 💳 Pay Now
 
@@ -462,10 +527,12 @@ Best Quality Products | Fast Delivery
 </a>
 
 
+
 </div>
 
 
 </div>
+
 
 
 
@@ -475,7 +542,7 @@ Best Quality Products | Fast Delivery
 <div class="product">
 
 
-<div class="image">
+<div class="image-box">
 
 <img src="HARSHITA.jpg">
 
@@ -487,6 +554,7 @@ Best Quality Products | Fast Delivery
 
 <h2>BANASKATHA SING</h2>
 
+
 <div class="price">
 
 ₹120
@@ -494,7 +562,8 @@ Best Quality Products | Fast Delivery
 </div>
 
 
-<a class="btn buy">
+
+<a class="btn pay">
 
 💳 Pay Now
 
@@ -508,10 +577,12 @@ Best Quality Products | Fast Delivery
 </a>
 
 
+
 </div>
 
 
 </div>
+
 
 
 
@@ -522,7 +593,7 @@ Best Quality Products | Fast Delivery
 <div class="product">
 
 
-<div class="image">
+<div class="image-box">
 
 <img src="product3.jpg">
 
@@ -534,6 +605,7 @@ Best Quality Products | Fast Delivery
 
 <h2>PRODUCT 3</h2>
 
+
 <div class="price">
 
 ₹180
@@ -541,7 +613,8 @@ Best Quality Products | Fast Delivery
 </div>
 
 
-<a class="btn buy">
+
+<a class="btn pay">
 
 💳 Pay Now
 
@@ -555,10 +628,12 @@ Best Quality Products | Fast Delivery
 </a>
 
 
+
 </div>
 
 
 </div>
+
 
 
 
@@ -569,7 +644,7 @@ Best Quality Products | Fast Delivery
 <div class="product">
 
 
-<div class="image">
+<div class="image-box">
 
 <img src="product4.jpg">
 
@@ -581,6 +656,7 @@ Best Quality Products | Fast Delivery
 
 <h2>PRODUCT 4</h2>
 
+
 <div class="price">
 
 ₹200
@@ -588,7 +664,8 @@ Best Quality Products | Fast Delivery
 </div>
 
 
-<a class="btn buy">
+
+<a class="btn pay">
 
 💳 Pay Now
 
@@ -602,17 +679,22 @@ Best Quality Products | Fast Delivery
 </a>
 
 
+
+</div>
+
+
+</div>
+
+
+
+
+
 </div>
 
 
 </div>
 
 
-
-
-</div>
-
-</div>
 
 
 
@@ -621,9 +703,71 @@ Best Quality Products | Fast Delivery
 
 <footer>
 
-© 2026 Mera Online Store | All Rights Reserved
+© 2026 Mera Online Store
 
 </footer>
+
+
+
+
+
+
+
+<script>
+
+
+function searchProduct(){
+
+
+let input=document
+.getElementById("search")
+.value
+.toLowerCase();
+
+
+
+let products=document
+.querySelectorAll(".product");
+
+
+
+products.forEach(function(item){
+
+
+let name=item
+.querySelector("h2")
+.innerText
+.toLowerCase();
+
+
+
+if(name.includes(input)){
+
+
+item.style.display="block";
+
+
+}
+
+else{
+
+
+item.style.display="none";
+
+
+}
+
+
+
+});
+
+
+}
+
+
+
+
+</script>
 
 
 
