@@ -16,16 +16,7 @@ body{
     background:#f5f5f5;
 }
 
-/* SEARCH */
-
-.search-wrapper{
-
-    background:white;
-    padding:12px;
-    text-align:center;
-}
-
-        
+});
 /* HEADER */
 header{
     background:#ffffff;
@@ -50,63 +41,14 @@ header p{
 
 }
 
-.search-wrapper{
-  width:100%;
-  display:flex;
-  justify-content:center;
-}
-
-.search-container{
-  width:600px;
-  height:55px;
-  background:white;
-  border-radius:35px;
-  display:flex;
-  align-items:center;
-  padding:6px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-
-.search-container input{
-  flex:1;
-  border:none;
-  outline:none;
-  padding-left:20px;
-  font-size:16px;
-}
-
-
-/* pura button popup effect */
-.search-btn{
-  height:48px;
-  padding:0 35px;
-  border:none;
-  border-radius:30px;
-  background:#0d8cff;
-  color:white;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-
-  transition:0.25s ease;
-  box-shadow:0 6px 15px rgba(0,140,255,0.4);
-}
-
-
-/* mouse le jane par */
-.search-btn:hover{
-  transform:scale(1.08);
-}
-
-
-/* click karne par pura button bahar pop */
-.search-btn:active{
-  transform:scale(1.25);
-  box-shadow:0 0 35px rgba(0,140,255,0.8);
-}
-}
-
-
+.search-box input{
+    width:90%;
+    max-width:400px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:14px;
 }
 /* CLEAN TITLE ANIMATION */
 @keyframes textPop{
@@ -253,30 +195,6 @@ header p{
 
 <body>
 
-<!-- SEARCH -->
-<div class="search-wrapper">
-  <div class="search-container">
-
-    <input id="mySearch" type="text" placeholder="product, brand">
-
-    <button class="search-btn" onclick="searchNow()">
-      🔍 Search
-    </button>
-
-  </div>
-</div>
-
-
-<script>
-function searchNow(){
-
-  let text = document.getElementById("mySearch").value;
-
-  alert("Aapne search kiya: " + text);
-
-}
-</script>
-
 <header>
     <h1>🛒 Mera Online Store</h1>
     <p>Best Quality Products | Fast Delivery</p>
@@ -288,7 +206,7 @@ function searchNow(){
 
     <!-- PRODUCT 1 -->
     <div class="product">
-        <img src="divya.new.jpg">
+        <img src="chana.jpg">
         <div class="product-content">
             <h2>ROASTED SING</h2>
             <div class="price">₹150</div>
