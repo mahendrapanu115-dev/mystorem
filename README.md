@@ -1,274 +1,476 @@
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mera Online Store</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
+
 
 body{
-    background:#f5f5f5;
+    background:#f1f3f6;
 }
 
-});
+
 /* HEADER */
+
 header{
-    background:#ffffff;
-    color:#222;
+
+    background:white;
     text-align:center;
-    padding:18px;
-    border-bottom:1px solid #eee;
+    padding:20px;
+    border-bottom:1px solid #ddd;
+
 }
 
-header h1,
-header p{
-    text-align:center;
-}
-/* Title animation */
+
 header h1{
-    animation: textPop 1s ease;
+
+    font-size:28px;
+    animation:textPop 1s ease;
+
 }
 
-/* subtitle animation */
+
 header p{
-    animation: fadeUp 1.2s ease;
 
+    margin-top:5px;
+    color:#555;
 }
 
-.search-box input{
-    width:90%;
-    max-width:400px;
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    outline:none;
-    font-size:14px;
-}
-/* CLEAN TITLE ANIMATION */
+
+
+/* ANIMATION */
+
 @keyframes textPop{
-    0%{
-        transform:translateY(-10px);
-        opacity:0;
-    }
-    100%{
-        transform:translateY(0);
-        opacity:1;
-    }
+
+0%{
+transform:scale(.7);
+opacity:0;
 }
 
-/* CLEAN TEXT ANIMATION */
-@keyframes fadeUp{
-    0%{
-        opacity:0;
-        transform:translateY(15px);
-    }
-    100%{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
+100%{
+transform:scale(1);
+opacity:1;
 }
 
-/* Title effect */
-@keyframes textPop{
-    0%{
-        transform:scale(0.6);
-        opacity:0;
-        letter-spacing:5px;
-    }
-    100%{
-        transform:scale(1);
-        opacity:1;
-        letter-spacing:0px;
-    }
 }
 
-/* Subtitle effect */
-@keyframes fadeUp{
-    0%{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    100%{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
 
 
 /* CONTAINER */
+
+
 .container{
+
     width:100%;
     max-width:1200px;
     margin:auto;
-    padding:10px;
+    padding:15px;
+
 }
 
-/* PRODUCTS GRID */
+
+
+/* PRODUCT GRID */
+
+
 .products{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
-    gap:10px;
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+
 }
+
+
 
 /* PRODUCT CARD */
+
+
 .product{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
+
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 3px 12px rgba(0,0,0,.15);
+
+transition:.3s;
+
 }
 
-/* IMAGE FIX */
+
+.product:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+
+/* FLIPKART STYLE IMAGE */
+
+
 .product img{
-    width:100%;
-    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
-    object-fit:cover;  /* सभी images same crop + same look */
-    background:#fff;
+
+width:100%;
+height:260px;
+
+object-fit:contain;
+
+background:white;
+
+padding:15px;
+
 }
 
-/* TEXT AREA */
+
+
+
+/* CONTENT */
+
+
 .product-content{
-    padding:8px;
-    text-align:center;
+
+padding:12px;
+text-align:center;
+
 }
+
+
 
 .product h2{
-    font-size:13px;
-    margin:5px 0;
+
+font-size:15px;
+margin-bottom:8px;
+
 }
+
+
+
 
 .price{
-    color:green;
-    font-size:18px;
-    font-weight:bold;
-    margin-bottom:5px;
+
+color:#008000;
+font-size:22px;
+font-weight:bold;
+margin:8px 0;
+
 }
 
-/* BUTTONS */
+
+
+
+/* BUTTON */
+
+
 .btn{
-    display:block;
-    width:100%;
-    padding:8px;
-    margin-top:5px;
-    text-decoration:none;
-    color:white;
-    border-radius:5px;
-    font-size:13px;
+
+display:block;
+width:100%;
+
+padding:10px;
+
+margin-top:8px;
+
+color:white;
+text-decoration:none;
+
+border-radius:6px;
+
+font-size:14px;
+
 }
+
+
 
 .buy{
-    background:green;
+
+background:#ff9f00;
+
 }
+
+
 
 .whatsapp{
-    background:#25D366;
+
+background:#25D366;
+
 }
+
+
 
 /* TABLET */
-@media (min-width:768px){
-    .products{
-        grid-template-columns:repeat(3, 1fr);
-    }
 
-    .product img{
-        height:160px;
-    }
+@media(min-width:768px){
+
+
+.products{
+
+grid-template-columns:repeat(3,1fr);
+
 }
+
+
+.product img{
+
+height:230px;
+
+}
+
+
+}
+
+
+
 
 /* LAPTOP */
-@media (min-width:1024px){
-    .products{
-        grid-template-columns:repeat(4, 1fr);
-    }
+
+@media(min-width:1024px){
+
+
+.products{
+
+grid-template-columns:repeat(4,1fr);
+
 }
+
+
+.product img{
+
+height:260px;
+
+}
+
+
+
+}
+
+
 </style>
+
+
 </head>
+
 
 <body>
 
+
+
 <header>
-    <h1>🛒 Mera Online Store</h1>
-    <p>Best Quality Products | Fast Delivery</p>
+
+<h1>🛒 Mera Online Store</h1>
+
+<p>Best Quality Products | Fast Delivery</p>
+
 </header>
+
+
+
 
 <div class="container">
 
+
 <div class="products">
 
-    <!-- PRODUCT 1 -->
-    <div class="product">
-        <img src="chana.jpg">
-        <div class="product-content">
-            <h2>ROASTED SING</h2>
-            <div class="price">₹150</div>
 
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
 
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
-            📲 Order
-            </a>
-        </div>
-    </div>
+<div class="product">
 
-    <!-- PRODUCT 2 -->
-    <div class="product">
-        <img src="HARSHITA.jpg">
-        <div class="product-content">
-            <h2>BANASKATHA SING</h2>
-            <div class="price">₹120</div>
 
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
+<img src="chana.jpg">
 
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
-            📲 Order
-            </a>
-        </div>
-    </div>
 
-    <!-- PRODUCT 3 -->
-    <div class="product">
-        <img src="product3.jpg">
-        <div class="product-content">
-            <h2>PRODUCT 3</h2>
-            <div class="price">₹180</div>
+<div class="product-content">
 
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
+<h2>ROASTED SING</h2>
 
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
-            📲 Order
-            </a>
-        </div>
-    </div>
 
-    <!-- PRODUCT 4 -->
-    <div class="product">
-        <img src="product4.jpg">
-        <div class="product-content">
-            <h2>PRODUCT 4</h2>
-            <div class="price">₹200</div>
+<div class="price">
 
-            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
-
-            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
-            📲 Order
-            </a>
-        </div>
-    </div>
+₹150
 
 </div>
 
+
+
+<a class="btn buy"
+href="upi://pay?pa=yourupi@upi&am=150&cu=INR">
+
+💳 Pay Now
+
+</a>
+
+
+<a class="btn whatsapp"
+href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+
+📲 Order
+
+</a>
+
+
 </div>
+
+
+</div>
+
+
+
+
+
+<div class="product">
+
+
+<img src="HARSHITA.jpg">
+
+
+<div class="product-content">
+
+
+<h2>BANASKATHA SING</h2>
+
+
+<div class="price">
+
+₹120
+
+</div>
+
+
+<a class="btn buy"
+href="upi://pay?pa=yourupi@upi&am=120&cu=INR">
+
+💳 Pay Now
+
+</a>
+
+
+
+<a class="btn whatsapp"
+href="https://wa.me/919601393176?text=I%20want%20Banaskantha%20Sing">
+
+📲 Order
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="product">
+
+
+<img src="product3.jpg">
+
+
+<div class="product-content">
+
+
+<h2>PRODUCT 3</h2>
+
+
+<div class="price">
+
+₹180
+
+</div>
+
+
+
+<a class="btn buy">
+
+💳 Pay Now
+
+</a>
+
+
+<a class="btn whatsapp">
+
+📲 Order
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="product">
+
+
+<img src="product4.jpg">
+
+
+<div class="product-content">
+
+
+<h2>PRODUCT 4</h2>
+
+
+<div class="price">
+
+₹200
+
+</div>
+
+
+
+<a class="btn buy">
+
+💳 Pay Now
+
+</a>
+
+
+
+<a class="btn whatsapp">
+
+📲 Order
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
 
 </body>
 
-</script>
 </html>
