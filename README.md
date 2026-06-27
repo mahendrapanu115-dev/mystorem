@@ -1,544 +1,356 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mera Store</title>
-
+<title>Mera Online Store</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
-
 
 body{
-background:#f2f2f2;
+    background:#f5f5f5;
 }
 
+/* SEARCH */
 
+.search-wrapper{
 
+    background:white;
+    padding:12px;
+    text-align:center;
+}
+
+        
+/* HEADER */
 header{
+    background:#ffffff;
+    color:#222;
+    text-align:center;
+    padding:18px;
+    border-bottom:1px solid #eee;
+}
 
-background:white;
-padding:20px;
-text-align:center;
+header h1,
+header p{
+    text-align:center;
+}
+/* Title animation */
+header h1{
+    animation: textPop 1s ease;
+}
+
+/* subtitle animation */
+header p{
+    animation: fadeUp 1.2s ease;
 
 }
 
+.search-wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
+}
 
+.search-container{
+  width:600px;
+  height:55px;
+  background:white;
+  border-radius:35px;
+  display:flex;
+  align-items:center;
+  padding:6px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
 
-.logo{
-
-font-size:28px;
-font-weight:bold;
-color:#2874f0;
-
+.search-container input{
+  flex:1;
+  border:none;
+  outline:none;
+  padding-left:20px;
+  font-size:16px;
 }
 
 
-.search{
+/* pura button popup effect */
+.search-btn{
+  height:48px;
+  padding:0 35px;
+  border:none;
+  border-radius:30px;
+  background:#0d8cff;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
 
-margin-top:20px;
-
-display:flex;
-justify-content:center;
-gap:5px;
-
+  transition:0.25s ease;
+  box-shadow:0 6px 15px rgba(0,140,255,0.4);
 }
 
 
-.search input{
-
-width:70%;
-padding:12px;
-
-border-radius:20px;
-
-border:1px solid #ccc;
-
+/* mouse le jane par */
+.search-btn:hover{
+  transform:scale(1.08);
 }
 
 
-
-.search button{
-
-padding:12px 18px;
-
-border:0;
-
-border-radius:20px;
-
-background:#2874f0;
-
-color:white;
-
+/* click karne par pura button bahar pop */
+.search-btn:active{
+  transform:scale(1.25);
+  box-shadow:0 0 35px rgba(0,140,255,0.8);
+}
 }
 
 
+}
+/* CLEAN TITLE ANIMATION */
+@keyframes textPop{
+    0%{
+        transform:translateY(-10px);
+        opacity:0;
+    }
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* CLEAN TEXT ANIMATION */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+}
+
+/* Title effect */
+@keyframes textPop{
+    0%{
+        transform:scale(0.6);
+        opacity:0;
+        letter-spacing:5px;
+    }
+    100%{
+        transform:scale(1);
+        opacity:1;
+        letter-spacing:0px;
+    }
+}
+
+/* Subtitle effect */
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
 
+/* CONTAINER */
 .container{
-
-padding:10px;
-
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:10px;
 }
 
-
-
+/* PRODUCTS GRID */
 .products{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:10px;
-
+    display:grid;
+    grid-template-columns:repeat(2, 1fr); /* MOBILE = 2 per row */
+    gap:10px;
 }
 
-
-
-
-.card{
-
-
-background:white;
-
-border-radius:10px;
-
-overflow:hidden;
-
-box-shadow:0 2px 8px #ccc;
-
+/* PRODUCT CARD */
+.product{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    display:flex;
+    flex-direction:column;
 }
 
-
-
-
-.img{
-
-
-height:150px;
-
-overflow:hidden;
-
+/* IMAGE FIX */
+.product img{
+    width:100%;
+    height:180px;      /* पहले 140px था, अब बड़ा कर दिया */
+    object-fit:cover;  /* सभी images same crop + same look */
+    background:#fff;
 }
 
-
-
-.img img{
-
-
-width:100%;
-
-height:100%;
-
-object-fit:contain;
-
-transition:.4s;
-
-
+/* TEXT AREA */
+.product-content{
+    padding:8px;
+    text-align:center;
 }
 
-
-
-.card:hover img{
-
-transform:scale(1.1);
-
+.product h2{
+    font-size:13px;
+    margin:5px 0;
 }
-
-
-
-
-.info{
-
-text-align:center;
-
-padding:10px;
-
-}
-
-
-
-.info h3{
-
-font-size:14px;
-
-}
-
-
 
 .price{
-
-color:green;
-
-font-size:20px;
-
-font-weight:bold;
-
-margin:8px;
-
+    color:green;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:5px;
 }
 
-
-
-button.buy,
-button.order{
-
-
-width:100%;
-
-padding:10px;
-
-border:0;
-
-border-radius:5px;
-
-margin-top:5px;
-
-color:white;
-
-
+/* BUTTONS */
+.btn{
+    display:block;
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    text-decoration:none;
+    color:white;
+    border-radius:5px;
+    font-size:13px;
 }
-
-
 
 .buy{
-
-background:#ff9800;
-
+    background:green;
 }
 
-
-
-.order{
-
-background:#25D366;
-
+.whatsapp{
+    background:#25D366;
 }
 
+/* TABLET */
+@media (min-width:768px){
+    .products{
+        grid-template-columns:repeat(3, 1fr);
+    }
 
-
-
-@media(min-width:800px){
-
-
-.products{
-
-grid-template-columns:repeat(4,1fr);
-
+    .product img{
+        height:160px;
+    }
 }
 
-
+/* LAPTOP */
+@media (min-width:1024px){
+    .products{
+        grid-template-columns:repeat(4, 1fr);
+    }
 }
-
-
-
-
 </style>
-
-
 </head>
-
 
 <body>
 
+<!-- SEARCH -->
+<div class="search-wrapper">
+  <div class="search-container">
 
+    <input id="mySearch" type="text" placeholder="product, brand">
 
-<header>
+    <button class="search-btn" onclick="searchNow()">
+      🔍 Search
+    </button>
 
-
-<div class="logo">
-
-🛒 mystorem
-
+  </div>
 </div>
-
-
-<p>Best Quality Products | Fast Delivery</p>
-
-
-
-<div class="search">
-
-
-<input id="search" placeholder="Search product">
-
-
-<button onclick="find()">
-
-🔍 Search
-
-</button>
-
-
-</div>
-
-
-</header>
-
-
-
-
-<div class="container">
-
-
-<div class="products">
-
-
-
-<div class="card">
-
-
-<div class="img">
-
-<img src="chana.jpg">
-
-</div>
-
-
-<div class="info">
-
-
-<h3>ROASTED SING</h3>
-
-
-<div class="price">
-
-₹150
-
-</div>
-
-
-<button class="buy">
-
-💳 Pay Now
-
-</button>
-
-
-<button class="order">
-
-📲 Order
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<div class="img">
-
-<img src="HARSHITA.jpg">
-
-</div>
-
-
-<div class="info">
-
-
-<h3>BANASKATHA SING</h3>
-
-
-<div class="price">
-
-₹120
-
-</div>
-
-
-<button class="buy">
-
-💳 Pay Now
-
-</button>
-
-
-<button class="order">
-
-📲 Order
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<div class="img">
-
-<img src="product3.jpg">
-
-</div>
-
-
-<div class="info">
-
-
-<h3>PRODUCT 3</h3>
-
-
-<div class="price">
-
-₹180
-
-</div>
-
-
-<button class="buy">
-
-💳 Pay Now
-
-</button>
-
-
-<button class="order">
-
-📲 Order
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-
-<div class="img">
-
-<img src="product4.jpg">
-
-</div>
-
-
-<div class="info">
-
-
-<h3>PRODUCT 4</h3>
-
-
-<div class="price">
-
-₹200
-
-</div>
-
-
-<button class="buy">
-
-💳 Pay Now
-
-</button>
-
-
-<button class="order">
-
-📲 Order
-
-</button>
-
-
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-
 
 
 <script>
+function searchNow(){
 
+  let text = document.getElementById("mySearch").value;
 
-function find(){
-
-
-let text=document
-.getElementById("search")
-.value
-.toLowerCase();
-
-
-let cards=document
-.querySelectorAll(".card");
-
-
-
-cards.forEach(function(card){
-
-
-let name=card
-.querySelector("h3")
-.innerText
-.toLowerCase();
-
-
-
-if(name.includes(text)){
-
-card.style.display="block";
+  alert("Aapne search kiya: " + text);
 
 }
-
-else{
-
-card.style.display="none";
-
-}
-
-
-});
-
-
-}
-
-
-
 </script>
 
+<header>
+    <h1>🛒 Mera Online Store</h1>
+    <p>Best Quality Products | Fast Delivery</p>
+</header>
 
+<div class="container">
+
+<div class="products">
+
+    <!-- PRODUCT 1 -->
+    <div class="product">
+        <img src="divya.new.jpg">
+        <div class="product-content">
+            <h2>ROASTED SING</h2>
+            <div class="price">₹150</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=150&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Roasted%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="product">
+        <img src="HARSHITA.jpg">
+        <div class="product-content">
+            <h2>BANASKATHA SING</h2>
+            <div class="price">₹120</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=120&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20to%20buy%20Banaskantha%20Sing">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="product">
+        <img src="product3.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 3</h2>
+            <div class="price">₹180</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=180&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%203">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="product">
+        <img src="product4.jpg">
+        <div class="product-content">
+            <h2>PRODUCT 4</h2>
+            <div class="price">₹200</div>
+
+            <a class="btn buy" href="upi://pay?pa=yourupi@upi&am=200&cu=INR">💳 Pay Now</a>
+
+            <a class="btn whatsapp" href="https://wa.me/919601393176?text=I%20want%20Product%204">
+            📲 Order
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</div>
 
 </body>
 
+</script>
 </html>
